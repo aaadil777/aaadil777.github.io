@@ -6,8 +6,13 @@
   <meta name="theme-color" content="#0a0e15">
   <title>Aadil Ali • Product Owner, Supply Chain Analyst, Business Analyst</title>
   <meta name="description" content="Portfolio, projects, and profile for Aadil Ali — product, supply chain, and analytics." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Apple / system font stack -->
+  <style>
+    @font-face{font-family:"SF Pro Display";src:local("SF Pro Display"),local(".SFNSDisplay");font-display:swap}
+    @font-face{font-family:"SF Pro Text";src:local("SF Pro Text"),local(".SFNSText");font-display:swap}
+  </style>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -18,25 +23,33 @@
       --bg:#f7fafc; --ink:#0c1726; --muted:#5b6b86; --accent:#2563eb; --accent2:#0891b2;
       --panel:rgba(0,0,0,.03); --ring:rgba(37,99,235,.18); --border:rgba(0,0,0,.08);
     }
-
     html{scroll-behavior:smooth}
     *,*:before,*:after{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+    body{
+      margin:0;background:var(--bg);color:var(--ink);
+      font-family:"SF Pro Text","Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;overflow-x:hidden
+    }
+    h1,h2,h3{font-family:"SF Pro Display","Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
     a{color:var(--accent);text-decoration:none}
 
     .shell{max-width:1100px;margin:0 auto;padding:24px 20px 80px}
 
-    /* sticky mini nav */
+    /* polished nav with avatar left */
     .mini-nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.25);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
     html[data-theme="light"] .mini-nav{background:rgba(255,255,255,.75)}
-    .mini-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
-    .mini-links{display:flex;gap:14px;flex-wrap:wrap}
+    .mini-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:8px 16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .mini-avatar{width:36px;height:36px;border-radius:9px;object-fit:cover;border:1px solid var(--ring)}
+    .brand .name{font-weight:800;letter-spacing:.2px}
+    .brand .role{color:var(--muted);font-size:12px;margin-top:-2px}
+    .mini-links{display:flex;gap:10px;flex-wrap:wrap}
     .mini-links a{padding:8px 10px;border-radius:10px;color:var(--ink);font-weight:600}
     .mini-links a.active{background:var(--panel);border:1px solid var(--border)}
     .toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:var(--panel);border:1px solid var(--border);cursor:pointer;font-weight:700}
 
-    /* hero (parallax) */
-    header.hero{position:relative;border-radius:28px;padding:48px 22px 64px;overflow:hidden;margin-top:16px}
+    /* hero (parallax) and centered content */
+    header.hero{position:relative;border-radius:28px;padding:54px 22px 70px;overflow:hidden;margin-top:16px;text-align:center}
     header.hero .bg{position:absolute;inset:-20% -10% -30% -10%;pointer-events:none;z-index:-1;
       background:
         radial-gradient(900px 420px at 10% 20%, rgba(124,196,255,.22), transparent 60%),
@@ -44,31 +57,30 @@
         linear-gradient(180deg, transparent, transparent 60%, rgba(0,0,0,.12));
       transform:translate3d(0,0,0);
     }
-    header .row{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-    .avatar{width:104px;height:104px;border-radius:18px;object-fit:cover;border:2px solid var(--ring);box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    h1{margin:0;font-size:clamp(28px,4vw,44px);line-height:1.15}
-    .tagline{color:var(--muted);font-weight:600;margin-top:6px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    header .row{display:flex;gap:22px;align-items:center;flex-direction:column;justify-content:center}
+    .avatar{width:112px;height:112px;border-radius:20px;object-fit:cover;border:2px solid var(--ring);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    h1{margin:10px 0 0;font-size:clamp(32px,5vw,56px);line-height:1.05}
+    .tagline{color:var(--muted);font-weight:600;margin-top:6px;font-size:clamp(14px,2vw,18px)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;justify-content:center}
     .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 14px;border-radius:12px;background:var(--panel);border:1px solid var(--border);color:var(--ink);font-weight:700}
     .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
 
     section{padding:80px 0}
-    section .lead{max-width:900px;color:var(--muted);font-size:18px}
+    section .lead{max-width:900px;color:var(--muted);font-size:18px;margin:0 auto}
     .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent)}
 
     /* about */
-    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-    .about-photo{border-radius:20px;width:100%;object-fit:cover;box-shadow:0 20px 50px rgba(0,0,0,.25)}
-    .pills{margin-top:12px}
+    .pills{margin-top:12px;text-align:center}
     .pill{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--border);color:var(--muted);font-size:12px;margin:0 8px 8px 0}
 
-    /* impact scrollytelling */
+    /* experience cards */
     .impact{display:grid;grid-template-columns:1fr 1fr;gap:24px}
     .sticky-col{position:sticky;top:70px;align-self:start}
-    .impact-item{padding:22px;border-radius:16px;transition:opacity .45s ease, transform .45s ease, background .6s ease; background:transparent;border:1px solid transparent;opacity:.55;transform:translateY(6px)}
-    .impact-item h3{margin:.2rem 0 .3rem 0}
-    .impact-item p{margin:0;color:var(--muted)}
-    .impact-item.active{opacity:1;transform:none;background:linear-gradient(180deg, rgba(124,196,255,.12), rgba(34,211,238,.10));border-color:var(--ring);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+    .card{padding:22px;border-radius:16px;border:1px solid var(--border);background:linear-gradient(180deg,var(--panel),transparent);transition:transform .25s ease, box-shadow .25s ease}
+    .card:hover{transform:scale(1.015);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+    .zoomable:hover h3{transform:scale(1.02)}
+    .zoomable h3{margin:.2rem 0 .4rem 0;transition:transform .25s ease}
+    .card p{margin:0;color:var(--muted)}
 
     /* projects */
     .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -83,7 +95,7 @@
     .shot img{width:100%;border-radius:16px;box-shadow:0 25px 70px rgba(0,0,0,.35)}
     .caption{margin-top:8px;color:var(--muted);font-size:14px}
 
-    /* skills/experience cards */
+    /* chips groups */
     .exp-grid{display:grid;gap:14px}
     .exp-item{padding:16px 18px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,var(--panel),transparent)}
     .exp-item strong{display:block}
@@ -100,54 +112,74 @@
     .reveal.show{opacity:1;transform:none}
 
     @media (max-width:900px){
-      .about-grid,.impact{grid-template-columns:1fr}
+      .impact{grid-template-columns:1fr}
       .sticky-col{position:static}
     }
     @media (max-width:480px){
       .btn{padding:12px;font-size:14px}
       .proj{padding:16px}
       .lead{font-size:16px}
-      .avatar{width:88px;height:88px}
+      .avatar{width:92px;height:92px}
     }
     img{max-width:100%;height:auto}
+
+    /* Scroll progress bar */
+    #scrollProgress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      z-index: 1000; box-shadow: 0 0 10px rgba(0,0,0,.25);
+    }
   </style>
 </head>
 <body>
-  <!-- sticky mini nav -->
+  <!-- scroll progress -->
+  <div id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- NAV -->
   <div class="mini-nav">
     <div class="mini-inner">
-      <div class="mini-links" id="navLinks">
-        <a href="#top">Top</a>
-        <a href="#about">About</a>
-        <a href="#impact">Impact</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+      <div class="brand">
+        <img class="mini-avatar" src="assets/profile.jpg" alt="Aadil Ali"/>
+        <div>
+          <div class="name">Aadil Ali</div>
+          <div class="role">Product • Supply Chain • Analytics</div>
+        </div>
       </div>
-      <button class="toggle" id="themeToggle">🌙 Dark</button>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="mini-links" id="navLinks">
+          <a href="#top">Top</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#additional">Additional</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="toggle" id="themeToggle">🌙 Dark</button>
+      </div>
     </div>
   </div>
 
   <div class="shell">
-    <!-- hero -->
+    <!-- HERO -->
     <header id="top" class="hero">
       <div class="bg" id="heroBg" aria-hidden="true"></div>
       <div class="row">
-        <img class="avatar" src="assets/profile.jpg" alt="Aadil Ali headshot" loading="eager"/>
+        <img class="avatar" src="assets/profile.jpg" alt="Aadil Ali" loading="eager"/>
         <div>
           <h1>Aadil Ali</h1>
           <div class="tagline">Product Owner • Supply Chain Analyst • Business Analyst</div>
           <div class="cta">
             <a class="btn" href="#about">★ About</a>
-            <a class="btn" href="#impact">↳ Impact</a>
+            <a class="btn" href="#experience">↳ Experience</a>
             <a class="btn" href="#projects">↳ Projects</a>
             <a class="btn" href="#gallery">↳ Gallery</a>
             <a class="btn" href="mailto:aadilali0630@gmail.com">✉ Email</a>
             <a class="btn" href="https://www.linkedin.com/in/aadil-ali01/" target="_blank" rel="noopener">in LinkedIn</a>
-            <a class="btn" href="https://github.com/aadil-ali" target="_blank" rel="noopener">⌁ GitHub</a>
+            <a class="btn" href="https://github.com/aaadil777" target="_blank" rel="noopener">⌁ GitHub</a>
             <a class="btn" href="https://calendar.google.com/appointments/schedules/AcZssZ1bdsyGyWYywDzVKcUeWpQteRkzItjo292s6fmdwFW3MnvtrE-g4UgDKx-FBeVXYlooG8_hzJSM" target="_blank" rel="noopener">📅 Book</a>
+            <a class="btn" href="assets/aadil-ali.vcf" download>👤 Save contact</a>
           </div>
           <div class="cta" style="margin-top:8px">
             <a class="btn" href="https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/view?usp=sharing" target="_blank" rel="noopener">⬇ Resume (PDF)</a>
@@ -156,62 +188,37 @@
       </div>
     </header>
 
-    <!-- about -->
+    <!-- ABOUT -->
     <section id="about">
-      <div class="about-grid">
-        <div>
-          <h2 class="reveal">About</h2>
-          <p class="lead reveal">Aadil is an analytical and results-oriented professional with a multidisciplinary background in public health, supply chain, and technology, delivering high-impact process improvement and digital transformation initiatives across manufacturing, pharmaceutical, retail, and public sector domains. Skilled at diagnosing operational inefficiencies, architecting data-driven solutions, and leading cross-functional teams to implement scalable, sustainable change.</p>
-          <p class="lead reveal">Proficient in SAP S/4 HANA & IBP, Salesforce, Workday HCM, Power BI, and advanced statistical modeling, he bridges business strategy with technical execution—aligning process redesign, KPI frameworks, and system automation to drive measurable gains in efficiency, cost reduction, and risk mitigation. He translates complex requirements into actionable roadmaps and guides organizations through end-to-end improvement cycles.</p>
-          <div class="pills reveal">
-            <span class="pill">SAP S/4 HANA & IBP</span>
-            <span class="pill">Salesforce</span>
-            <span class="pill">Workday HCM</span>
-            <span class="pill">Power BI</span>
-            <span class="pill">Snowflake</span>
-            <span class="pill">AWS CloudWatch</span>
-            <span class="pill">Python • SQL</span>
-          </div>
-          <div class="pills reveal">
-            <span class="pill">CAT</span>
-            <span class="pill">84.51°</span>
-            <span class="pill">Gilead Sciences</span>
-          </div>
-        </div>
-        <div>
-          <img class="about-photo reveal" src="assets/profile.jpg" alt="Aadil speaking / headshot" loading="lazy">
-        </div>
-      </div>
+      <h2 class="reveal" style="text-align:center">About</h2>
+      <p class="lead reveal">Aadil is an analytical and results-oriented professional with a multidisciplinary background in public health, supply chain, and technology. He delivers high-impact process improvement and digital transformation across manufacturing, pharmaceutical, retail, and public sector domains—diagnosing operational inefficiencies, architecting data-driven solutions, and leading cross-functional teams to implement scalable, sustainable change.</p>
+      <p class="lead reveal">Proficient in SAP S/4HANA & IBP, Salesforce, Workday HCM, Power BI, and advanced statistical modeling, he aligns business strategy with technical execution to drive measurable gains in efficiency, cost reduction, and risk mitigation.</p>
     </section>
 
     <div class="divider"></div>
 
-    <!-- impact -->
-    <section id="impact">
+    <!-- EXPERIENCE (from resume) -->
+    <section id="experience">
       <div class="impact">
         <div class="sticky-col">
-          <h2>Representative Impact</h2>
+          <h2>Experience</h2>
         </div>
         <div>
-          <article class="impact-item reveal">
-            <h3>Enterprise Process Optimization — Caterpillar</h3>
-            <p>Built multi-phase logistics visibility (Power BI + Snowflake) improving truckload efficiency, cutting shipping costs, and standardizing dealer reporting for sourcing insights.</p>
+          <article class="card zoomable reveal">
+            <h3>Caterpillar — Strategic Procurement & Planning Division Intern</h3>
+            <p>Built end-to-end logistics visibility in Power BI integrating <b>Snowflake CTEs</b>; Excel optimization & forecasting validated HVLV dealer orders across <b>256+ machines</b>; KPI sourcing dashboards; recognition in Case Competition for cost savings & risk mitigation. (SAP <b>S/4HANA</b> context)</p>
           </article>
-          <article class="impact-item reveal">
-            <h3>Agile Delivery & Product Management — 84.51°</h3>
-            <p>Product Owner for API programs; AI-assisted Agile workflows, tighter backlog ops, and streamlined deployments reduced cycle time and increased throughput.</p>
+          <article class="card zoomable reveal">
+            <h3>Stark State College — IT Strategy & Implementation Associate (Consultant)</h3>
+            <p>Implemented <b>SAP FICO</b> integrations with external B2B and university systems; Streamlit + Cursor for transparent reporting; deployed AI tooling across academic/admin workflows; aligned IT implementations with organizational strategy.</p>
           </article>
-          <article class="impact-item reveal">
-            <h3>Supply Chain Transformation — Gilead Sciences</h3>
-            <p>Advanced forecasting (Excel/Solver + Monte Carlo) with CloudWatch visibility improved inventory availability and removed delays across clinical-trial supply chains.</p>
+          <article class="card zoomable reveal">
+            <h3>84.51° (Kroger) — Product Owner Co-op</h3>
+            <p>Facilitated Agile ceremonies; AI-driven JIRA/Mural workflows (~25% velocity lift); API reliability with Python/SQL + <b>Datadog</b>, <b>SonarQube</b>; supported <b>Kong Gateway</b> + <b>Terraform</b> migration; standardized API scorecards.</p>
           </article>
-          <article class="impact-item reveal">
-            <h3>Workforce Systems Integration — Summit County</h3>
-            <p>Full Workday HCM migration with validation and interactive reporting enabling better workforce planning and compliance monitoring.</p>
-          </article>
-          <article class="impact-item reveal">
-            <h3>Public Sector Performance — Marion Public Health</h3>
-            <p>Live Power BI + ArcGIS epidemiology dashboards improved outbreak response and cross-agency coordination.</p>
+          <article class="card zoomable reveal">
+            <h3>Gilead Sciences — Supply Chain Planning Intern</h3>
+            <p>Automated <b>SAP S/4HANA & IBP</b> for demand/replenishment across India/Canada/Brazil; Excel/Solver + Monte Carlo forecasting with <b>AWS CloudWatch</b> monitoring; risk-mitigation Power BI views.</p>
           </article>
         </div>
       </div>
@@ -219,76 +226,83 @@
 
     <div class="divider"></div>
 
-    <!-- skills -->
-    <section id="skills">
-      <h2 class="reveal">Skills</h2>
-      <div class="exp-grid reveal">
-        <div class="exp-item"><strong>Programming & Data</strong> Python, R, SQL, GitHub, Google Colab, Streamlit, Cursor</div>
-        <div class="exp-item"><strong>Analytics & Visualization</strong> Excel (PivotTables, VBA, Macros), Power BI, Tableau, DAX, Snowflake, ArcGIS</div>
-        <div class="exp-item"><strong>Enterprise Systems</strong> SAP (S/4 HANA, IBP, FICO), Salesforce, Workday HCM</div>
-        <div class="exp-item"><strong>Cloud & DevOps</strong> AWS CloudWatch, Docker, Kubernetes, Terraform, PowerShell, CI/CD, Datadog, Kong Gateway, SonarQube</div>
-        <div class="exp-item"><strong>Methods & Certifications</strong> Agile/Scrum (PSPO I, PSM I), Lean Six Sigma</div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- experience with exact titles from resume -->
-    <section id="experience">
-      <h2 class="reveal">Experience</h2>
+    <!-- ADDITIONAL EXPERIENCE -->
+    <section id="additional">
+      <h2 class="reveal">Additional Experience</h2>
       <div class="exp-grid">
-        <div class="exp-item reveal"><strong>Caterpillar — Strategic Procurement & Planning Division Intern</strong> May 2025 – Present</div>
-        <div class="exp-item reveal"><strong>Stark State College — IT Strategy & Implementation Associate (Consultant)</strong> Jan 2023 – Present</div>
-        <div class="exp-item reveal"><strong>84.51° (Kroger) — Product Owner Co-op</strong> Aug 2024 – Dec 2024</div>
-        <div class="exp-item reveal"><strong>Gilead Sciences — Supply Chain Planning Intern</strong> May 2024 – Aug 2024</div>
-        <div class="exp-item reveal"><strong>Summit County Executive — Business Analyst Intern</strong> Feb 2023 – Jul 2023</div>
-        <div class="exp-item reveal"><strong>All-American Freight Logistics — Web Developer & Strategist</strong> Jan 2024 – May 2024</div>
-        <div class="exp-item reveal"><strong>Marion Public Health — Health Data Strategist & BI Analyst</strong> Jul 2023 – Jan 2024</div>
+        <div class="exp-item reveal"><strong>Summit County Executive — Business Analyst Intern</strong> Workday HCM migration of 500+ employee records (QA/testing), Power BI workforce planning, HR data accuracy</div>
+        <div class="exp-item reveal"><strong>All-American Freight Logistics — Web Developer & Strategist</strong> Full-stack website + Salesforce dashboards for vendor communication, fleet utilization, KPI reporting</div>
+        <div class="exp-item reveal"><strong>Marion Public Health — Health Data Strategist & BI Analyst</strong> Live Power BI + ArcGIS infectious-disease tracking; accelerated containment responses; improved cross-agency coordination</div>
       </div>
     </section>
 
     <div class="divider"></div>
 
-    <!-- projects -->
+    <!-- SKILLS (grouped) -->
+    <section id="skills">
+      <h2 class="reveal" style="text-align:center">Skills</h2>
+      <div class="exp-grid reveal">
+        <div class="exp-item">
+          <strong>Systems & Platforms</strong>
+          SAP (S/4HANA, IBP, FICO), Salesforce, Workday HCM, Snowflake, Datadog, SonarQube, Kong Gateway, ArcGIS
+        </div>
+        <div class="exp-item">
+          <strong>Data & Languages</strong>
+          Python, SQL, R, Power BI, Tableau, DAX, Excel (PivotTables, VBA, Macros)
+        </div>
+        <div class="exp-item">
+          <strong>Cloud & DevOps</strong>
+          AWS CloudWatch, Docker, Kubernetes, Terraform, PowerShell, CI/CD
+        </div>
+        <div class="exp-item">
+          <strong>Methods & Certifications</strong>
+          Agile/Scrum (PSPO I, PSM I), Lean Six Sigma
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PROJECTS -->
     <section id="projects">
-      <h2 class="reveal">Projects & Selected Work</h2>
+      <h2 class="reveal" style="text-align:center">Projects & Selected Work</h2>
       <div class="projects">
         <a class="proj reveal" href="https://drive.google.com/file/d/1lc3x2ueLaNYztbQAYWTSoUokFv91zSp1/view?usp=drive_link" target="_blank" rel="noopener">
           <span class="icon">📊</span><strong>API Scorecard</strong>
-          <p>Cross-functional view blending Datadog & SonarQube to guide API reliability and code quality decisions.</p>
+          <p>Cross-functional Datadog + SonarQube view for reliability & code quality decisions.</p>
         </a>
         <a class="proj reveal" href="https://www.scrum.org/certificates/1152261" target="_blank" rel="noopener">
           <span class="icon">📜</span><strong>PSPO I Certification</strong>
-          <p>Scrum.org — product ownership foundations applied to delivery and stakeholder value.</p>
+          <p>Product ownership foundations applied to delivery and stakeholder value.</p>
         </a>
         <a class="proj reveal" href="https://www.credly.com/badges/58187f5b-9ae7-4960-98b4-da648b63b08e/public_url" target="_blank" rel="noopener">
           <span class="icon">🧭</span><strong>PSM I Certification</strong>
-          <p>Scrum.org — Agile facilitation, empiricism, and continuous improvement.</p>
+          <p>Agile facilitation, empiricism, and continuous improvement.</p>
         </a>
         <a class="proj reveal" href="https://drive.google.com/file/d/15-33C7BSzdV6xGRwh_961sYyXlZOf4WP/view?usp=sharing" target="_blank" rel="noopener">
           <span class="icon">🗺️</span><strong>ArcGIS Route Planning</strong>
-          <p>Vehicle routing & optimization with geospatial analytics for operational efficiency.</p>
+          <p>Vehicle routing & optimization with geospatial analytics for operations.</p>
         </a>
         <a class="proj reveal" href="https://github.com/hornbuck/spring-hackathon-23" target="_blank" rel="noopener">
           <span class="icon">🎮</span><strong>OSU Hackathon: Pygame</strong>
-          <p>Rapid prototyping and gameplay mechanics in Python.</p>
+          <p>Rapid Python prototyping and gameplay mechanics.</p>
         </a>
         <a class="proj reveal" href="https://www.figma.com/file/vceqVV63y6SgHM0tfQynqq/AllergyScan?type=design&node-id=0-1&mode=design" target="_blank" rel="noopener">
           <span class="icon">🎨</span><strong>AllergyScan UI (Figma)</strong>
-          <p>Usability engineering deliverable: information architecture and interface flows.</p>
+          <p>Usability engineering deliverable—IA & flows.</p>
         </a>
         <a class="proj reveal" href="https://drive.google.com/file/d/1TIkFRiiVuFRP1bvYrWEZ3tfdk964IoDb/view?usp=sharing" target="_blank" rel="noopener">
           <span class="icon">🏥</span><strong>NaloxBox Assessment</strong>
-          <p>Public health analytics for harm-reduction access points; dashboarding & recommendations.</p>
+          <p>Public health analytics for harm-reduction access.</p>
         </a>
       </div>
     </section>
 
     <div class="divider"></div>
 
-    <!-- gallery (use JPGs) -->
+    <!-- GALLERY (expects JPGs) -->
     <section id="gallery">
-      <h2 class="reveal">Presentation Moments</h2>
+      <h2 class="reveal" style="text-align:center">Presentation Moments</h2>
       <div class="gallery">
         <figure class="shot reveal">
           <img src="assets/present-cat.jpg" alt="Caterpillar Intern Report Out on stage" loading="lazy" />
@@ -299,27 +313,23 @@
           <figcaption class="caption">Gilead Sciences — CFO organization presentation day</figcaption>
         </figure>
         <figure class="shot reveal">
-          <img src="assets/present-8451.jpg" alt="84.51 degrees office photo" loading="lazy" />
+          <img src="assets/present-8451.jpg" alt="84.51° office photo" loading="lazy" />
           <figcaption class="caption">84.51° — product & API operations showcase</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- contact (buttons + resume preview) -->
+    <!-- CONTACT -->
     <section id="contact">
-      <h2 class="reveal">Get in touch</h2>
+      <h2 class="reveal" style="text-align:center">Get in touch</h2>
       <div class="cta">
         <a class="btn" href="https://calendar.google.com/appointments/schedules/AcZssZ1bdsyGyWYywDzVKcUeWpQteRkzItjo292s6fmdwFW3MnvtrE-g4UgDKx-FBeVXYlooG8_hzJSM" target="_blank" rel="noopener">📅 Book a call</a>
         <a class="btn" href="https://www.linkedin.com/in/aadil-ali01/" target="_blank" rel="noopener">in LinkedIn</a>
         <a class="btn" href="mailto:aadilali0630@gmail.com">✉ Email</a>
+        <a class="btn" href="assets/aadil-ali.vcf" download>👤 Save contact</a>
       </div>
       <div class="resume-wrap reveal">
-        <iframe
-          src="https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/preview"
-          allow="autoplay"
-          loading="lazy"
-          title="Aadil Ali — Resume">
-        </iframe>
+        <iframe src="https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/preview" allow="autoplay" loading="lazy" title="Aadil Ali — Resume"></iframe>
         <div class="cta" style="margin-top:10px">
           <a class="btn" href="https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/view?usp=sharing" target="_blank" rel="noopener">⬇ Download / View Resume (PDF)</a>
         </div>
@@ -345,9 +355,8 @@
     // year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // reveal + impact emphasis
+    // reveal + nav highlight
     const reveals = document.querySelectorAll('.reveal');
-    const impacts = document.querySelectorAll('.impact-item');
     const navLinks = document.querySelectorAll('#navLinks a');
     const sections = document.querySelectorAll('section, header.hero');
 
@@ -355,16 +364,6 @@
       entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); })
     },{threshold:.25});
     reveals.forEach(el=>io.observe(el));
-
-    const impactIO = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          impacts.forEach(i=>i.classList.remove('active'));
-          entry.target.classList.add('active');
-        }
-      })
-    },{threshold:.6});
-    impacts.forEach(i=>impactIO.observe(i));
 
     const so = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
@@ -382,6 +381,18 @@
       const y = window.scrollY * 0.2;
       heroBg.style.transform = `translate3d(0, ${y}px, 0)`;
     }, {passive:true});
+
+    // scroll progress
+    function setProgress(){
+      const dh = document.documentElement;
+      const scrolled = (dh.scrollTop || document.body.scrollTop);
+      const height = (dh.scrollHeight - dh.clientHeight);
+      const pct = height ? (scrolled / height) * 100 : 0;
+      document.getElementById('scrollProgress').style.width = pct + '%';
+    }
+    window.addEventListener('scroll', setProgress, {passive:true});
+    window.addEventListener('resize', setProgress);
+    setProgress();
   </script>
 </body>
 </html>
