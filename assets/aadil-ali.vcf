@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Ali;Aadil;;;
+FN:Aadil Ali
+TITLE:Product Owner • Supply Chain Analyst • Business Analyst
+ORG:—
+EMAIL;TYPE=INTERNET;TYPE=WORK:aadilali0630@gmail.com
+TEL;TYPE=CELL:+1-330-949-5221
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/aadil-ali01/
+URL;TYPE=GitHub:https://github.com/aaadil777
+item1.URL;type=WORK:https://aaadil777.github.io/
+item1.X-ABLabel:Portfolio
+NOTE:Driving Digital Transformation through AI-Enhanced Solutions, Supply Chain Analytics, and Enterprise Systems Integration. SAP S/4HANA & IBP • Power BI • Snowflake • AWS CloudWatch • Agile (PSPO I, PSM I)
+END:VCARD
