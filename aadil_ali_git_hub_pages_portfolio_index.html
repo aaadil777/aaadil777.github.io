@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aadil Ali • Product Owner, Supply Chain Analyst, BA</title>
+  <meta name="description" content="Portfolio and profile for Aadil Ali — product ownership, supply chain analytics, and business analysis projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f16; /* dark */
+      --bg-soft:#101726;
+      --card:#141c2d;
+      --text:#e8eefc;
+      --muted:#9fb0d1;
+      --accent:#7cc4ff;
+      --accent-2:#22d3ee;
+      --border:rgba(255,255,255,.08);
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(124,196,255,.15), transparent 70%),
+                  radial-gradient(900px 500px at -10% 20%, rgba(34,211,238,.12), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Layout */
+    .container{max-width:1000px;margin:0 auto;padding:28px 20px 80px}
+    header{
+      display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+      background:linear-gradient( to right, rgba(124,196,255,.12), rgba(34,211,238,.08) );
+      border:1px solid var(--border);border-radius:20px;padding:22px 22px 22px 18px;
+      box-shadow:var(--shadow);
+    }
+    .avatar{width:96px;height:96px;border-radius:16px;object-fit:cover;border:2px solid var(--border)}
+    .title{flex:1}
+    h1{margin:0;font-size:clamp(24px,3.2vw,36px);line-height:1.2}
+    .subtitle{margin-top:4px;color:var(--muted);font-weight:500}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;padding:11px 14px;border-radius:12px;
+      background:var(--card);color:var(--text);border:1px solid var(--border);
+      box-shadow:var(--shadow);font-weight:600
+    }
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
+
+    /* Sections */
+    section{margin-top:28px}
+    .card{background:var(--bg-soft);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);padding:22px}
+    h2{margin:0 0 10px 0;font-size:clamp(18px,2.2vw,22px)}
+
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .project{position:relative;overflow:hidden}
+    .project h3{margin:6px 0 4px 0;font-size:18px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.03);font-size:12px;color:var(--muted);margin-right:6px}
+
+    footer{margin-top:30px;color:var(--muted);text-align:center}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* Responsive tweak */
+    @media (max-width:520px){
+      header{padding:18px}
+      .avatar{width:84px;height:84px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HERO / HEADER -->
+    <header>
+      <!-- Replace src with /assets/profile.jpg or your hosted image -->
+      <img class="avatar" src="assets/profile.jpg" alt="Aadil Ali headshot" />
+      <div class="title">
+        <h1>Aadil Ali</h1>
+        <div class="subtitle">Product Owner • Supply Chain Analyst • Business Analyst</div>
+        <div class="actions">
+          <a class="btn" href="#projects" title="See projects">★ View projects</a>
+          <a class="btn" href="mailto:aadilali0630@gmail.com" title="Email">✉ Email</a>
+          <a class="btn" href="https://www.linkedin.com/in/aadil-ali01/" target="_blank" rel="noopener">in LinkedIn</a>
+          <a class="btn" href="https://github.com/aadil-ali" target="_blank" rel="noopener">⌁ GitHub</a>
+          <!-- Replace with your Google Calendar booking link -->
+          <a class="btn" href="https://calendar.google.com" target="_blank" rel="noopener">📅 Book a meeting</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- SUMMARY -->
+    <section class="card">
+      <h2>About</h2>
+      <p>
+        Analytical, results‑oriented professional with a multidisciplinary background in public health, supply chain, and technology.
+        I deliver high‑impact process improvements and digital transformation initiatives across manufacturing, pharma, retail,
+        and public sector domains. Skilled in diagnosing operational inefficiencies, architecting data‑driven solutions, and
+        leading cross‑functional teams to implement scalable, sustainable change.
+      </p>
+      <div class="small">
+        <span class="pill">SAP S/4 HANA & IBP</span>
+        <span class="pill">Salesforce</span>
+        <span class="pill">Workday HCM</span>
+        <span class="pill">Power BI</span>
+        <span class="pill">Snowflake</span>
+        <span class="pill">AWS CloudWatch</span>
+        <span class="pill">Python • SQL</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card">
+      <h2>Projects & Selected Work</h2>
+      <div class="grid">
+        <article class="project card">
+          <h3><a href="https://drive.google.com/file/d/1lc3x2ueLaNYztbQAYWTSoUokFv91zSp1/view?usp=drive_link" target="_blank" rel="noopener">API Scorecard</a></h3>
+          <p>Cross‑functional performance view blending Datadog and SonarQube to guide API reliability and code quality decisions.</p>
+        </article>
+        <article class="project card">
+          <h3><a href="https://www.scrum.org/certificates/1152261" target="_blank" rel="noopener">PSPO I Certification</a></h3>
+          <p>Scrum.org — Product ownership foundations applied to delivery and stakeholder value.</p>
+        </article>
+        <article class="project card">
+          <h3><a href="https://www.credly.com/badges/58187f5b-9ae7-4960-98b4-da648b63b08e/public_url" target="_blank" rel="noopener">PSM I Certification</a></h3>
+          <p>Scrum.org — Agile facilitation, empiricism, and continuous improvement.</p>
+        </article>
+        <article class="project card">
+          <h3><a href="https://drive.google.com/file/d/15-33C7BSzdV6xGRwh_961sYyXlZOf4WP/view?usp=sharing" target="_blank" rel="noopener">ArcGIS Route Planning</a></h3>
+          <p>Vehicle routing & optimization with geospatial analytics for operational efficiency.</p>
+        </article>
+        <article class="project card">
+          <h3><a href="https://github.com/hornbuck/spring-hackathon-23" target="_blank" rel="noopener">OSU Hackathon: Pygame</a></h3>
+          <p>Rapid prototyping and gameplay mechanics in Python.</p>
+        </article>
+        <article class="project card">
+          <h3><a href="https://www.figma.com/file/vceqVV63y6SgHM0tfQynqq/AllergyScan?type=design&node-id=0-1&mode=design" target="_blank" rel="noopener">AllergyScan UI (Figma)</a></h3>
+          <p>Usability engineering deliverable: information architecture and interface flows.</p>
+        </article>
+        <article class="project card">
+          <h3><a href="https://drive.google.com/file/d/1TIkFRiiVuFRP1bvYrWEZ3tfdk964IoDb/view?usp=sharing" target="_blank" rel="noopener">NaloxBox Assessment</a></h3>
+          <p>Public health analytics for harm‑reduction access points; dashboarding & recommendations.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT / LINKS -->
+    <section class="card">
+      <h2>Get in touch</h2>
+      <p class="small">I’m open to roles in product ownership, supply chain analytics, and business analysis.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:aadilali0630@gmail.com">✉ Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/aadil-ali01/" target="_blank" rel="noopener">in LinkedIn</a>
+        <a class="btn" href="https://github.com/aadil-ali" target="_blank" rel="noopener">⌁ GitHub</a>
+        <a class="btn" href="https://calendar.google.com" target="_blank" rel="noopener">📅 Book time</a>
+        <!-- Optional: add resume link once hosted in your repo -->
+        <!-- <a class="btn" href="assets/Aadil_Ali_Resume.pdf" target="_blank" rel="noopener">⬇ Resume</a> -->
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">© <span id="y"></span> Aadil Ali • Built for GitHub Pages</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
