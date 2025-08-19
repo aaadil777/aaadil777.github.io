@@ -1,175 +1,327 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aadil Ali • Product Owner, Supply Chain Analyst, BA</title>
-  <meta name="description" content="Portfolio and profile for Aadil Ali — product ownership, supply chain analytics, and business analysis projects." />
+  <meta name="theme-color" content="#0a0e15">
+  <title>Aadil Ali • Product Owner, Supply Chain Analyst, Business Analyst</title>
+  <meta name="description" content="Portfolio, projects, and profile for Aadil Ali — product, supply chain, and analytics." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0f16; /* dark */
-      --bg-soft:#101726;
-      --card:#141c2d;
-      --text:#e8eefc;
-      --muted:#9fb0d1;
-      --accent:#7cc4ff;
-      --accent-2:#22d3ee;
-      --border:rgba(255,255,255,.08);
-      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --bg:#0a0e15; --ink:#eaf0ff; --muted:#a7b7d7; --accent:#7cc4ff; --accent2:#22d3ee;
+      --panel:rgba(255,255,255,.06); --ring:rgba(124,196,255,.25); --border:rgba(255,255,255,.10);
     }
-    *{box-sizing:border-box}
-    html,body{margin:0}
-    body{
-      background: radial-gradient(1200px 600px at 80% -10%, rgba(124,196,255,.15), transparent 70%),
-                  radial-gradient(900px 500px at -10% 20%, rgba(34,211,238,.12), transparent 60%),
-                  var(--bg);
-      color:var(--text);
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
+    /* Light theme variables */
+    html[data-theme="light"]{
+      --bg:#f7fafc; --ink:#0c1726; --muted:#5b6b86; --accent:#2563eb; --accent2:#0891b2;
+      --panel:rgba(0,0,0,.03); --ring:rgba(37,99,235,.18); --border:rgba(0,0,0,.08);
     }
+
+    html{scroll-behavior:smooth}
+    *,*:before,*:after{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
     a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
 
-    /* Layout */
-    .container{max-width:1000px;margin:0 auto;padding:28px 20px 80px}
-    header{
-      display:flex;align-items:center;gap:24px;flex-wrap:wrap;
-      background:linear-gradient( to right, rgba(124,196,255,.12), rgba(34,211,238,.08) );
-      border:1px solid var(--border);border-radius:20px;padding:22px 22px 22px 18px;
-      box-shadow:var(--shadow);
+    .shell{max-width:1100px;margin:0 auto;padding:24px 20px 80px}
+
+    /* --- STICKY MINI NAV --- */
+    .mini-nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.25);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    html[data-theme="light"] .mini-nav{background:rgba(255,255,255,.75)}
+    .mini-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+    .mini-links{display:flex;gap:14px;flex-wrap:wrap}
+    .mini-links a{padding:8px 10px;border-radius:10px;color:var(--ink);font-weight:600}
+    .mini-links a.active{background:var(--panel);border:1px solid var(--border)}
+    .toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:var(--panel);border:1px solid var(--border);cursor:pointer;font-weight:700}
+
+    /* --- HERO (Parallax) --- */
+    header.hero{position:relative;border-radius:28px;padding:48px 22px 64px;overflow:hidden;margin-top:16px}
+    header.hero .bg{position:absolute;inset:-20% -10% -30% -10%;pointer-events:none;z-index:-1;
+      background:
+        radial-gradient(900px 420px at 10% 20%, rgba(124,196,255,.22), transparent 60%),
+        radial-gradient(1100px 520px at 90% -10%, rgba(34,211,238,.20), transparent 60%),
+        linear-gradient(180deg, transparent, transparent 60%, rgba(0,0,0,.12));
+      transform:translate3d(0,0,0);
     }
-    .avatar{width:96px;height:96px;border-radius:16px;object-fit:cover;border:2px solid var(--border)}
-    .title{flex:1}
-    h1{margin:0;font-size:clamp(24px,3.2vw,36px);line-height:1.2}
-    .subtitle{margin-top:4px;color:var(--muted);font-weight:500}
-    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;padding:11px 14px;border-radius:12px;
-      background:var(--card);color:var(--text);border:1px solid var(--border);
-      box-shadow:var(--shadow);font-weight:600
+    header .row{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+    .avatar{width:104px;height:104px;border-radius:18px;object-fit:cover;border:2px solid var(--ring);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    h1{margin:0;font-size:clamp(28px,4vw,44px);line-height:1.15}
+    .tagline{color:var(--muted);font-weight:600;margin-top:6px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 14px;border-radius:12px;background:var(--panel);border:1px solid var(--border);color:var(--ink);font-weight:700}
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+
+    /* --- SECTIONS --- */
+    section{padding:80px 0}
+    section .lead{max-width:900px;color:var(--muted);font-size:18px}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.15),transparent)}
+    html[data-theme="dark"] .divider{background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent)}
+
+    /* About */
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .about-photo{border-radius:20px;width:100%;object-fit:cover;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+    .pills{margin-top:12px}
+    .pill{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--border);color:var(--muted);font-size:12px;margin:0 8px 8px 0}
+
+    /* Impact scrollytelling */
+    .impact{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .sticky-col{position:sticky;top:70px;align-self:start}
+    .impact-item{padding:22px;border-radius:16px;transition:transform .6s ease, opacity .6s ease, background .6s ease; background:transparent;border:1px solid transparent}
+    .impact-item h3{margin:.2rem 0 .3rem 0}
+    .impact-item p{margin:0;color:var(--muted)}
+    .impact-item.active{transform:scale(1.02);background:linear-gradient(180deg, rgba(124,196,255,.12), rgba(34,211,238,.10));border-color:var(--ring);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .proj{padding:18px;border-radius:16px;background:linear-gradient(180deg, var(--panel), transparent);border:1px solid var(--border);transition:transform .25s ease}
+    .proj:hover{transform:translateY(-4px)}
+    .icon{width:26px;height:26px;display:inline-block;margin-right:8px;vertical-align:-4px}
+    .proj p{margin:.35rem 0 0 0;color:var(--muted);font-size:14px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:1fr;gap:42px}
+    .shot{max-width:760px;margin:0 auto;text-align:center}
+    .shot img{width:100%;border-radius:16px;box-shadow:0 25px 70px rgba(0,0,0,.35)}
+    .caption{margin-top:8px;color:var(--muted);font-size:14px}
+
+    /* Work strip */
+    .strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .chip{padding:6px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--border);color:var(--muted);font-weight:600}
+
+    footer{text-align:center;color:var(--muted);padding:40px 0}
+
+    /* Reveal on scroll */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    @media (max-width:900px){
+      .about-grid,.impact{grid-template-columns:1fr}
+      .sticky-col{position:static}
     }
-    .btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
-
-    /* Sections */
-    section{margin-top:28px}
-    .card{background:var(--bg-soft);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);padding:22px}
-    h2{margin:0 0 10px 0;font-size:clamp(18px,2.2vw,22px)}
-
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .project{position:relative;overflow:hidden}
-    .project h3{margin:6px 0 4px 0;font-size:18px}
-    .project p{margin:0;color:var(--muted);font-size:14px}
-
-    .pill{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.03);font-size:12px;color:var(--muted);margin-right:6px}
-
-    footer{margin-top:30px;color:var(--muted);text-align:center}
-    .small{font-size:13px;color:var(--muted)}
-
-    /* Responsive tweak */
-    @media (max-width:520px){
-      header{padding:18px}
-      .avatar{width:84px;height:84px}
+    @media (max-width:480px){
+      .btn{padding:12px;font-size:14px}
+      .proj{padding:16px}
+      .lead{font-size:16px}
+      .avatar{width:88px;height:88px}
     }
+    img{max-width:100%;height:auto}
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- HERO / HEADER -->
-    <header>
-      <!-- Replace src with /assets/profile.jpg or your hosted image -->
-      <img class="avatar" src="assets/profile.jpg" alt="Aadil Ali headshot" />
-      <div class="title">
-        <h1>Aadil Ali</h1>
-        <div class="subtitle">Product Owner • Supply Chain Analyst • Business Analyst</div>
-        <div class="actions">
-          <a class="btn" href="#projects" title="See projects">★ View projects</a>
-          <a class="btn" href="mailto:aadilali0630@gmail.com" title="Email">✉ Email</a>
-          <a class="btn" href="https://www.linkedin.com/in/aadil-ali01/" target="_blank" rel="noopener">in LinkedIn</a>
-          <a class="btn" href="https://github.com/aadil-ali" target="_blank" rel="noopener">⌁ GitHub</a>
-          <!-- Replace with your Google Calendar booking link -->
-          <a class="btn" href="https://calendar.google.com" target="_blank" rel="noopener">📅 Book a meeting</a>
+  <!-- STICKY MINI NAV -->
+  <div class="mini-nav">
+    <div class="mini-inner">
+      <div class="mini-links" id="navLinks">
+        <a href="#top">Top</a>
+        <a href="#about">About</a>
+        <a href="#impact">Impact</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="toggle" id="themeToggle">🌙 Dark</button>
+    </div>
+  </div>
+
+  <div class="shell">
+    <!-- HERO with Parallax background layer -->
+    <header id="top" class="hero">
+      <div class="bg" id="heroBg" aria-hidden="true"></div>
+      <div class="row">
+        <img class="avatar" src="assets/profile.jpg" alt="Aadil Ali headshot" loading="eager"/>
+        <div>
+          <h1>Aadil Ali</h1>
+          <div class="tagline">Product Owner • Supply Chain Analyst • Business Analyst</div>
+          $1
+          <div class="cta" style="margin-top:8px">
+            <a class="btn" href="https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/view?usp=sharing" target="_blank" rel="noopener">⬇ Resume (PDF)</a>
+          </div>
         </div>
       </div>
     </header>
 
-    <!-- SUMMARY -->
-    <section class="card">
-      <h2>About</h2>
-      <p>
-        Analytical, results‑oriented professional with a multidisciplinary background in public health, supply chain, and technology.
-        I deliver high‑impact process improvements and digital transformation initiatives across manufacturing, pharma, retail,
-        and public sector domains. Skilled in diagnosing operational inefficiencies, architecting data‑driven solutions, and
-        leading cross‑functional teams to implement scalable, sustainable change.
-      </p>
-      <div class="small">
-        <span class="pill">SAP S/4 HANA & IBP</span>
-        <span class="pill">Salesforce</span>
-        <span class="pill">Workday HCM</span>
-        <span class="pill">Power BI</span>
-        <span class="pill">Snowflake</span>
-        <span class="pill">AWS CloudWatch</span>
-        <span class="pill">Python • SQL</span>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-grid">
+        <div>
+          <h2 class="reveal">About</h2>
+          <p class="lead reveal">Aadil is an analytical and results‑oriented professional with a multidisciplinary background in public health, supply chain, and technology, delivering high‑impact process improvement and digital transformation initiatives across manufacturing, pharmaceutical, retail, and public sector domains. Skilled at diagnosing operational inefficiencies, architecting data‑driven solutions, and leading cross‑functional teams to implement scalable, sustainable change.</p>
+          <p class="lead reveal">Proficient in SAP S/4 HANA & IBP, Salesforce, Workday HCM, Power BI, and advanced statistical modeling, he bridges business strategy with technical execution—aligning process redesign, KPI frameworks, and system automation to drive measurable gains in efficiency, cost reduction, and risk mitigation. He translates complex requirements into actionable roadmaps and guides organizations through end‑to‑end improvement cycles.</p>
+          <div class="pills reveal">
+            <span class="pill">SAP S/4 HANA & IBP</span>
+            <span class="pill">Salesforce</span>
+            <span class="pill">Workday HCM</span>
+            <span class="pill">Power BI</span>
+            <span class="pill">Snowflake</span>
+            <span class="pill">AWS CloudWatch</span>
+            <span class="pill">Python • SQL</span>
+          </div>
+          <div class="strip reveal">
+            <span class="chip">CAT</span><span class="chip">84.51°</span><span class="chip">Gilead Sciences</span>
+          </div>
+        </div>
+        <div>
+          <img class="about-photo reveal" src="assets/profile.jpg" alt="Aadil speaking / headshot" loading="lazy">
+        </div>
       </div>
     </section>
+
+    <div class="divider"></div>
+
+    <!-- IMPACT -->
+    <section id="impact">
+      <div class="impact">
+        <div class="sticky-col">
+          <h2>Representative Impact</h2>
+          <p class="lead">As you scroll, items on the right are emphasized. Themes span enterprise process optimization, agile delivery, supply chain transformation, workforce systems, and public sector performance.</p>
+        </div>
+        <div>
+          <article class="impact-item reveal">
+            <h3>Enterprise Process Optimization (Caterpillar)</h3>
+            <p>Led a multi‑phase logistics visibility initiative using Power BI and Snowflake to improve truckload efficiency, cut shipping costs, and embed dealer reporting into daily operations—driving long‑term standardization and strategic sourcing insights.</p>
+          </article>
+          <article class="impact-item reveal">
+            <h3>Agile Delivery & Product Management (84.51°)</h3>
+            <p>Served as Product Owner; integrated AI‑driven Agile workflows, enhanced backlog management, and streamlined API deployment to reduce cycle times and increase delivery throughput.</p>
+          </article>
+          <article class="impact-item reveal">
+            <h3>Supply Chain Transformation (Gilead Sciences)</h3>
+            <p>Applied advanced forecasting models to ensure better inventory availability and remove delays in global clinical‑trial supply chains.</p>
+          </article>
+          <article class="impact-item reveal">
+            <h3>Workforce Systems Integration (Summit County)</h3>
+            <p>Executed full migration into Workday HCM with validation protocols and interactive reporting that improved workforce planning and compliance monitoring.</p>
+          </article>
+          <article class="impact-item reveal">
+            <h3>Public Sector Performance Improvement (Marion Public Health)</h3>
+            <p>Designed a live epidemiological tracking dashboard to optimize response workflows and improve cross‑agency coordination during outbreak events.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
 
     <!-- PROJECTS -->
-    <section id="projects" class="card">
-      <h2>Projects & Selected Work</h2>
-      <div class="grid">
-        <article class="project card">
-          <h3><a href="https://drive.google.com/file/d/1lc3x2ueLaNYztbQAYWTSoUokFv91zSp1/view?usp=drive_link" target="_blank" rel="noopener">API Scorecard</a></h3>
-          <p>Cross‑functional performance view blending Datadog and SonarQube to guide API reliability and code quality decisions.</p>
-        </article>
-        <article class="project card">
-          <h3><a href="https://www.scrum.org/certificates/1152261" target="_blank" rel="noopener">PSPO I Certification</a></h3>
-          <p>Scrum.org — Product ownership foundations applied to delivery and stakeholder value.</p>
-        </article>
-        <article class="project card">
-          <h3><a href="https://www.credly.com/badges/58187f5b-9ae7-4960-98b4-da648b63b08e/public_url" target="_blank" rel="noopener">PSM I Certification</a></h3>
+    <section id="projects">
+      <h2 class="reveal">Projects & Selected Work</h2>
+      <div class="projects">
+        <a class="proj reveal" href="https://drive.google.com/file/d/1lc3x2ueLaNYztbQAYWTSoUokFv91zSp1/view?usp=drive_link" target="_blank" rel="noopener">
+          <span class="icon">📊</span><strong>API Scorecard</strong>
+          <p>Cross‑functional view blending Datadog & SonarQube to guide API reliability and code quality decisions.</p>
+        </a>
+        <a class="proj reveal" href="https://www.scrum.org/certificates/1152261" target="_blank" rel="noopener">
+          <span class="icon">📜</span><strong>PSPO I Certification</strong>
+          <p>Scrum.org — product ownership foundations applied to delivery and stakeholder value.</p>
+        </a>
+        <a class="proj reveal" href="https://www.credly.com/badges/58187f5b-9ae7-4960-98b4-da648b63b08e/public_url" target="_blank" rel="noopener">
+          <span class="icon">🧭</span><strong>PSM I Certification</strong>
           <p>Scrum.org — Agile facilitation, empiricism, and continuous improvement.</p>
-        </article>
-        <article class="project card">
-          <h3><a href="https://drive.google.com/file/d/15-33C7BSzdV6xGRwh_961sYyXlZOf4WP/view?usp=sharing" target="_blank" rel="noopener">ArcGIS Route Planning</a></h3>
+        </a>
+        <a class="proj reveal" href="https://drive.google.com/file/d/15-33C7BSzdV6xGRwh_961sYyXlZOf4WP/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="icon">🗺️</span><strong>ArcGIS Route Planning</strong>
           <p>Vehicle routing & optimization with geospatial analytics for operational efficiency.</p>
-        </article>
-        <article class="project card">
-          <h3><a href="https://github.com/hornbuck/spring-hackathon-23" target="_blank" rel="noopener">OSU Hackathon: Pygame</a></h3>
+        </a>
+        <a class="proj reveal" href="https://github.com/hornbuck/spring-hackathon-23" target="_blank" rel="noopener">
+          <span class="icon">🎮</span><strong>OSU Hackathon: Pygame</strong>
           <p>Rapid prototyping and gameplay mechanics in Python.</p>
-        </article>
-        <article class="project card">
-          <h3><a href="https://www.figma.com/file/vceqVV63y6SgHM0tfQynqq/AllergyScan?type=design&node-id=0-1&mode=design" target="_blank" rel="noopener">AllergyScan UI (Figma)</a></h3>
+        </a>
+        <a class="proj reveal" href="https://www.figma.com/file/vceqVV63y6SgHM0tfQynqq/AllergyScan?type=design&node-id=0-1&mode=design" target="_blank" rel="noopener">
+          <span class="icon">🎨</span><strong>AllergyScan UI (Figma)</strong>
           <p>Usability engineering deliverable: information architecture and interface flows.</p>
-        </article>
-        <article class="project card">
-          <h3><a href="https://drive.google.com/file/d/1TIkFRiiVuFRP1bvYrWEZ3tfdk964IoDb/view?usp=sharing" target="_blank" rel="noopener">NaloxBox Assessment</a></h3>
+        </a>
+        <a class="proj reveal" href="https://drive.google.com/file/d/1TIkFRiiVuFRP1bvYrWEZ3tfdk964IoDb/view?usp=sharing" target="_blank" rel="noopener">
+          <span class="icon">🏥</span><strong>NaloxBox Assessment</strong>
           <p>Public health analytics for harm‑reduction access points; dashboarding & recommendations.</p>
-        </article>
+        </a>
       </div>
     </section>
 
-    <!-- CONTACT / LINKS -->
-    <section class="card">
-      <h2>Get in touch</h2>
-      <p class="small">I’m open to roles in product ownership, supply chain analytics, and business analysis.</p>
-      <div class="actions">
-        <a class="btn" href="mailto:aadilali0630@gmail.com">✉ Email</a>
-        <a class="btn" href="https://www.linkedin.com/in/aadil-ali01/" target="_blank" rel="noopener">in LinkedIn</a>
-        <a class="btn" href="https://github.com/aadil-ali" target="_blank" rel="noopener">⌁ GitHub</a>
-        <a class="btn" href="https://calendar.google.com" target="_blank" rel="noopener">📅 Book time</a>
-        <!-- Optional: add resume link once hosted in your repo -->
-        <!-- <a class="btn" href="assets/Aadil_Ali_Resume.pdf" target="_blank" rel="noopener">⬇ Resume</a> -->
+    <div class="divider"></div>
+
+    <!-- PRESENTATION GALLERY -->
+    <section id="gallery">
+      <h2 class="reveal">Presentation Moments</h2>
+      <div class="gallery">
+        <figure class="shot reveal">
+          <img src="assets/present-cat.jpg" alt="Caterpillar Intern Report Out on stage" loading="lazy" />
+          <figcaption class="caption">Caterpillar: SPPD Intern Report‑Out — logistics optimization results</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <img src="assets/present-gilead.jpg" alt="Gilead CFO organization presentation" loading="lazy" />
+          <figcaption class="caption">Gilead Sciences — CFO organization presentation day</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <img src="assets/present-8451.jpg" alt="84.51 degrees office photo" loading="lazy" />
+          <figcaption class="caption">84.51° — product & API operations showcase</figcaption>
+        </figure>
       </div>
     </section>
 
-    <footer>
-      <div class="small">© <span id="y"></span> Aadil Ali • Built for GitHub Pages</div>
-    </footer>
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="reveal">Get in touch</h2>
+      <p class="lead reveal">Open to roles in product ownership, supply chain analytics, and business analysis.</p>
+      $1
+      <div class="cta" style="margin-top:8px">
+        <a class="btn" href="https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/view?usp=sharing" target="_blank" rel="noopener">⬇ View Resume (Google Drive)</a>
+      </div>
+    </section>
+
+    <footer>© <span id="y"></span> Aadil Ali · Built for GitHub Pages</footer>
   </div>
+
   <script>
+    // Persisted theme
+    const root = document.documentElement;
+    const btn = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme');
+    if(saved){ root.setAttribute('data-theme', saved); btn.textContent = saved==='dark'?'🌙 Dark':'☀️ Light'; }
+    btn.addEventListener('click', ()=>{
+      const current = root.getAttribute('data-theme')==='light'?'dark':'light';
+      root.setAttribute('data-theme', current);
+      btn.textContent = current==='dark'?'🌙 Dark':'☀️ Light';
+      localStorage.setItem('theme', current);
+    });
+
+    // year
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // reveal on scroll + emphasize impact items + nav highlight
+    const reveals = document.querySelectorAll('.reveal');
+    const impacts = document.querySelectorAll('.impact-item');
+    const sections = document.querySelectorAll('section, header.hero');
+    const navLinks = document.querySelectorAll('#navLinks a');
+
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('show'); }
+        if(e.target.classList.contains('impact-item')){
+          if(e.isIntersecting){ e.target.classList.add('active'); }
+          else{ e.target.classList.remove('active'); }
+        }
+      })
+    }, {threshold:.25});
+    reveals.forEach(el=>io.observe(el));
+
+    const so = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const id = entry.target.getAttribute('id') || 'top';
+          navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+id));
+        }
+      })
+    }, {threshold:.6});
+    sections.forEach(s=>so.observe(s));
+
+    // Parallax hero background
+    const heroBg = document.getElementById('heroBg');
+    window.addEventListener('scroll', ()=>{
+      const y = window.scrollY * 0.2; // subtle parallax
+      heroBg.style.transform = `translate3d(0, ${y}px, 0)`;
+    }, {passive:true});
   </script>
 </body>
 </html>
