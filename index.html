@@ -1,406 +1,379 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0a0e15">
-  <title>Aadil Ali • Product, Supply Chain & Analytics</title>
-  <meta name="description" content="Welcome to Aadil's website — dynamic professional supporting global operations through digital transformation, AI integration, and process improvement." />
-  <!-- Apple / system font stack -->
-  <style>
-    @font-face{font-family:"SF Pro Display";src:local("SF Pro Display"),local(".SFNSDisplay");font-display:swap}
-    @font-face{font-family:"SF Pro Text";src:local("SF Pro Text"),local(".SFNSText");font-display:swap}
-  </style>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Aadil Ali — Product • Supply Chain • Analytics</title>
+  <meta name="description" content="Aadil Ali — dynamic professional supporting global operations through digital transformation, AI integration, and process improvement."/>
   <style>
     :root{
-      --bg:#0a0e15; --ink:#eaf0ff; --muted:#a7b7d7; --accent:#7cc4ff; --accent2:#22d3ee;
-      --panel:rgba(255,255,255,.06); --ring:rgba(124,196,255,.25); --border:rgba(255,255,255,.10);
+      --bg:#f7fafc; --ink:#0b1323; --muted:#55627a; --accent:#0ea5e9; --accent2:#2563eb; --soft:#e9eef6;
     }
-    html[data-theme="light"]{
-      --bg:#f7fafc; --ink:#0c1726; --muted:#5b6b86; --accent:#2563eb; --accent2:#0891b2;
-      --panel:rgba(0,0,0,.03); --ring:rgba(37,99,235,.18); --border:rgba(0,0,0,.08);
-    }
-    html{scroll-behavior:smooth}
+    html[data-theme="dark"]{ --bg:#0a0e15; --ink:#ecf2ff; --muted:#a6b4cf; --soft:#111722 }
     *,*:before,*:after{box-sizing:border-box}
-    body{
-      margin:0;background:var(--bg);color:var(--ink);
-      font-family:"SF Pro Text","Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;overflow-x:hidden
-    }
-    h1,h2,h3{font-family:"SF Pro Display","Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif}
+
     a{color:var(--accent);text-decoration:none}
-    img{max-width:100%;height:auto}
+    h1,h2,h3{font-weight:800;line-height:1.15;margin:0 0 .3rem}
+    h2{font-size:clamp(28px,3vw,40px)}
+    h3{font-size:clamp(18px,2vw,22px)}
+    p{margin:.5rem 0 1rem;color:var(--ink);font-weight:400}
+    small, .muted{color:var(--muted)}
 
-    /* layout */
-    .shell{max-width:1100px;margin:0 auto;padding:24px 20px 80px}
+    .shell{max-width:1120px;margin:0 auto;padding:22px 18px 72px}
+    .section{padding:90px 0}
+    .section-head{text-align:center;margin-bottom:18px}
+    .section-sub{font-size:18px;color:var(--muted);max-width:880px;margin:8px auto 0}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,#c8d3e5,transparent);opacity:.5;margin:28px 0}
 
-    /* sticky nav */
-    .mini-nav{position:sticky;top:0;z-index:60;background:rgba(0,0,0,.25);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-    html[data-theme="light"] .mini-nav{background:rgba(255,255,255,.75)}
-    .mini-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:8px 16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .mini-avatar{width:36px;height:36px;border-radius:9px;object-fit:cover;border:1px solid var(--ring)}
-    .name{font-weight:800;letter-spacing:.2px}
-    .role{color:var(--muted);font-size:12px;margin-top:-2px}
-    .mini-links{display:flex;gap:10px;flex-wrap:wrap}
-    .mini-links a{padding:8px 10px;border-radius:10px;color:var(--ink);font-weight:600}
-    .mini-links a.active{background:var(--panel);border:1px solid var(--border)}
-    .toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:var(--panel);border:1px solid var(--border);cursor:pointer;font-weight:700}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.75);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid #dde5f2}
+    html[data-theme="dark"] .nav{background:rgba(10,14,21,.65);border-bottom-color:#1c2433}
+    .nav-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:8px 12px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{width:32px;height:32px;border-radius:7px;object-fit:cover}
+    .brand .title{font-weight:800}
+    .brand .tag{font-size:12px;color:var(--muted);margin-top:-2px}
+    .links{display:flex;gap:10px;flex-wrap:wrap}
+    .links a{padding:6px 10px;border-radius:10px;color:var(--ink);font-weight:700}
+    .links a.active{background:var(--soft)}
+    .toggle{border:0;background:var(--soft);padding:6px 10px;border-radius:10px;font-weight:700;cursor:pointer}
 
-    /* hero */
-    header.hero{position:relative;border-radius:28px;padding:72px 22px 80px;overflow:hidden;margin-top:16px;text-align:center}
-    header.hero .bg{position:absolute;inset:-20% -10% -30% -10%;pointer-events:none;z-index:-1;
-      background:
-        radial-gradient(900px 420px at 10% 20%, rgba(124,196,255,.25), transparent 60%),
-        radial-gradient(1100px 520px at 90% -10%, rgba(34,211,238,.25), transparent 60%),
-        linear-gradient(180deg, transparent, transparent 55%, rgba(0,0,0,.12));
-      transform:translate3d(0,0,0);
-    }
-    .avatar{width:112px;height:112px;border-radius:20px;object-fit:cover;border:2px solid var(--ring);box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    h1{margin:14px 0 4px;font-size:clamp(34px,5.4vw,64px);line-height:1.05}
-    .flare{display:inline-block;margin-top:10px;padding:8px 14px;border-radius:999px;background:linear-gradient(90deg,rgba(124,196,255,.18),rgba(34,211,238,.18));border:1px solid var(--border);color:var(--ink);font-weight:700;letter-spacing:.2px}
-    .type{display:block;margin-top:10px;color:var(--muted);font-weight:600;font-size:clamp(14px,2vw,18px);opacity:.0;animation:fadeIn 1s ease .4s forwards}
-    @keyframes fadeIn{to{opacity:1}}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;justify-content:center}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 14px;border-radius:12px;background:var(--panel);border:1px solid var(--border);color:var(--ink);font-weight:700}
-    .btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+    header.hero{position:relative;margin-top:16px;border-radius:26px;padding:56px 18px 60px;text-align:center;overflow:hidden;background:
+      radial-gradient(1000px 420px at 50% -10%, rgba(14,165,233,.18), transparent 70%),
+      radial-gradient(1200px 520px at 90% 10%, rgba(37,99,235,.14), transparent 70%)}
+    .avatar{width:96px;height:96px;border-radius:18px;object-fit:cover;margin:0 auto 12px;display:block;border:2px solid rgba(14,165,233,.25)}
+    .headline{font-size:clamp(34px,5.2vw,64px);letter-spacing:.2px}
+    .flare{display:inline-block;margin:14px auto 6px;padding:10px 16px;border-radius:999px;background:linear-gradient(90deg,rgba(14,165,233,.14),rgba(37,99,235,.14));font-weight:700}
+    .roles{color:var(--muted);font-weight:700;margin-top:6px}
+    .cta{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;border:1px solid #d8e1ef;background:#fff;color:#0b1323;font-weight:800}
+    html[data-theme="dark"] .btn{background:#0e1420;border-color:#1e2739;color:#ecf2ff}
+    .btn:hover{transform:translateY(-1px)}
+    .ghost{background:transparent;border-color:#cfd8ea}
 
-    /* section framing */
-    section{padding:96px 0}
-    .section-head{margin:0 auto 24px auto;text-align:center}
-    .section-kicker{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--border);color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.3px}
-    .section-title{font-size:clamp(26px,3.2vw,38px);margin:12px 0 6px}
-    .section-sub{max-width:840px;margin:0 auto;color:var(--muted)}
-
-    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent)}
-
-    /* reveal gate */
-    .gate{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease}
-    .gate.open{opacity:1;transform:none}
-    .reveal{opacity:0;transform:translateY(12px);transition:opacity .7s ease, transform .7s ease}
+    .gate{display:none}
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
     .reveal.show{opacity:1;transform:none}
 
-    /* skills chips */
-    .pills{margin-top:12px;text-align:center}
-    .pill{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--panel);border:1px solid var(--border);color:var(--ink);font-size:13px;margin:0 8px 10px}
+    .chips{text-align:center;margin-top:10px}
+    .chip{display:inline-block;margin:6px 8px;padding:8px 12px;border-radius:999px;background:var(--soft);font-weight:700}
 
-    /* experience timeline */
-    .timeline{position:relative;margin:28px auto 0;max-width:880px}
-    .timeline:before{content:"";position:absolute;left:24px;top:0;bottom:0;width:2px;background:linear-gradient(var(--accent),var(--accent2));opacity:.65}
-    .t-item{position:relative;display:flex;gap:18px;margin:0 0 26px 0}
-    .t-dot{position:absolute;left:15px;top:6px;width:18px;height:18px;border-radius:50%;background:linear-gradient(180deg,var(--accent),var(--accent2));box-shadow:0 0 0 4px rgba(124,196,255,.18)}
-    .t-card{margin-left:46px;padding:16px 18px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,var(--panel),transparent);transition:transform .25s ease, box-shadow .25s ease}
-    .t-card:hover{transform:scale(1.012);box-shadow:0 18px 55px rgba(0,0,0,.25)}
-    .t-title{margin:0 0 6px 0;font-weight:800}
-    .t-meta{color:var(--muted);font-size:13px;margin-bottom:8px}
+    .timeline{position:relative;margin:18px auto 0;max-width:900px}
+    .timeline:before{content:"";position:absolute;left:20px;top:0;bottom:0;width:2px;background:linear-gradient(var(--accent),var(--accent2));opacity:.75}
+    .t{position:relative;margin:0 0 22px}
+    .t .dot{position:absolute;left:11px;top:6px;width:18px;height:18px;border-radius:50%;background:linear-gradient(180deg,var(--accent),var(--accent2))}
+    .t h3{margin:0 0 4px}
+    .t .meta{color:var(--muted);font-size:13px;margin-bottom:6px}
+    .t .body{margin-left:44px}
 
-    /* cards/grids reused */
-    .exp-grid{display:grid;gap:14px;max-width:900px;margin:0 auto}
-    .exp-item{padding:16px 18px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,var(--panel),transparent)}
-    .exp-item strong{display:block}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:1000px;margin:0 auto}
+    .card{border:1px solid #d8e1ef;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#fff,rgba(255,255,255,.6))}
+    html[data-theme="dark"] .card{border-color:#1f2a3e;background:linear-gradient(180deg,#0e1420,#0e1420f2)}
+    .thumb{aspect-ratio:16/9;width:100%;object-fit:cover;background:linear-gradient(135deg,#e6f2ff,#f1f5ff)}
+    .card .pad{padding:14px}
+    .card h3{margin:0 0 4px}
+    .card p{margin:0;color:var(--muted)}
 
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:1000px;margin:0 auto}
-    .proj{padding:18px;border-radius:16px;background:linear-gradient(180deg, var(--panel), transparent);border:1px solid var(--border);transition:transform .25s ease}
-    .proj:hover{transform:translateY(-4px)}
-    .proj p{margin:.35rem 0 0 0;color:var(--muted);font-size:14px}
+    .gallery{display:grid;grid-template-columns:1fr;gap:40px;max-width:820px;margin:0 auto}
+    .shot img{width:100%;border-radius:16px}
 
-    .gallery{display:grid;grid-template-columns:1fr;gap:42px;max-width:820px;margin:0 auto}
-    .shot{text-align:center}
-    .shot img{width:100%;border-radius:16px;box-shadow:0 25px 70px rgba(0,0,0,.35)}
-    .caption{margin-top:8px;color:var(--muted);font-size:14px}
+    footer{color:var(--muted);text-align:center;padding:40px 0}
 
-    .resume-wrap{margin-top:16px;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:12px}
-    .resume-wrap iframe{width:100%;height:560px;border:0;border-radius:12px;background:#fff}
-    @media (max-width:600px){ .resume-wrap iframe{height:420px} }
-
-    footer{text-align:center;color:var(--muted);padding:40px 0}
-
-    /* progress */
-    #scrollProgress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));z-index:1000;box-shadow:0 0 10px rgba(0,0,0,.25)}
-    /* responsive tweaks */
-    @media (max-width:900px){ .timeline:before{left:18px}.t-dot{left:9px}.t-card{margin-left:38px} }
-    @media (max-width:480px){ .btn{padding:12px;font-size:14px} .avatar{width:92px;height:92px} }
+    #scrollProgress{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));z-index:1000}
+    @media (max-width:560px){ .btn{font-weight:700} .headline{letter-spacing:.1px} }
   </style>
 </head>
 <body>
-  <!-- scroll progress -->
-  <div id="scrollProgress" aria-hidden="true"></div>
+  <div id="scrollProgress"></div>
 
-  <!-- NAV -->
-  <div class="mini-nav">
-    <div class="mini-inner">
+  <nav class="nav">
+    <div class="nav-in">
       <div class="brand">
-        <img class="mini-avatar" src="assets/profile.jpg" alt="Aadil Ali"/>
+        <img src="assets/profile.jpg" alt="Aadil Ali"/>
         <div>
-          <div class="name">Aadil Ali</div>
-          <div class="role">Product • Supply Chain • Analytics</div>
+          <div class="title">Aadil Ali</div>
+          <div class="tag">Product • Supply Chain • Analytics</div>
         </div>
       </div>
-      <div style="display:flex;align-items:center;gap:10px">
-        <div class="mini-links" id="navLinks">
+      <div style="display:flex;gap:8px;align-items:center">
+        <div class="links" id="navLinks">
           <a href="#top">Top</a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#projects">Portfolio</a>
           <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
         </div>
-        <button class="toggle" id="themeToggle">🌙 Dark</button>
+        <button class="toggle" id="themeBtn">☀️</button>
       </div>
     </div>
-  </div>
+  </nav>
 
   <div class="shell">
-    <!-- HERO -->
     <header id="top" class="hero">
-      <div class="bg" id="heroBg" aria-hidden="true"></div>
-      <img class="avatar" src="assets/profile.jpg" alt="Aadil Ali" loading="eager"/>
-      <h1>Welcome to Aadil’s Website</h1>
-      <span class="flare">Dynamic professional supporting global operations through digital transformation, AI integration, and process improvement</span>
-      <span class="type">Product Owner • Supply Chain Analyst • Business Analyst</span>
-      <div class="cta">
-        <a class="btn" href="#about">★ About</a>
-        <a class="btn" href="#experience">↳ Experience</a>
-        <a class="btn" href="#projects">↳ Projects</a>
-        <a class="btn" href="#gallery">↳ Gallery</a>
-        <a class="btn" href="mailto:aadilali0630@gmail.com">✉ Email</a>
-        <a class="btn" href="https://www.linkedin.com/in/aadil-ali01/" target="_blank" rel="noopener">in LinkedIn</a>
-        <a class="btn" href="https://github.com/aaadil777" target="_blank" rel="noopener">⌁ GitHub</a>
-        <a class="btn" href="https://calendar.google.com/appointments/schedules/AcZssZ1bdsyGyWYywDzVKcUeWpQteRkzItjo292s6fmdwFW3MnvtrE-g4UgDKx-FBeVXYlooG8_hzJSM" target="_blank" rel="noopener">📅 Book</a>
-        <a class="btn" href="assets/aadil-ali.vcf" download>👤 Save contact</a>
-        <a class="btn" href="https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/view?usp=sharing" target="_blank" rel="noopener">⬇ Resume (PDF)</a>
+      <img class="avatar" src="assets/profile.jpg" alt="Aadil"/>
+      <h1 class="headline">Welcome to Aadil’s Website</h1>
+      <div class="flare">Dynamic professional supporting global operations through digital transformation, AI integration, and process improvement</div>
+      <div class="roles">Product Owner • Supply Chain Analyst • Business Analyst</div>
+      <div class="cta" style="margin-top:18px">
+        <a class="btn ghost" href="#about">About</a>
+        <a class="btn ghost" href="#timeline">Experience</a>
+        <a class="btn ghost" href="#projects">Portfolio</a>
+        <a class="btn" href="mailto:aadilali0630@gmail.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/aadil-ali01/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/aaadil777" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://calendar.google.com/appointments/schedules/AcZssZ1bdsyGyWYywDzVKcUeWpQteRkzItjo292s6fmdwFW3MnvtrE-g4UgDKx-FBeVXYlooG8_hzJSM" target="_blank" rel="noopener">Book</a>
+        <a class="btn" href="assets/aadil-ali.vcf" download>Download contact</a>
+        <a class="btn" href="https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/view?usp=sharing" target="_blank" rel="noopener">Resume (PDF)</a>
       </div>
     </header>
 
-    <!-- ABOUT -->
-    <section id="about" class="gate">
-      <div class="section-head">
-        <span class="section-kicker">About</span>
-        <h2 class="section-title">Who I am & how I work</h2>
-        <p class="section-sub">I bring a multidisciplinary background in public health, supply chain, and technology—diagnosing operational inefficiencies, architecting data-driven solutions, and leading cross-functional teams to deliver scalable, sustainable change across manufacturing, pharma, retail, and public sector domains.</p>
-      </div>
-      <p class="section-sub">Proficient in SAP <b>S/4HANA & IBP</b>, Salesforce, Workday HCM, Power BI, and advanced forecasting (Excel/Solver, Monte Carlo) with <b>AWS CloudWatch</b> visibility. I bridge strategy and execution through Agile delivery and KPI-driven roadmaps.</p>
-    </section>
+    <main id="content" class="gate">
+      <section id="about" class="section">
+        <div class="section-head">
+          <h2>About</h2>
+          <p class="section-sub">
+            I combine public health, supply chain, and technology to diagnose operational inefficiencies and lead data-driven change across manufacturing, pharma, retail, and public sectors.
+            Proficient with SAP S/4HANA & IBP, Salesforce, Workday HCM, Power BI, and advanced forecasting (Excel/Solver, Monte Carlo) with AWS CloudWatch visibility.
+          </p>
+        </div>
+      </section>
 
-    <div class="divider"></div>
+      <div class="divider"></div>
 
-    <!-- SKILLS -->
-    <section id="skills" class="gate">
-      <div class="section-head">
-        <span class="section-kicker">Skills</span>
-        <h2 class="section-title">Systems, data, and delivery methods</h2>
-        <p class="section-sub">Pulled from my resume—grouped the way recruiters scan.</p>
-      </div>
-      <div class="exp-grid">
-        <div class="exp-item reveal"><strong>Systems & Platforms</strong> SAP (S/4HANA, IBP, FICO), Salesforce, Workday HCM, Snowflake, Datadog, SonarQube, Kong Gateway, ArcGIS</div>
-        <div class="exp-item reveal"><strong>Data & Tools</strong> Power BI, Tableau, DAX, Excel (PivotTables, VBA, Macros)</div>
-        <div class="exp-item reveal"><strong>Languages</strong> <span class="pill">Python</span> <span class="pill">SQL</span> <span class="pill">R</span></div>
-        <div class="exp-item reveal"><strong>Cloud & DevOps</strong> AWS CloudWatch, Docker, Kubernetes, Terraform, PowerShell, CI/CD</div>
-        <div class="exp-item reveal"><strong>Methods & Certifications</strong> Agile / Scrum (PSPO I, PSM I), Lean Six Sigma</div>
-      </div>
-    </section>
+      <section id="skills" class="section">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p class="section-sub">Systems, platforms, languages, and methods I use.</p>
+        </div>
+        <div class="chips">
+          <span class="chip">SAP S/4HANA</span>
+          <span class="chip">SAP IBP</span>
+          <span class="chip">SAP FICO</span>
+          <span class="chip">Salesforce</span>
+          <span class="chip">Workday HCM</span>
+          <span class="chip">Snowflake</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Tableau</span>
+          <span class="chip">Excel (PivotTables/VBA/Macros)</span>
+          <span class="chip">Datadog</span>
+          <span class="chip">SonarQube</span>
+          <span class="chip">Kong Gateway</span>
+          <span class="chip">AWS CloudWatch</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Kubernetes</span>
+          <span class="chip">Terraform</span>
+          <span class="chip">PowerShell</span>
+          <span class="chip">CI/CD</span>
+          <span class="chip">Python</span>
+          <span class="chip">SQL</span>
+          <span class="chip">R</span>
+          <span class="chip">Agile/Scrum (PSPO I, PSM I)</span>
+          <span class="chip">Lean Six Sigma</span>
+        </div>
+      </section>
 
-    <div class="divider"></div>
+      <div class="divider"></div>
 
-    <!-- EXPERIENCE TIMELINE -->
-    <section id="experience" class="gate">
-      <div class="section-head">
-        <span class="section-kicker">Experience</span>
-        <h2 class="section-title">What I’ve shipped & improved</h2>
-        <p class="section-sub">A vertical timeline with dates and impact highlights.</p>
-      </div>
-
-      <div class="timeline">
-        <div class="t-item reveal">
-          <span class="t-dot" aria-hidden="true"></span>
-          <div class="t-card">
-            <h3 class="t-title">Caterpillar — Strategic Procurement & Planning Division Intern</h3>
-            <div class="t-meta">May 2025 – Present · Peoria, IL</div>
-            <p>Built end-to-end Power BI logistics visibility integrating <b>Snowflake CTEs</b>; validated HVLV dealer orders across <b>256+ machines</b> via Excel optimization; KPI sourcing dashboards. Recognition in Case Competition for measurable cost savings & risk mitigation. (SAP <b>S/4HANA</b>)</p>
-          </div>
+      <section id="timeline" class="section">
+        <div class="section-head">
+          <h2>Timeline of my growth</h2>
+          <p class="section-sub">Roles and impact highlights.</p>
         </div>
 
-        <div class="t-item reveal">
-          <span class="t-dot"></span>
-          <div class="t-card">
-            <h3 class="t-title">Stark State College — IT Strategy & Implementation Associate (Consultant)</h3>
-            <div class="t-meta">Jan 2023 – Present · North Canton, OH</div>
-            <p>Implemented <b>SAP FICO</b> with external B2B & university systems; Streamlit + Cursor for reporting transparency; AI-enabled tooling across academic/admin workflows; aligned IT initiatives with organizational strategy.</p>
+        <div class="timeline">
+          <div class="t reveal">
+            <span class="dot"></span>
+            <div class="body">
+              <h3>Caterpillar — Strategic Procurement & Planning Division Intern</h3>
+              <div class="meta">May 2025 – Present · Peoria, IL</div>
+              <p>Power BI logistics visibility with Snowflake CTEs; Excel optimization validated HVLV dealer orders across 256+ machines; sourcing KPI dashboards; recognition for measurable cost savings and risk mitigation. (SAP S/4HANA)</p>
+            </div>
+          </div>
+          <div class="t reveal">
+            <span class="dot"></span>
+            <div class="body">
+              <h3>Stark State College — IT Strategy & Implementation Associate (Consultant)</h3>
+              <div class="meta">Jan 2023 – Present · North Canton, OH</div>
+              <p>Implemented SAP FICO integrations with external B2B & university systems; Streamlit + Cursor reporting; AI-enabled workflow improvements; alignment to organizational strategy.</p>
+            </div>
+          </div>
+          <div class="t reveal">
+            <span class="dot"></span>
+            <div class="body">
+              <h3>84.51° (Kroger) — Product Owner Co-op</h3>
+              <div class="meta">Aug 2024 – Dec 2024 · Chicago, IL</div>
+              <p>Agile ceremonies and AI-assisted JIRA/Mural boosted velocity ~25%; API health with Python/SQL + Datadog and SonarQube; supported Kong Gateway + Terraform migration; standardized API scorecards.</p>
+            </div>
+          </div>
+          <div class="t reveal">
+            <span class="dot"></span>
+            <div class="body">
+              <h3>Gilead Sciences — Supply Chain Planning Intern</h3>
+              <div class="meta">May 2024 – Aug 2024 · Foster City, CA</div>
+              <p>Automated SAP S/4HANA & IBP for demand/replenishment across India, Canada, Brazil; Excel/Solver + Monte Carlo forecasting with AWS CloudWatch monitoring; Power BI stockout-risk dashboards.</p>
+            </div>
+          </div>
+          <div class="t reveal">
+            <span class="dot"></span>
+            <div class="body">
+              <h3>Summit County Executive — Business Analyst Intern</h3>
+              <div class="meta">Feb 2023 – Jul 2023 · Akron, OH</div>
+              <p>Workday HCM migration of 500+ employee records with QA/testing; workforce planning dashboards; improved HR data accuracy and financial forecasting inputs.</p>
+            </div>
+          </div>
+          <div class="t reveal">
+            <span class="dot"></span>
+            <div class="body">
+              <h3>All-American Freight Logistics — Web Developer & Strategist</h3>
+              <div class="meta">Jan 2024 – May 2024 · Akron, OH</div>
+              <p>Full-stack website and Salesforce dashboards improved vendor communication, fleet utilization, and KPI reporting for leadership.</p>
+            </div>
+          </div>
+          <div class="t reveal">
+            <span class="dot"></span>
+            <div class="body">
+              <h3>Marion Public Health — Health Data Strategist & BI Analyst</h3>
+              <div class="meta">Jul 2023 – Jan 2024 · Marion, OH</div>
+              <p>Live Power BI + ArcGIS infectious-disease dashboard accelerated containment responses and strengthened cross-agency coordination.</p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="t-item reveal">
-          <span class="t-dot"></span>
-          <div class="t-card">
-            <h3 class="t-title">84.51° (Kroger) — Product Owner Co-op</h3>
-            <div class="t-meta">Aug 2024 – Dec 2024 · Chicago, IL</div>
-            <p>Led Agile ceremonies; AI-driven JIRA/Mural workflows (~25% velocity); API reliability with Python/SQL + <b>Datadog</b>, <b>SonarQube</b>; supported <b>Kong Gateway</b> & <b>Terraform</b> migration; standardized API scorecards.</p>
-          </div>
+      <div class="divider"></div>
+
+      <!-- PROJECTS WITH EMOJIS + REWRITTEN USABILITY ENTRY -->
+      <section id="projects" class="section">
+        <div class="section-head">
+          <h2>Portfolio projects</h2>
+          <p class="section-sub">A quick selection with thumbnails.</p>
         </div>
-
-        <div class="t-item reveal">
-          <span class="t-dot"></span>
-          <div class="t-card">
-            <h3 class="t-title">Gilead Sciences — Supply Chain Planning Intern</h3>
-            <div class="t-meta">May 2024 – Aug 2024 · Foster City, CA</div>
-            <p>Automated <b>SAP S/4HANA & IBP</b> for demand/replenishment across India, Canada, Brazil; Excel/Solver + Monte Carlo forecasting with <b>AWS CloudWatch</b> monitoring; Power BI risk-mitigation dashboards.</p>
-          </div>
+        <div class="grid">
+          <a class="card reveal" href="https://drive.google.com/file/d/1lc3x2ueLaNYztbQAYWTSoUokFv91zSp1/view?usp=drive_link" target="_blank" rel="noopener">
+            <img class="thumb" src="assets/thumb-api.jpg" alt="API Scorecard (Datadog + SonarQube)" onerror="this.style.background='linear-gradient(135deg,#d7ecff,#eef3ff)'; this.removeAttribute('src');">
+            <div class="pad">
+              <h3>📊 API Scorecard</h3>
+              <p>Cross-functional Datadog + SonarQube reliability and code-quality view.</p>
+            </div>
+          </a>
+          <a class="card reveal" href="https://www.scrum.org/certificates/1152261" target="_blank" rel="noopener">
+            <img class="thumb" src="assets/thumb-pspo.jpg" alt="PSPO I" onerror="this.style.background='linear-gradient(135deg,#e6f7ff,#eef3ff)'; this.removeAttribute('src');">
+            <div class="pad">
+              <h3>🎯 PSPO I</h3>
+              <p>Product ownership foundations for delivery & stakeholder value.</p>
+            </div>
+          </a>
+          <a class="card reveal" href="https://www.credly.com/badges/58187f5b-9ae7-4960-98b4-da648b63b08e/public_url" target="_blank" rel="noopener">
+            <img class="thumb" src="assets/thumb-psm.jpg" alt="PSM I" onerror="this.style.background='linear-gradient(135deg,#f0f7ff,#eef3ff)'; this.removeAttribute('src');">
+            <div class="pad">
+              <h3>🌀 PSM I</h3>
+              <p>Agile facilitation, empiricism, and continuous improvement.</p>
+            </div>
+          </a>
+          <a class="card reveal" href="https://drive.google.com/file/d/15-33C7BSzdV6xGRwh_961sYyXlZOf4WP/view?usp=sharing" target="_blank" rel="noopener">
+            <img class="thumb" src="assets/thumb-arcgis.jpg" alt="ArcGIS Route Planning" onerror="this.style.background='linear-gradient(135deg,#e8fff5,#eef3ff)'; this.removeAttribute('src');">
+            <div class="pad">
+              <h3>🗺️ ArcGIS Route Planning</h3>
+              <p>Vehicle routing & optimization with geospatial analytics.</p>
+            </div>
+          </a>
+          <a class="card reveal" href="https://github.com/hornbuck/spring-hackathon-23" target="_blank" rel="noopener">
+            <img class="thumb" src="assets/thumb-pygame.jpg" alt="OSU Hackathon Pygame" onerror="this.style.background='linear-gradient(135deg,#fff7e6,#eef3ff)'; this.removeAttribute('src');">
+            <div class="pad">
+              <h3>🎮 OSU Hackathon: Pygame</h3>
+              <p>Rapid Python prototyping and gameplay mechanics.</p>
+            </div>
+          </a>
+          <a class="card reveal" href="https://www.figma.com/file/vceqVV63y6SgHM0tfQynqq/AllergyScan?type=design&node-id=0-1&mode=design" target="_blank" rel="noopener">
+            <img class="thumb" src="assets/thumb-figma.jpg" alt="AllergyScan UI" onerror="this.style.background='linear-gradient(135deg,#f6f0ff,#eef3ff)'; this.removeAttribute('src');">
+            <div class="pad">
+              <h3>🏥 Healthcare UI — Allergy Scanner</h3>
+              <p>Usability engineering with Information Architecture (IA) for a retail healthcare allergy-scanning & detection interface; focused on clear flows and accessible interactions.</p>
+            </div>
+          </a>
+          <a class="card reveal" href="https://drive.google.com/file/d/1TIkFRiiVuFRP1bvYrWEZ3tfdk964IoDb/view?usp=sharing" target="_blank" rel="noopener">
+            <img class="thumb" src="assets/thumb-nalox.jpg" alt="NaloxBox Assessment" onerror="this.style.background='linear-gradient(135deg,#e6fbff,#eef3ff)'; this.removeAttribute('src');">
+            <div class="pad">
+              <h3>🩺 NaloxBox Assessment</h3>
+              <p>Public-health analytics for harm-reduction access points.</p>
+            </div>
+          </a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="divider"></div>
+      <div class="divider"></div>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="gate">
-      <div class="section-head">
-        <span class="section-kicker">Projects</span>
-        <h2 class="section-title">Selected work & credentials</h2>
-        <p class="section-sub">Brief cards recruiters can click through quickly.</p>
-      </div>
-      <div class="projects">
-        <a class="proj reveal" href="https://drive.google.com/file/d/1lc3x2ueLaNYztbQAYWTSoUokFv91zSp1/view?usp=drive_link" target="_blank" rel="noopener">
-          <strong>API Scorecard</strong>
-          <p>Cross-functional Datadog + SonarQube reliability and code-quality view.</p>
-        </a>
-        <a class="proj reveal" href="https://www.scrum.org/certificates/1152261" target="_blank" rel="noopener">
-          <strong>PSPO I</strong>
-          <p>Product ownership foundations applied to delivery & stakeholder value.</p>
-        </a>
-        <a class="proj reveal" href="https://www.credly.com/badges/58187f5b-9ae7-4960-98b4-da648b63b08e/public_url" target="_blank" rel="noopener">
-          <strong>PSM I</strong>
-          <p>Agile facilitation, empiricism, continuous improvement.</p>
-        </a>
-        <a class="proj reveal" href="https://drive.google.com/file/d/15-33C7BSzdV6xGRwh_961sYyXlZOf4WP/view?usp=sharing" target="_blank" rel="noopener">
-          <strong>ArcGIS Route Planning</strong>
-          <p>Vehicle routing & optimization with geospatial analytics.</p>
-        </a>
-        <a class="proj reveal" href="https://github.com/hornbuck/spring-hackathon-23" target="_blank" rel="noopener">
-          <strong>OSU Hackathon: Pygame</strong>
-          <p>Rapid Python prototyping and gameplay mechanics.</p>
-        </a>
-        <a class="proj reveal" href="https://www.figma.com/file/vceqVV63y6SgHM0tfQynqq/AllergyScan?type=design&node-id=0-1&mode=design" target="_blank" rel="noopener">
-          <strong>AllergyScan UI (Figma)</strong>
-          <p>Usability engineering deliverable—information architecture and flows.</p>
-        </a>
-        <a class="proj reveal" href="https://drive.google.com/file/d/1TIkFRiiVuFRP1bvYrWEZ3tfdk964IoDb/view?usp=sharing" target="_blank" rel="noopener">
-          <strong>NaloxBox Assessment</strong>
-          <p>Public health analytics for harm-reduction access points.</p>
-        </a>
-      </div>
-    </section>
+      <section id="gallery" class="section">
+        <div class="section-head">
+          <h2>Gallery</h2>
+          <p class="section-sub">Presentation moments.</p>
+        </div>
+        <div class="gallery">
+          <figure class="shot reveal">
+            <img src="assets/present-cat.jpg" alt="Caterpillar report-out"/>
+          </figure>
+          <figure class="shot reveal">
+            <img src="assets/present-gilead.jpg" alt="Gilead CFO organization presentation"/>
+          </figure>
+          <figure class="shot reveal">
+            <img src="assets/present-8451.jpg" alt="84.51° office photo"/>
+          </figure>
+        </div>
+      </section>
 
-    <div class="divider"></div>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="gate">
-      <div class="section-head">
-        <span class="section-kicker">Gallery</span>
-        <h2 class="section-title">Presentation moments</h2>
-        <p class="section-sub">A few snapshots from report-outs and showcase days.</p>
-      </div>
-      <div class="gallery">
-        <figure class="shot reveal">
-          <img src="assets/present-cat.jpg" alt="Caterpillar Intern Report Out on stage" loading="lazy" />
-          <figcaption class="caption">Caterpillar — SPPD Intern Report-Out</figcaption>
-        </figure>
-        <figure class="shot reveal">
-          <img src="assets/present-gilead.jpg" alt="Gilead CFO organization presentation" loading="lazy" />
-          <figcaption class="caption">Gilead Sciences — CFO organization presentation day</figcaption>
-        </figure>
-        <figure class="shot reveal">
-          <img src="assets/present-8451.jpg" alt="84.51° office photo" loading="lazy" />
-          <figcaption class="caption">84.51° — product & API operations showcase</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="gate">
-      <div class="section-head">
-        <span class="section-kicker">Contact</span>
-        <h2 class="section-title">Let’s connect</h2>
-        <p class="section-sub">Book time, email me, or save my contact card directly.</p>
-      </div>
-      <div class="cta">
-        <a class="btn" href="https://calendar.google.com/appointments/schedules/AcZssZ1bdsyGyWYywDzVKcUeWpQteRkzItjo292s6fmdwFW3MnvtrE-g4UgDKx-FBeVXYlooG8_hzJSM" target="_blank" rel="noopener">📅 Book a call</a>
-        <a class="btn" href="mailto:aadilali0630@gmail.com">✉ Email</a>
-        <a class="btn" href="https://www.linkedin.com/in/aadil-ali01/" target="_blank" rel="noopener">in LinkedIn</a>
-        <a class="btn" href="assets/aadil-ali.vcf" download>👤 Download contact card</a>
-        <a class="btn" href="https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/view?usp=sharing" target="_blank" rel="noopener">⬇ Resume (PDF)</a>
-      </div>
-
-      <div class="resume-wrap reveal" style="max-width:900px;margin:16px auto 0;">
-        <iframe src="https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/preview" allow="autoplay" loading="lazy" title="Aadil Ali — Resume"></iframe>
-      </div>
-    </section>
+      <section id="contact" class="section">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="section-sub">Book time, email, or download my contact card.</p>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://calendar.google.com/appointments/schedules/AcZssZ1bdsyGyWYywDzVKcUeWpQteRkzItjo292s6fmdwFW3MnvtrE-g4UgDKx-FBeVXYlooG8_hzJSM" target="_blank" rel="noopener">Book</a>
+          <a class="btn" href="mailto:aadilali0630@gmail.com">Email</a>
+          <a class="btn" href="https://www.linkedin.com/in/aadil-ali01/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="assets/aadil-ali.vcf" download>Download contact</a>
+          <a class="btn" href="https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/view?usp=sharing" target="_blank" rel="noopener">Resume (PDF)</a>
+        </div>
+      </section>
+    </main>
 
     <footer>© <span id="y"></span> Aadil Ali · Built for GitHub Pages</footer>
   </div>
 
   <script>
-    // theme persistence
-    const root = document.documentElement;
-    const btn = document.getElementById('themeToggle');
-    const saved = localStorage.getItem('theme');
-    if(saved){ root.setAttribute('data-theme', saved); btn.textContent = saved==='dark'?'🌙 Dark':'☀️ Light'; }
-    btn.addEventListener('click', ()=>{
-      const current = root.getAttribute('data-theme')==='light'?'dark':'light';
-      root.setAttribute('data-theme', current);
-      btn.textContent = current==='dark'?'🌙 Dark':'☀️ Light';
-      localStorage.setItem('theme', current);
-    });
+    const root=document.documentElement, themeBtn=document.getElementById('themeBtn');
+    const saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);
+    themeBtn.textContent = root.getAttribute('data-theme')==='dark'?'🌙':'☀️';
+    themeBtn.onclick=()=>{const t=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',t);themeBtn.textContent=t==='dark'?'🌙':'☀️';localStorage.setItem('theme',t)};
 
-    // year
-    document.getElementById('y').textContent = new Date().getFullYear();
+    const gate=document.getElementById('content');
+    const openGate=()=>{gate.style.display='block';setTimeout(()=>{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show'))},120)};
+    setTimeout(openGate,1000);
+    window.addEventListener('scroll',()=>{if(gate.style.display!=='block') openGate()},{once:true,passive:true});
 
-    // intersection reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const gates = document.querySelectorAll('.gate');
-    const navLinks = document.querySelectorAll('#navLinks a');
-    const sections = document.querySelectorAll('section, header.hero');
-
-    // open main sections after 1s (initial gate)
-    setTimeout(()=>{ gates.forEach(g => g.classList.add('open')); }, 1000);
-
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); })
-    },{threshold:.25});
-    reveals.forEach(el=>io.observe(el));
-
-    // sticky highlight
-    const so = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          const id = entry.target.getAttribute('id') || 'top';
-          navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+id));
+    const sections=document.querySelectorAll('header.hero, main .section');
+    const links=document.querySelectorAll('#navLinks a');
+    const obs=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const id=e.target.id||'top';
+          links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));
         }
       })
     },{threshold:.55});
-    sections.forEach(s=>so.observe(s));
+    sections.forEach(s=>obs.observe(s));
 
-    // parallax hero
-    const heroBg = document.getElementById('heroBg');
-    window.addEventListener('scroll', ()=>{
-      const y = window.scrollY * 0.2;
-      heroBg.style.transform = `translate3d(0, ${y}px, 0)`;
-    }, {passive:true});
-
-    // scroll progress
-    function setProgress(){
-      const dh = document.documentElement;
-      const scrolled = (dh.scrollTop || document.body.scrollTop);
-      const height = (dh.scrollHeight - dh.clientHeight);
-      const pct = height ? (scrolled / height) * 100 : 0;
-      document.getElementById('scrollProgress').style.width = pct + '%';
+    function progress(){
+      const h=document.documentElement;
+      const sc=(h.scrollTop||document.body.scrollTop);
+      const max=h.scrollHeight-h.clientHeight;
+      document.getElementById('scrollProgress').style.width=(sc/max*100)+'%';
     }
-    window.addEventListener('scroll', setProgress, {passive:true});
-    window.addEventListener('resize', setProgress);
-    setProgress();
+    window.addEventListener('scroll',progress,{passive:true}); window.addEventListener('resize',progress); progress();
+
+    document.getElementById('y').textContent=new Date().getFullYear();
   </script>
 </body>
 </html>
