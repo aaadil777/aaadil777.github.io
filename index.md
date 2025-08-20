@@ -78,21 +78,17 @@ title: "Aadil Ali"
   </div>
 </section>
 
-<!-- index.md -->
 <section id="portfolio" class="reveal">
-  <h2 class="h-section">Projects &amp; Certifications</h2>
+  <h2 class="h-section">Projects & Certifications</h2>
   <div class="preview-grid">
     {% for p in site.data.projects %}
-      <a class="proj-card"
-         href="{{ p.url }}"
-         target="_blank" rel="noopener"
-         data-img="{{ p.image | relative_url }}">
-        <span class="proj-icon" aria-hidden="true">{{ p.emoji }}</span>
-        <div class="proj-meta">
-          <div class="proj-title">{{ p.title }}</div>
-          <p class="proj-desc">{{ p.desc }}</p>
-        </div>
-      </a>
+    <a class="proj-card" href="{{ p.url }}" target="_blank" rel="noopener" data-img="{{ p.image | relative_url }}">
+      <span class="proj-icon" aria-hidden="true">{{ p.emoji }}</span>
+      <div class="proj-meta">
+        <div class="proj-title">{{ p.title }}</div>
+        <p class="proj-desc">{{ p.desc }}</p>
+      </div>
+    </a>
     {% endfor %}
   </div>
 </section>
