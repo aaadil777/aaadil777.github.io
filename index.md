@@ -5,8 +5,11 @@ title: "Aadil Ali"
 
 <section class="hero">
   <img src="{{ '/assets/profile.jpg' | relative_url }}" class="avatar" alt="Aadil">
-  <h1>Welcome to Aadil’s Website</h1>
-  <div class="sublede">Dynamic professional supporting global operations through digital transformation, AI integration, and process improvement</div>
+  <h1>Hi! My name is Aadil.</h1>
+<p class="sublede"
+     data-typer
+     data-text="I am passionate about digital transformation, AI integration, and strategy. Navigate below to learn more about who I am.">
+  </p>
 
   <div class="chips" style="justify-content:center;margin-top:16px;">
     <span class="chip">SAP (S/4HANA, IBP, FICO)</span>
