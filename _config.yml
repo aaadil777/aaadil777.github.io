@@ -1,28 +1,28 @@
-# _config.yml
 title: "Aadil Ali — Portfolio"
 email: "aadilali0630@gmail.com"
-description: "Digital transformation, AI integration, and strategy."
-url: "https://aaadil777.github.io"
-baseurl: ""  # keep empty for a user/organization Pages site
+description: >
+  Digital transformation, AI integration, and strategy. Portfolio and contact.
 
-# Theme & plugins used by GitHub Pages
+url: "https://aaadil777.github.io"
+baseurl: ""
+
 theme: minima
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
 
-# Social / contact values used in templates
+# Social / links used in templates
 linkedin: "https://www.linkedin.com/in/aadil-ali01"
-github:   "https://github.com/aaadil777"
+github: "https://github.com/aaadil777"
 calendar: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1bdsyGyWYywDzVKcUeWpQteRkzItjo292s6fmdwFW3MnvtrE-g4UgDKx-FBeVXYlooG8_hzJSM"
 resume_url: "https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/view?usp=sharing"
 
-# Don’t process these paths
+# Keep paths simple
+include:
+  - assets
+  - _data
+
 exclude:
   - node_modules/
   - vendor/
   - .sass-cache/
   - .jekyll-cache/
-  - README.md
-  - Gemfile
-  - Gemfile.lock
