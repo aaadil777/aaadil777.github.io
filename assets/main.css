@@ -117,23 +117,45 @@ section{ margin:0 auto; max-width:1100px; padding:72px 20px; }
   padding:16px; border-radius:16px; background:#1a2330; border:1px solid var(--line);
   text-decoration:none; color:var(--text);
 }
-.proj-card:hover{ outline:var(--ring); }
-.proj-icon{
-  width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
-  background:#111922; border:1px solid var(--line); font-size:22px; color:var(--text);
+/* Project icon (emoji) */
+.proj-card .proj-icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #111922;
+  border: 1px solid var(--line);
+  /* Key bits: readable size + emoji-capable font */
+  font-size: 26px;
+  line-height: 1;
+  color: var(--text);
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",
+               -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
+
 .proj-title{ margin:2px 0 4px; font-weight:600; font-size:18px; }
 .proj-desc{ margin:0; color:var(--muted); font-size:15px; font-weight:400; }
 
-/* Hover preview (used by JS) */
 .hover-preview{
-  position:fixed; inset:auto 24px 24px auto; width:min(420px,40vw); height:230px;
-  border-radius:16px; overflow:hidden; pointer-events:none; z-index:60;
-  opacity:0; transform:translateY(8px); transition:opacity .25s ease,transform .25s ease;
-  border:1px solid var(--line); background:#101820;
+  position: fixed;
+  left: 24px; top: 24px;            /* JS will update these on move */
+  width: min(420px, 40vw);
+  height: 230px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #2a3548;
+  background: #101820;
+  box-shadow: 0 20px 50px rgba(0,0,0,.4);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .25s ease, transform .25s ease, left .05s linear, top .05s linear;
+  pointer-events: none;             /* so it never blocks clicks */
+  z-index: 60;
 }
 .hover-preview.in{ opacity:1; transform:translateY(0); }
-.hover-preview img{ width:100%; height:100%; object-fit:cover; }
+.hover-preview img{ width:100%; height:100%; object-fit:cover; display:block; }
+
 
 /* ===== Contact actions ===== */
 .contact-actions{
