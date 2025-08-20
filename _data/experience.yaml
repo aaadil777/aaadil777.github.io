@@ -1,0 +1,72 @@
+- role: "Strategic Procurement & Planning Division Intern"
+  company: "Caterpillar"
+  location: "Peoria, IL"
+  dates: "May 2025 – Present"
+  bullets:
+    - "Led end-to-end Power BI dashboard integrating Snowflake CTEs to improve full-truckload visibility, reduce shipping costs, and enable scalable dealer reporting."
+    - "Built Excel optimization & forecasting models (PivotTables, Macros) to validate HVLV dealer order data across 256+ machines, increasing planning accuracy and reducing manual work."
+    - "Designed KPI-driven Power BI reports on cost variance and delivery timeliness; earned top honors in Caterpillar Procurement Case Competition for measurable cost savings and risk-mitigation strategies."
+
+- role: "IT Strategy & Implementation Associate (Consultant)"
+  company: "Stark State College"
+  location: "North Canton, OH"
+  dates: "Jan 2023 – Present"
+  bullets:
+    - "Implemented SAP FICO with external B2B partners and university systems, streamlining reconciliation and accelerating transactions; leveraged Streamlit and Cursor for transparent reporting."
+    - "Deployed AI-enabled tools across academic/administrative workflows, reducing manual workload and improving institutional efficiency."
+    - "Partnered with leadership and clients to align IT implementations with organizational strategy for scalable financial and academic operations."
+
+- role: "Product Owner Co-op"
+  company: "84.51° (Kroger)"
+  location: "Chicago, IL"
+  dates: "Aug 2024 – Dec 2024"
+  bullets:
+    - "Facilitated Agile ceremonies; built AI-driven JIRA/Mural workflows boosting sprint velocity by ~25% and accelerating API delivery."
+    - "Monitored API health with Python/SQL + Datadog; integrated SonarQube; cut downtime risk; supported Kong Gateway + Terraform migration."
+    - "Standardized cross-functional API scorecards to prioritize optimization."
+
+- role: "Supply Chain Planning Intern"
+  company: "Gilead Sciences"
+  location: "Foster City, CA"
+  dates: "May 2024 – Aug 2024"
+  bullets:
+    - "Automated SAP S/4HANA & IBP workflows for demand/replenishment across India, Canada, and Brazil; used Microsoft Project for global stakeholder alignment."
+    - "Built Excel/Solver + Monte Carlo models; improved forecast accuracy and automated planning; integrated AWS CloudWatch for real-time visibility."
+    - "Created Power BI risk-mitigation dashboards integrating IBP forecasts with fulfillment metrics."
+
+# Additional Experience
+- role: "Business Analyst Intern — Workday HCM & Financial Forecasting"
+  company: "Summit County Executive"
+  location: "Akron, OH"
+  dates: "Feb 2023 – Jul 2023"
+  bullets:
+    - "Migrated 500+ employee records with QA/testing and built Power BI dashboards integrated with Workday HCM to improve workforce planning, HR accuracy, and financial forecasting."
+
+- role: "Web Developer & Strategist — Digital Transformation"
+  company: "All-American Freight Logistics"
+  location: "Akron, OH"
+  dates: "Jan 2024 – May 2024"
+  bullets:
+    - "Built a full-stack website and Salesforce dashboards to enhance vendor communication, track fleet utilization, and drive KPI-driven logistics decisions."
+
+- role: "BI Analyst — Public Health Data Visualization"
+  company: "Marion Public Health"
+  location: "Marion, OH"
+  dates: "Jul 2023 – Jan 2024"
+  bullets:
+    - "Built live Power BI + ArcGIS dashboards for infectious disease tracking, accelerating containment responses and improving cross-agency coordination."
+
+# Education (shown in timeline too)
+- role: "B.S. Computer Science • Supply Chain Management Minor (Teaching Assistant, CS 391)"
+  company: "Oregon State University"
+  location: "Corvallis, OR"
+  dates: "2023 – 2026 (TA: Aug 2024 – Present)"
+  bullets:
+    - "Facilitated sessions on ethical computing frameworks for 50+ undergrads; grading and discussion leadership."
+
+- role: "M.P.H. Epidemiology (Graduate Analyst — DEI Outcomes Research)"
+  company: "Youngstown State University"
+  location: "Youngstown, OH"
+  dates: "2020 – 2022"
+  bullets:
+    - "Led DEI attrition research; built Power BI dashboards highlighting student outcomes; delivered data-driven recommendations to leadership."
