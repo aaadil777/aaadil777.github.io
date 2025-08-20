@@ -116,10 +116,3 @@ title: "Aadil Ali"
   </div>
 </section>
 
-<a class="proj-card" href="#" data-img="{{ '/assets/proj-psm.jpg' | relative_url }}">
-  <span class="proj-icon">🎯</span>
-  <div class="proj-meta">
-    <div class="proj-title">TEST CARD</div>
-    <p class="proj-desc">If you see the emoji and the image preview, the loop is the only issue.</p>
-  </div>
-</a>
