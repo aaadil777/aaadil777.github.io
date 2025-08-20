@@ -1,29 +1,50 @@
+# ==== Site metadata ====
 title: "Aadil Ali — Portfolio"
-email: "aadilali0630@gmail.com"
-description: >
-  Digital transformation, AI integration, and strategy. Portfolio and contact.
+description: "Digital transformation, AI integration, and strategy."
+lang: en
 
+# Public URL for GitHub Pages (user/org site lives at the root)
 url: "https://aaadil777.github.io"
-baseurl: ""
+baseurl: ""   # keep empty for user/organization pages
 
-theme: minima
-plugins:
-  - jekyll-feed
-  #- jekyll-seo-tag
-
-# Social / links used in templates
+# Contact / social (used in templates & SEO)
+email: "your-email@example.com"
 linkedin: "https://www.linkedin.com/in/aadil-ali01"
 github: "https://github.com/aaadil777"
 calendar: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1bdsyGyWYywDzVKcUeWpQteRkzItjo292s6fmdwFW3MnvtrE-g4UgDKx-FBeVXYlooG8_hzJSM"
 resume_url: "https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/view?usp=sharing"
 
-# Keep paths simple
-include:
-  - assets
-  - _data
+# Optional: helps jekyll-seo-tag find your profiles
+social:
+  links:
+    - "https://www.linkedin.com/in/aadil-ali01"
+    - "https://github.com/aaadil777"
 
+# ==== Build & plugins ====
+theme: minima   # harmless even with custom layouts; remove if you want
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+
+# Default front matter (so pages render with your layout unless overridden)
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# ==== Excludes (won’t be processed/published) ====
 exclude:
   - node_modules/
   - vendor/
-  - .sass-cache/
-  - .jekyll-cache/
+  - .gitignore
+  - README.md
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - webpack.config.js
