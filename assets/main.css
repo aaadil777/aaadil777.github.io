@@ -207,3 +207,6 @@ noscript .reveal{ opacity:1 !important; transform:none !important; }
   .skills-grid, .proj-grid, .gallery{ grid-template-columns:1fr; }
   .hover-preview{ display:none; }
 }
+
+/* If JS doesn't run, still show sections */
+.no-js .reveal { opacity: 1 !important; transform: none !important; }

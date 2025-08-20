@@ -1,20 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">  <!-- add class no-js -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
+
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 </head>
-
 <body>
+  <!-- remove no-js so CSS knows JS is live -->
+  <script>document.documentElement.classList.remove('no-js');</script>
+
   <header class="site-nav">
     <div class="nav-inner">
       <div class="brand">
         <img src="{{ '/assets/profile.jpg' | relative_url }}" alt="Aadil" class="brand-avatar">
         <div class="brand-meta">
           <div class="brand-name">Aadil Ali</div>
-          <div class="brand-sub">Digital transformation • AI integration • Strategy</div>
+          <div class="brand-sub">Digital Transformation • AI Integration • Strategy</div>
         </div>
       </div>
       <nav class="links">
@@ -37,6 +40,7 @@
     <div>© {{ "now" | date: "%Y" }} Aadil Ali</div>
   </footer>
 
-  <script src="{{ '/assets/main.js' | relative_url }}"></script>
+  <!-- Ensure script path is correct and actually runs -->
+  <script defer src="{{ '/assets/main.js' | relative_url }}"></script>
 </body>
 </html>
