@@ -1,42 +1,28 @@
-# === Site metadata ===
-title: "Aadil Ali — Digital Transformation, AI Integration, Strategy"
-email: aadilali0630@gmail.com
-description: >-
-  Portfolio and contact hub for Aadil Ali — focused on digital transformation,
-  AI integration, and strategy across product, supply chain, and analytics.
+# _config.yml
+title: "Aadil Ali — Portfolio"
+email: "aadilali0630@gmail.com"
+description: "Digital transformation, AI integration, and strategy."
+url: "https://aaadil777.github.io"
+baseurl: ""  # keep empty for a user/organization Pages site
 
-# For a user/organization site, baseurl stays empty.
-baseurl: ""                         # e.g. "/blog" for project sites
-url: "https://aaadil777.github.io"  # your live site
-
-# === Build settings ===
-# Disable the bundled Minima theme so your custom CSS/JS take effect.
-theme: null
-
-# Use your default layout for all pages and posts
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default
-
-# Markdown/Permalinks (optional but sensible)
-markdown: kramdown
-permalink: pretty
-
-# Plugins that GitHub Pages supports
+# Theme & plugins used by GitHub Pages
+theme: minima
 plugins:
-  - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-seo-tag
+
+# Social / contact values used in templates
 linkedin: "https://www.linkedin.com/in/aadil-ali01"
-github: "https://github.com/aaadil777"
+github:   "https://github.com/aaadil777"
 calendar: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1bdsyGyWYywDzVKcUeWpQteRkzItjo292s6fmdwFW3MnvtrE-g4UgDKx-FBeVXYlooG8_hzJSM"
 resume_url: "https://drive.google.com/file/d/1JfynHbI1yvtBb6x_Bwq6HZEJpXT6x4sK/view?usp=sharing"
-# Files/dirs Jekyll shouldn’t process
+
+# Don’t process these paths
 exclude:
-  - README.md
   - node_modules/
   - vendor/
-  - .gitignore
+  - .sass-cache/
+  - .jekyll-cache/
+  - README.md
   - Gemfile
   - Gemfile.lock
