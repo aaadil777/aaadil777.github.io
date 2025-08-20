@@ -79,24 +79,22 @@ title: "Aadil Ali"
 </section>
 
 <section id="portfolio" class="reveal">
-  <h2 class="h-section">Projects &amp; Certifications</h2>
-
+  <h2 class="h-section">Projects & Certifications</h2>
   <div class="preview-grid">
     {% for p in site.data.projects %}
-      <a class="proj-card preview"
+      <a class="proj-card"
          href="{{ p.url }}"
-         data-img="{{ p.img | relative_url }}"
-         aria-label="{{ p.title }}">
-        <div class="p-body">
-          <div class="proj-icon" aria-hidden="true">{{ p.icon }}</div>
-          <div class="p-title">{{ p.title }}</div>
-          <p class="p-desc">{{ p.desc }}</p>
+         target="_blank" rel="noopener"
+         data-img="{{ p.image | relative_url }}">
+        <span class="proj-icon" aria-hidden="true">{{ p.emoji }}</span>
+        <div class="proj-meta">
+          <div class="proj-title">{{ p.title }}</div>
+          <p class="proj-desc">{{ p.desc }}</p>
         </div>
       </a>
     {% endfor %}
   </div>
 </section>
-
 
 <section id="gallery" class="reveal">
   <h2 class="h-section">Presentation moments</h2>
