@@ -19,7 +19,6 @@ title: "Aadil Ali"
   <p>SAP (S/4HANA, IBP, FICO) · Power BI · Snowflake · Workday HCM · Python · SQL · AWS CloudWatch · Agile (PSPO I, PSM I)</p>
 </section>
 
-<!-- Temporarily remove loops to prove the page builds
 <section id="timeline" class="reveal">
   <h2 class="h-section">Timeline</h2>
   <div class="timeline">
@@ -49,7 +48,6 @@ title: "Aadil Ali"
     {% endfor %}
   </div>
 </section>
--->
 
 <section id="contact" class="reveal">
   <h2 class="h-section">Get in touch</h2>
