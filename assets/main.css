@@ -28,6 +28,7 @@ body{
 /* Links */
 a{ color:var(--link); text-decoration:underline; text-underline-offset:2px; }
 a:hover{ color:var(--link-2); }
+a:focus-visible{ outline:var(--ring); border-radius:8px; text-decoration:none; }
 
 /* ===== Top nav ===== */
 .site-nav{
@@ -52,6 +53,7 @@ a:hover{ color:var(--link-2); }
   border:1px solid var(--line);
 }
 .pill:hover{ outline:var(--ring); }
+.links a.active{ background:#243248; }
 
 /* ===== Sections ===== */
 section{ margin:0 auto; max-width:1100px; padding:72px 20px; }
@@ -123,7 +125,7 @@ section{ margin:0 auto; max-width:1100px; padding:72px 20px; }
 .proj-title{ margin:2px 0 4px; font-weight:600; font-size:18px; }
 .proj-desc{ margin:0; color:var(--muted); font-size:15px; font-weight:400; }
 
-/* Hover preview */
+/* Hover preview (used by JS) */
 .hover-preview{
   position:fixed; inset:auto 24px 24px auto; width:min(420px,40vw); height:230px;
   border-radius:16px; overflow:hidden; pointer-events:none; z-index:60;
@@ -132,6 +134,23 @@ section{ margin:0 auto; max-width:1100px; padding:72px 20px; }
 }
 .hover-preview.in{ opacity:1; transform:translateY(0); }
 .hover-preview img{ width:100%; height:100%; object-fit:cover; }
+
+/* ===== Contact actions ===== */
+.contact-actions{
+  display:flex; gap:18px; flex-wrap:wrap; align-items:stretch;
+}
+.action{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:10px; padding:16px 20px; min-width:160px;
+  text-decoration:none; color:var(--text); background:#1a2330;
+  border:1px solid var(--line); border-radius:16px;
+}
+.action:hover{ outline:var(--ring); }
+.action .label{ font-weight:600; }
+.action .icon{
+  font-size:22px; opacity:.95; display:block; line-height:1;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,.25));
+}
 
 /* ===== Gallery ===== */
 .gallery{ display:grid; gap:10px; grid-template-columns:repeat(3,minmax(0,1fr)); }
@@ -145,6 +164,9 @@ section{ margin:0 auto; max-width:1100px; padding:72px 20px; }
 /* Reveal-on-scroll */
 .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
 .reveal.in{ opacity:1; transform:translateY(0); }
+
+/* ===== No-JS safety (show sections without animation) ===== */
+noscript .reveal{ opacity:1 !important; transform:none !important; }
 
 /* ===== Responsive ===== */
 @media (max-width: 900px){
