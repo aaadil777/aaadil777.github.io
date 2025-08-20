@@ -6,28 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{{ page.title | default: site.title }}</title>
-  <meta name="theme-color" content="#0b0f15">
 
-  <!-- Fonts / Icons (optional but useful for contact icons) -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-3oViNnqQjH2Bv9Q5fM0wqF4b7Qq9l3W4m3n3gS9b5y5jXq1ZC0q1yKXcG/6pmzvM1s8qUeBf4n5yC0P3m5Jb9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Your custom CSS (ensure file exists at /assets/main.css) -->
+  <!-- Load your custom CSS -->
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 </head>
 <body>
 
-  <!-- Skip link for accessibility -->
-  <a href="#top" class="sr-only sr-only-focusable">Skip to content</a>
-
   <!-- Sticky top bar -->
-  <header class="site-nav" role="navigation" aria-label="Primary">
+  <header class="site-nav">
     <div class="nav-inner">
       <div class="brand">
         <img src="{{ '/assets/profile.jpg' | relative_url }}" alt="Aadil" class="brand-avatar">
         <div class="brand-meta">
           <div class="brand-name">Aadil Ali</div>
-          <div class="brand-sub">Digital transformation • AI integration • Strategy</div>
+          <div class="brand-sub">Digital Transformation • AI Integration • Strategy</div>
         </div>
       </div>
       <nav class="links">
@@ -42,15 +34,15 @@
     </div>
   </header>
 
-  <main id="top" role="main">
+  <main id="top">
     {{ content }}
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div>© {{ "now" | date: "%Y" }} Aadil Ali</div>
   </footer>
 
-  <!-- Your custom JS (ensure file exists at /assets/main.js) -->
-  <script defer src="{{ '/assets/main.js' | relative_url }}"></script>
+  <!-- Load your custom JS -->
+  <script src="{{ '/assets/main.js' | relative_url }}"></script>
 </body>
 </html>
