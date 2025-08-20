@@ -78,8 +78,9 @@ title: "Aadil Ali"
   </div>
 </section>
 
+<!-- index.md -->
 <section id="portfolio" class="reveal">
-  <h2 class="h-section">Projects & Certifications</h2>
+  <h2 class="h-section">Projects &amp; Certifications</h2>
   <div class="preview-grid">
     {% for p in site.data.projects %}
       <a class="proj-card"
