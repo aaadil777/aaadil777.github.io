@@ -1,27 +1,27 @@
-/* ===== Type & Theme (Apple-like) ===== */
+/* ===== Type & Theme (Apple-like, high contrast) ===== */
 :root{
-  --bg: #0d1117;
-  --bg-2:#0b1016;
-  --panel:#0f141b;
-  --panel-2:#121823;
-  --line:#1b2432;
-  --text:#e7ecf3;
-  --muted:#b6c0cc;
-  --link:#8fd4ff;
-  --link-2:#a7e0ff;
-  --pill:#16202c;
+  --bg: #0b0f15;
+  --bg-2:#101620;
+  --panel:#151c27;
+  --panel-2:#1a2230;
+  --line:#2a3548;
+  --text:#f4f7fb;          /* brighter main text */
+  --muted:#c9d3df;         /* softer but still visible */
+  --link:#80cfff;
+  --link-2:#a8e4ff;
+  --pill:#1d2736;
   --accent:#7cc7ff;
-  --ring:0 0 0 6px rgb(124 199 255 / 12%);
+  --ring:0 0 0 6px rgb(124 199 255 / 20%);
 }
 
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; scroll-behavior:smooth; }
 body{
-  background: radial-gradient(1200px 700px at 50% -20%, #0f1722 0%, transparent 60%), var(--bg);
+  background: radial-gradient(1200px 700px at 50% -20%, #142030 0%, transparent 65%), var(--bg);
   color:var(--text);
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
   font-size:16.5px;
-  line-height:1.7;
+  line-height:1.75;
   font-weight:400;
 }
 
@@ -33,7 +33,7 @@ a:hover{ color:var(--link-2); }
 .site-nav{
   position:sticky; top:0; z-index:50;
   backdrop-filter:saturate(140%) blur(10px);
-  background:rgba(9,12,18,.7);
+  background:rgba(15,20,28,.85);
   border-bottom:1px solid var(--line);
 }
 .nav-inner{
@@ -42,7 +42,7 @@ a:hover{ color:var(--link-2); }
 }
 .brand{ display:flex; align-items:center; gap:12px; }
 .brand-avatar{ width:40px; height:40px; border-radius:12px; object-fit:cover; }
-.brand-name{ font-weight:600; letter-spacing:.2px; }
+.brand-name{ font-weight:600; letter-spacing:.2px; color:var(--text); }
 .brand-sub{ color:var(--muted); font-size:14px; }
 
 .links{ display:flex; gap:8px; flex-wrap:wrap; }
@@ -62,79 +62,78 @@ section{ margin:0 auto; max-width:1100px; padding:72px 20px; }
 .hero{
   margin-top:24px; border-radius:28px;
   padding:50px 24px 66px;
-  background: radial-gradient(1200px 600px at 50% -20%, #1a2736 0%, transparent 65%), var(--bg-2);
+  background: radial-gradient(1200px 600px at 50% -20%, #1f2d42 0%, transparent 65%), var(--bg-2);
   border:1px solid var(--line); text-align:center;
 }
 .hero .avatar{
   width:96px; height:96px; border-radius:28px; object-fit:cover; display:block; margin:0 auto 16px;
-  border:1px solid #203044;
+  border:1px solid #2c3b52;
 }
 .hero h1{ font-weight:600; font-size:clamp(30px,5vw,54px); margin:8px 0 0; letter-spacing:.2px; }
 .sublede{
   display:inline-block; margin-top:12px; padding:12px 18px; border-radius:14px;
-  background:#0f1620; border:1px solid var(--line); color:var(--muted); font-weight:400;
+  background:#1a2330; border:1px solid var(--line); color:var(--muted); font-weight:400;
 }
 
 /* ===== Chips ===== */
 .chips{ display:flex; gap:10px; flex-wrap:wrap; }
 .chip{
-  background:#0f1620; border:1px solid var(--line); color:#dfe6ee;
+  background:#1a2330; border:1px solid var(--line); color:#f0f5fb;
   padding:8px 12px; border-radius:12px; font-weight:500;
 }
 
-/* ===== Skills cards (softer) ===== */
+/* ===== Skills cards ===== */
 .skills-grid{ display:grid; gap:14px; grid-template-columns:repeat(2,minmax(0,1fr)); }
 .card{
-  background:linear-gradient(180deg,#0f1620,#0d131a);
+  background:linear-gradient(180deg,#151c27,#0f141c);
   border:1px solid var(--line); border-radius:16px; padding:16px;
 }
-.card h3{ margin:0 0 6px; font-weight:600; }
+.card h3{ margin:0 0 6px; font-weight:600; color:var(--text); }
 
 /* ===== Timeline ===== */
 .timeline{ position:relative; margin-left:6px; }
 .timeline::before{
-  content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:#233041;
+  content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:#2c3b52;
 }
 .node{
   position:relative; margin:18px 0 18px 36px; padding:14px 16px; border-radius:14px;
-  background:#0f1620; border:1px solid var(--line);
+  background:#1a2330; border:1px solid var(--line);
 }
 .node::before{
   content:""; position:absolute; left:-30px; top:16px; width:12px; height:12px; border-radius:50%;
-  background:var(--accent); box-shadow:0 0 0 6px rgb(124 199 255 / 15%);
+  background:var(--accent); box-shadow:0 0 0 6px rgb(124 199 255 / 20%);
 }
-.node .title{ font-weight:600; margin:0 0 4px; }
+.node .title{ font-weight:600; margin:0 0 4px; color:var(--text); }
 .meta{ color:var(--muted); font-size:14px; margin-bottom:6px; }
 
-/* ===== Projects (icon-first) ===== */
+/* ===== Projects ===== */
 .proj-grid{
   display:grid; gap:16px; grid-template-columns:repeat(3,minmax(0,1fr));
 }
 .proj-card{
   position:relative; display:flex; gap:14px; align-items:flex-start;
-  padding:16px; border-radius:16px; background:#0f1620; border:1px solid var(--line);
-  text-decoration:none;
+  padding:16px; border-radius:16px; background:#1a2330; border:1px solid var(--line);
+  text-decoration:none; color:var(--text);
 }
 .proj-card:hover{ outline:var(--ring); }
 .proj-icon{
   width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
-  background:#0f1a26; border:1px solid var(--line); font-size:22px;
+  background:#111922; border:1px solid var(--line); font-size:22px; color:var(--text);
 }
-.proj-meta{ color:var(--text); }
 .proj-title{ margin:2px 0 4px; font-weight:600; font-size:18px; }
 .proj-desc{ margin:0; color:var(--muted); font-size:15px; font-weight:400; }
 
-/* Hover preview container (used by JS) */
+/* Hover preview */
 .hover-preview{
   position:fixed; inset:auto 24px 24px auto; width:min(420px,40vw); height:230px;
   border-radius:16px; overflow:hidden; pointer-events:none; z-index:60;
   opacity:0; transform:translateY(8px); transition:opacity .25s ease,transform .25s ease;
-  border:1px solid var(--line); background:#0e151d;
+  border:1px solid var(--line); background:#101820;
 }
 .hover-preview.in{ opacity:1; transform:translateY(0); }
 .hover-preview img{ width:100%; height:100%; object-fit:cover; }
 
-/* ===== Gallery (kept) ===== */
+/* ===== Gallery ===== */
 .gallery{ display:grid; gap:10px; grid-template-columns:repeat(3,minmax(0,1fr)); }
 .gallery img{ width:100%; border-radius:14px; border:1px solid var(--line); }
 
