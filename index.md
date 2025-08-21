@@ -56,8 +56,13 @@ title: "Aadil Ali"
       <h3>Delivery & DevOps</h3>
       <p>Agile/Scrum (PSPO I, PSM I), CI/CD, Docker, Kubernetes, Terraform, Lean Six Sigma</p>
     </div>
+    <div class="card">
+      <h3>Development</h3>
+      <p>Ruby, HTML, CSS, JavaScript, React.js</p>
+    </div>
   </div>
 </section>
+
 
 <section id="timeline" class="reveal">
   <h2 class="h-section">Timeline of my growth</h2>
