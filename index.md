@@ -6,64 +6,55 @@ title: "Aadil Ali"
 <section class="hero">
   <img src="{{ '/assets/profile.jpg' | relative_url }}" class="avatar" alt="Aadil">
   <h1>Hi! My name is Aadil.</h1>
-
-  <!-- Typewriter effect -->
-  <p class="sublede"
-     data-typer
-     data-text="I am passionate about digital transformation, AI integration, and strategy. Navigate below to learn more about who I am.">
-  </p>
+  <p class="sublede" data-typer data-text="I build scalable ops through digital transformation, AI integration, and strategy. Scroll to learn more."></p>
 
   <div class="chips" style="justify-content:center;margin-top:16px;">
     <span class="chip">SAP (S/4HANA, IBP, FICO)</span>
-    <span class="chip">Power BI • Tableau • Excel</span>
+    <span class="chip">Power BI</span>
+    <span class="chip">Tableau</span>
     <span class="chip">Python</span>
     <span class="chip">SQL</span>
     <span class="chip">Snowflake</span>
     <span class="chip">Workday HCM</span>
     <span class="chip">AWS CloudWatch</span>
-    <span class="chip">Docker • Kubernetes • Terraform</span>
+    <span class="chip">Docker</span>
+    <span class="chip">Kubernetes</span>
+    <span class="chip">Terraform</span>
     <span class="chip">Agile (PSPO I, PSM I)</span>
-    <span class="chip">Lean Six Sigma</span>
   </div>
 
-  <!-- Resume button -->
-  <div style="margin-top:20px; text-align:center;">
-    <a class="chip" href="{{ site.resume_url }}" target="_blank" rel="noopener">📄 View Resume (PDF)</a>
+  <div class="cta-row" style="margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a class="btn-cta" href="{{ site.linkedin }}" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    <a class="btn-ghost" href="{{ site.resume_url }}" target="_blank" rel="noopener">Download Resume</a>
   </div>
 </section>
 
 <section id="about" class="reveal">
-  <h2 class="h-section">Who I am & how I work</h2>
+  <h2 class="h-section">About</h2>
   <p>
-    I bring a multidisciplinary background in public health, supply chain, and technology—diagnosing operational inefficiencies, architecting data-driven solutions, and leading cross-functional teams to deliver scalable, sustainable change across manufacturing, pharma, retail, and the public sector.
+    I’m a product-driven technologist at the intersection of data, supply chain, and AI. I turn complex operations into
+    scalable, measurable systems—spanning SAP/Workday implementations, API reliability, and cloud analytics. Recognized for
+    shipping outcomes (cost savings, higher forecast accuracy, shorter cycle times) by aligning business strategy with
+    technical execution.
   </p>
 </section>
 
 <section id="skills" class="reveal">
-  <h2 class="h-section">Systems, data, and delivery methods</h2>
-
+  <h2 class="h-section">Skills</h2>
   <div class="skills-grid">
     <div class="card">
-      <h3>Systems & Platforms</h3>
-      <p>SAP (S/4HANA, IBP, FICO), Salesforce, Workday HCM, Snowflake, Datadog, SonarQube, Kong Gateway, ArcGIS</p>
+      <h3>Data & Analytics</h3>
+      <p>Power BI, Tableau, DAX, Excel (PivotTables, VBA, Macros), R</p>
+      <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span></div>
     </div>
     <div class="card">
-      <h3>Data & Tools</h3>
-      <p>Power BI, Tableau, DAX, Excel (PivotTables, VBA, Macros)</p>
+      <h3>Systems & Cloud</h3>
+      <p>SAP (S/4HANA, IBP, FICO), Workday HCM, Salesforce, Snowflake, AWS CloudWatch</p>
+      <p>Datadog, SonarQube, Kong Gateway</p>
     </div>
     <div class="card">
-      <h3>Languages</h3>
-      <div class="chips">
-        <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">R</span>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Cloud & DevOps</h3>
-      <p>AWS CloudWatch, Docker, Kubernetes, Terraform, PowerShell, CI/CD</p>
-    </div>
-    <div class="card">
-      <h3>Methods & Certifications</h3>
-      <p>Agile / Scrum (PSPO I, PSM I), Lean Six Sigma</p>
+      <h3>Delivery & DevOps</h3>
+      <p>Agile/Scrum (PSPO I, PSM I), CI/CD, Docker, Kubernetes, Terraform, Lean Six Sigma</p>
     </div>
   </div>
 </section>
@@ -87,12 +78,11 @@ title: "Aadil Ali"
 
 <section id="portfolio" class="reveal">
   <h2 class="h-section">Projects & Certifications</h2>
-  <div class="preview-grid">
+
+  <!-- Mini case-study cards: challenge → action → result (uses your _data/projects.yml) -->
+  <div class="proj-grid">
     {% for p in site.data.projects %}
-      <a class="proj-card"
-         href="{{ p.url }}"
-         target="_blank" rel="noopener"
-         data-img="{{ p.image | relative_url }}">
+      <a class="proj-card" href="{{ p.url }}" target="_blank" rel="noopener" data-img="{{ p.image | relative_url }}">
         <span class="proj-icon" aria-hidden="true">{{ p.emoji }}</span>
         <div class="proj-meta">
           <div class="proj-title">{{ p.title }}</div>
@@ -101,6 +91,9 @@ title: "Aadil Ali"
       </a>
     {% endfor %}
   </div>
+
+  <!-- Hover preview container (JS fills this) -->
+  <div class="hover-preview" aria-hidden="true"><img alt=""></div>
 </section>
 
 <section id="gallery" class="reveal">
@@ -115,10 +108,10 @@ title: "Aadil Ali"
 <section id="contact" class="reveal">
   <h2 class="h-section">Get in touch</h2>
   <div class="chips">
-    <a class="chip" href="mailto:{{ site.email }}">Email</a>
-    <a class="chip" href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="chip" href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
-    <a class="chip" href="{{ site.calendar }}" target="_blank" rel="noopener">Book time</a>
-    <a class="chip" href="{{ site.resume_url }}" target="_blank" rel="noopener">Resume (PDF)</a>
+    <a class="chip" href="mailto:{{ site.email }}" aria-label="Email">✉️ Email</a>
+    <a class="chip" href="{{ site.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">🔗 LinkedIn</a>
+    <a class="chip" href="{{ site.github }}" target="_blank" rel="noopener" aria-label="GitHub">🐙 GitHub</a>
+    <a class="chip" href="{{ site.calendar }}" target="_blank" rel="noopener" aria-label="Book time">📅 Book time</a>
+    <a class="chip" href="{{ site.resume_url }}" target="_blank" rel="noopener" aria-label="Resume PDF">📄 Resume</a>
   </div>
 </section>
