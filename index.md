@@ -45,24 +45,36 @@ title: "Aadil Ali"
     <div class="card">
       <h3>Data & Analytics</h3>
       <p>Power BI, Tableau, DAX, Excel (PivotTables, VBA, Macros), R</p>
-      <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span></div>
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+      </div>
     </div>
+
     <div class="card">
       <h3>Systems & Cloud</h3>
       <p>SAP (S/4HANA, IBP, FICO), Workday HCM, Salesforce, Snowflake, AWS CloudWatch</p>
       <p>Datadog, SonarQube, Kong Gateway</p>
     </div>
+
     <div class="card">
       <h3>Delivery & DevOps</h3>
       <p>Agile/Scrum (PSPO I, PSM I), CI/CD, Docker, Kubernetes, Terraform, Lean Six Sigma</p>
     </div>
+
     <div class="card">
       <h3>Development</h3>
       <p>Ruby, HTML, CSS, JavaScript, React.js</p>
+      <div class="chips">
+        <span class="chip">Ruby</span>
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">React.js</span>
+      </div>
     </div>
   </div>
 </section>
-
 
 <section id="timeline" class="reveal">
   <h2 class="h-section">Timeline of my growth</h2>
