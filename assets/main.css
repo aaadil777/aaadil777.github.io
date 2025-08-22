@@ -77,56 +77,82 @@ section{ margin:0 auto; max-width:1100px; padding:72px 20px; }
   background:#1a2330; border:1px solid var(--line); color:var(--muted); font-weight:400;
 }
 
-/* ===== Skills cards (kept – the second/clean section only) ===== */
+/* ===== Skills cards (single, clean section) ===== */
 .skills-grid{ display:grid; gap:14px; grid-template-columns:repeat(2,minmax(0,1fr)); }
 .card{
   background:linear-gradient(180deg,#151c27,#0f141c);
   border:1px solid var(--line); border-radius:16px; padding:16px;
 }
 .card h3{ margin:0 0 6px; font-weight:600; color:var(--text); }
+#skills .card p{ margin:4px 0 10px; }
 
 /* ===== Timeline ===== */
-.timeline{ position:relative; margin-left:6px; }
+.timeline{
+  display:flex;
+  flex-direction:column;
+  gap:24px;                 /* equal vertical spacing for nodes */
+  position:relative;
+  margin-left:10px;
+}
 .timeline::before{
-  content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:#2c3b52;
+  content:"";
+  position:absolute;
+  left:10px; top:0; bottom:0;
+  width:2px; background:#2c3b52;
 }
 .node{
-  position:relative; margin:22px 0 22px 36px; padding:14px 16px; border-radius:14px;
-  background:#1a2330; border:1px solid var(--line);
+  position:relative;
+  margin-left:36px;         /* clear the vertical line */
+  padding:14px 16px;
+  border-radius:14px;
+  background:#1a2330;
+  border:1px solid var(--line);
 }
 .node::before{
-  content:""; position:absolute; left:-30px; top:16px; width:12px; height:12px; border-radius:50%;
+  content:"";
+  position:absolute;
+  left:-30px; top:16px;
+  width:12px; height:12px; border-radius:50%;
   background:var(--accent); box-shadow:0 0 0 6px rgb(124 199 255 / 20%);
 }
 .node .title{ font-weight:600; margin:0 0 4px; color:var(--text); }
 .meta{ color:var(--muted); font-size:14px; margin-bottom:6px; }
 
-/* === Typed bullets (typewriter label + fade-in rest) ====================== */
-.typed-bullets .bullet{ position:relative; margin:.5rem 0; line-height:1.5; }
+/* === Typed bullets – perfect alignment + caret only while typing === */
+.typed-bullets .bullet{
+  display:flex;                 /* align label + rest on one row */
+  align-items:flex-start;
+  margin:.5rem 0;
+  line-height:1.55;
+}
 .typed-bullets .bullet .bullet-label{
-  font-weight:700; white-space:nowrap; overflow:hidden; display:inline-block;
-  border-right:0 !important; padding-inline-end:2px;
+  font-weight:700;
+  white-space:nowrap;
+  overflow:hidden;
+  display:inline-block;
+  flex-shrink:0;                /* label width won't collapse */
+  margin-right:.4rem;
+  border-right: none;           /* no caret by default */
 }
 .typed-bullets .bullet .bullet-label.typing{
-  border-right:2px solid var(--accent, #7dd3fc) !important;
+  border-right:2px solid var(--accent);
   animation: bullet-caret-blink 1s steps(1, end) infinite;
 }
-.typed-bullets .bullet .bullet-rest{ opacity:0; transition:opacity .35s ease .05s; margin-left:.25rem; }
-@keyframes bullet-caret-blink{0%,100%{border-right-color:transparent}50%{border-right-color:var(--accent,#7dd3fc)}}
-@media (prefers-reduced-motion: reduce){ .typed-bullets .bullet .bullet-label.typing{ animation:none; } }
-
-
-/* Blink keyframes */
-@keyframes bullet-caret-blink {
-  0%, 100%   { border-right-color: transparent; }
-  50%        { border-right-color: var(--accent, #7dd3fc); }
+.typed-bullets .bullet .bullet-rest{
+  flex:1;                       /* keeps all bodies vertically aligned */
+  opacity:0;
+  transition:opacity .35s ease .05s;
 }
 
-/* Respect user motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .typed-bullets .bullet .bullet-label.typing{
-    animation: none;
-  }
+/* Caret blink */
+@keyframes bullet-caret-blink{
+  0%,100%{ border-right-color:transparent; }
+  50%    { border-right-color:var(--accent); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .typed-bullets .bullet .bullet-label.typing{ animation:none; }
 }
 
 /* ===== Projects ===== */
@@ -209,9 +235,6 @@ noscript .reveal{ opacity:1 !important; transform:none !important; }
   border:1px solid var(--line);
 }
 .btn-ghost:hover{ background:#16202c; }
-
-/* Fine-tuning */
-#skills .card p{ margin:4px 0 10px; }
 
 /* Responsive */
 @media (max-width: 900px){
