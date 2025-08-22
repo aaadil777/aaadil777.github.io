@@ -105,17 +105,24 @@ title: "Aadil Ali"
   <div class="hover-preview" aria-hidden="true"><img alt=""></div>
 </section>
 
-<section id="tech" class="reveal">
-  <h2 class="h-section">Technical Expertise & Certifications</h2>
-  <div class="tech-grid">
-    <div class="tech-card">
-      <h3>Analytics & Data</h3>
-      <div class="pill-wrap">
-        <span class="pill">Python</span><span class="pill">R</span><span class="pill">SQL</span>
-        <span class="pill">Power BI</span><span class="pill">Tableau</span><span class="pill">Excel (Pivot/VBA)</span>
-        <span class="pill">Streamlit</span><span class="pill">ArcGIS</span>
-      </div>
+<section id="education" class="reveal">
+  <h2 class="h-section">Education</h2>
+  <div class="timeline">
+    {% for edu in site.data.education %}
+    <div class="node">
+      <div class="title">{{ edu.school }} — {{ edu.degree }}</div>
+      <div class="meta">{{ edu.dates }} · {{ edu.location }}</div>
+      {% if edu.bullets %}
+      <ul>
+        {% for b in edu.bullets %}
+          <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
+    {% endfor %}
+  </div>
+</section>
 
     <div class="tech-card">
       <h3>Platforms & Cloud</h3>
