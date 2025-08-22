@@ -2,7 +2,7 @@
   emoji: "📦"
   desc: "Streamlit mini-suite: supplier scorecards, demand baseline, and inventory what-ifs."
   url: "https://aadil-ali-b2b-ai-suite.streamlit.app"
-  image: "/assets/projects/b2b-ai-suite.jpg"
+  image: "/assets/projects/b2b-ai-suite.png"
 
 - title: "API Scorecard"
   emoji: "🧭"

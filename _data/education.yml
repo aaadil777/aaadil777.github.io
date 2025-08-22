@@ -3,11 +3,11 @@
   location: Corvallis, OR
   dates: "Expected March 2026"
   notes:
-    - "Teaching Assistant, CS 391 (Aug 2024–Present)"
+    + "Teaching Assistant, CS 391 (Aug 2024–Present)"
 
 - school: Youngstown State University
   degree: "M.P.H., Epidemiology"
   location: Youngstown, OH
   dates: "May 2022"
   notes:
-    - "Graduate Analyst, DEI Outcomes Research (Aug 2020–Aug 2021)"
+    + "Graduate Analyst, DEI Outcomes Research (Aug 2020–Aug 2021)"
