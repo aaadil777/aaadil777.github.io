@@ -1,13 +1,13 @@
 - school: Oregon State University
-  degree: Bachelor of Science, Computer Science, Supply Chain Management Minor
-  dates: 2023 – 2026 (TA: Aug 2024 – Present)
+  degree: "B.S. Computer Science; Minor: Supply Chain Management"
   location: Corvallis, OR
-  bullets:
-    + Facilitated sessions on ethical computing frameworks for 50+ undergrads; grading and discussion leadership.
+  dates: "Expected March 2026"
+  notes:
+    - "Teaching Assistant, CS 391 (Aug 2024–Present)"
 
 - school: Youngstown State University
-  degree: Master of Public Health (Epidemiology)
-  dates: 2020 – 2022
+  degree: "M.P.H., Epidemiology"
   location: Youngstown, OH
-  bullets:
-    + Led DEI attrition research; built Power BI dashboards highlighting student outcomes; delivered data-driven recommendations to leadership.
+  dates: "May 2022"
+  notes:
+    - "Graduate Analyst, DEI Outcomes Research (Aug 2020–Aug 2021)"
