@@ -1,10 +1,18 @@
 <!doctype html>
-<html lang="en" class="no-js">  <!-- add class no-js -->
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
 
+  <!-- Canonical & theme -->
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/">
+  <meta name="theme-color" content="#0b0f15">
+
+  <!-- Favicon (optional but nice) -->
+  <link rel="icon" href="{{ '/assets/profile.jpg' | relative_url }}" type="image/jpeg">
+
+  <!-- Main CSS (cache-busted) -->
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}">
 
   <!-- Open Graph -->
@@ -12,17 +20,19 @@
   <meta property="og:title"       content="Aadil Ali — Digital Transformation • AI Integration • Strategy">
   <meta property="og:description" content="Product-driven technologist turning complex operations into scalable, measurable systems.">
   <meta property="og:url"         content="{{ site.url }}{{ site.baseurl }}/">
-  <meta property="og:image"       content="{{ site.url }}{{ '/assets/profile.jpg' | relative_url }}">
+  <meta property="og:image"       content="{{ site.url }}{{ site.baseurl }}{{ '/assets/profile.jpg' | relative_url }}">
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Aadil Ali — Digital Transformation • AI Integration • Strategy">
   <meta name="twitter:description" content="Product-driven technologist turning complex operations into scalable, measurable systems.">
-  <meta name="twitter:image"       content="{{ site.url }}{{ '/assets/profile.jpg' | relative_url }}">
+  <meta name="twitter:image"       content="{{ site.url }}{{ site.baseurl }}{{ '/assets/profile.jpg' | relative_url }}">
 
+  <!-- No-JS fallback so reveal content shows -->
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
-  <!-- remove no-js so CSS knows JS is live -->
+  <!-- Flip no-js -> JS on -->
   <script>document.documentElement.classList.remove('no-js');</script>
 
   <header class="site-nav">
@@ -34,10 +44,11 @@
           <div class="brand-sub">Digital Transformation • AI Integration • Strategy</div>
         </div>
       </div>
-      <nav class="links">
+      <nav class="links" aria-label="Primary">
         <a href="#top" class="pill">Top</a>
         <a href="#about" class="pill">About</a>
-        <a href="#skills" class="pill">Skills</a>
+        <!-- renamed: Skills -> Tech; anchor updated to #tech -->
+        <a href="#tech" class="pill">Tech</a>
         <a href="#timeline" class="pill">Timeline</a>
         <a href="#portfolio" class="pill">Projects</a>
         <a href="#gallery" class="pill">Gallery</a>
@@ -54,7 +65,7 @@
     <div>© {{ "now" | date: "%Y" }} Aadil Ali</div>
   </footer>
 
-  <!-- Ensure script path is correct and actually runs -->
+  <!-- Main JS (deferred + cache-busted) -->
   <script defer src="{{ '/assets/main.js' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}"></script>
 </body>
 </html>

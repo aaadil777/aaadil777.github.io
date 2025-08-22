@@ -1,111 +1,72 @@
-// assets/main.js
-console.log('main.js loaded');
+(function () {
+  // --- Reveal-on-scroll (safe fallback) ---
+  const revealItems = Array.from(document.querySelectorAll('.reveal'));
+  const showAll = () => revealItems.forEach(el => el.classList.add('in'));
 
-document.addEventListener('DOMContentLoaded', () => {
-  const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* --- Hero typewriter (headline sublede) --- */
-  const typerEl = document.querySelector('[data-typer]');
-  if (typerEl) {
-    const full = typerEl.getAttribute('data-text') || typerEl.textContent.trim();
-    if (prefersReduce) {
-      typerEl.textContent = full;
-    } else {
-      typerEl.textContent = '';
-      let i = 0;
-      const step = () => {
-        if (i <= full.length) {
-          typerEl.textContent = full.slice(0, i++);
-          setTimeout(step, 20);
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
         }
-      };
-      setTimeout(step, 350);
-    }
-  }
-
-  /* --- Reveal-on-scroll for sections --- */
-  const reveals = document.querySelectorAll('.reveal');
-  if (prefersReduce) {
-    reveals.forEach(el => el.classList.add('in'));
-  } else {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in'); });
-    }, { threshold: 0.12 });
-    setTimeout(() => { reveals.forEach(el => io.observe(el)); }, 900);
-  }
-
-  /* --- Typewriter bullets (Experience labels) --- */
-  const bullets = document.querySelectorAll('.typed-bullets .bullet');
-  if (bullets.length) {
-    const bio = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const bullet = entry.target;
-        const labelEl = bullet.querySelector('.bullet-label');
-        const restEl  = bullet.querySelector('.bullet-rest');
-        const full = (labelEl.dataset.type || labelEl.textContent).replace(/:$/, '');
-        if (prefersReduce) {
-          labelEl.textContent = full + ':';
-          restEl.style.opacity = 1;
-          bio.unobserve(bullet);
-          return;
-        }
-        labelEl.textContent = '';
-        labelEl.classList.add('typing');  // show caret only while typing
-        let i = 0;
-        const tick = () => {
-          if (i <= full.length) {
-            labelEl.textContent = full.slice(0, i) + ':';
-            i++; setTimeout(tick, 18);
-          } else {
-            labelEl.classList.remove('typing'); // caret off; no lingering line
-            labelEl.style.borderRight = "none";
-            restEl.style.opacity = 1;
-            bio.unobserve(bullet);
-          }
-        };
-        tick();
       });
-    }, { threshold: 0.35 });
-
-    bullets.forEach(b => bio.observe(b));
+    }, { threshold: 0.15 });
+    revealItems.forEach(el => io.observe(el));
+  } else {
+    showAll();
   }
 
-  /* --- Project cards: lightweight hover preview --- */
-  const projCards = document.querySelectorAll('.proj-card[data-img]');
-  if (projCards.length) {
-    let shell = document.querySelector('.hover-preview');
-    if (!shell) {
-      shell = document.createElement('div');
-      shell.className = 'hover-preview';
-      shell.innerHTML = '<img alt="">';
-      document.body.appendChild(shell);
-    }
-    const shellImg = shell.querySelector('img');
+  // --- Typewriter labels (with time-limit and mobile safety) ---
+  const SPEED = 18;
+  const bullets = Array.from(document.querySelectorAll('.typed-bullets .bullet'));
 
-    // Follow cursor softly
-    const move = (e) => {
-      const x = e.clientX + 18;
-      const y = e.clientY + 18;
-      shell.style.left = `${x}px`;
-      shell.style.top  = `${y}px`;
-    };
-    window.addEventListener('mousemove', move, { passive: true });
-
-    const show = (url) => {
-      if (!url) return;
-      const img = new Image();
-      img.onload = () => { shellImg.src = url; shell.classList.add('in'); };
-      img.src = url;
-    };
-    const hide = () => shell.classList.remove('in');
-
-    projCards.forEach(card => {
-      const url = card.getAttribute('data-img');
-      card.addEventListener('mouseenter', () => show(url));
-      card.addEventListener('mouseleave', hide);
-      card.addEventListener('focusin', () => show(url));
-      card.addEventListener('focusout', hide);
+  if (!('IntersectionObserver' in window)) {
+    // No IO: show all immediately
+    bullets.forEach(b => {
+      const rest = b.querySelector('.bullet-rest');
+      if (rest) rest.style.opacity = 1;
     });
+    return;
   }
-});
+
+  const bio = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const bullet  = entry.target;
+      const labelEl = bullet.querySelector('.bullet-label');
+      const restEl  = bullet.querySelector('.bullet-rest');
+      const full    = (labelEl.dataset.type || labelEl.textContent).replace(/:$/, '');
+
+      labelEl.textContent = '';
+      labelEl.classList.add('typing');
+
+      let i = 0;
+      let cancelled = false;
+
+      const timeout = setTimeout(() => {  // hard stop after 2.5s (iOS timer quirks)
+        cancelled = true;
+        labelEl.classList.remove('typing');
+        labelEl.textContent = full + ':';
+        if (restEl) restEl.style.opacity = 1;
+        bio.unobserve(bullet);
+      }, 2500);
+
+      (function tick(){
+        if (cancelled) return;
+        if (i <= full.length) {
+          labelEl.textContent = full.slice(0, i) + ':';
+          i++; setTimeout(tick, SPEED);
+        } else {
+          clearTimeout(timeout);
+          labelEl.classList.remove('typing');
+          if (restEl) restEl.style.opacity = 1;
+          bio.unobserve(bullet);
+        }
+      })();
+    });
+  }, { threshold: 0.35 });
+
+  bullets.forEach(b => bio.observe(b));
+})();
