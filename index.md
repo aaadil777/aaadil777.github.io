@@ -14,7 +14,6 @@ title: "Aadil Ali"
     <a class="btn-cta" href="{{ site.linkedin }}" target="_blank" rel="noopener">Connect on LinkedIn</a>
     <a class="btn-ghost" href="{{ site.resume_url }}" target="_blank" rel="noopener">Download Resume</a>
   </div>
-
 </section>
 
 <section id="about" class="reveal">
@@ -112,10 +111,10 @@ title: "Aadil Ali"
     <div class="node">
       <div class="title">{{ edu.school }} — {{ edu.degree }}</div>
       <div class="meta">{{ edu.dates }} · {{ edu.location }}</div>
-      {% if edu.bullets %}
+      {% if edu.notes %}
       <ul>
-        {% for b in edu.bullets %}
-          <li>{{ b }}</li>
+        {% for n in edu.notes %}
+          <li>{{ n }}</li>
         {% endfor %}
       </ul>
       {% endif %}
@@ -128,54 +127,56 @@ title: "Aadil Ali"
   <h2 class="h-section">Technical Expertise & Certifications</h2>
   <div class="tech-grid">
 
-  <div class="tech-card">
-    <h3>Platforms & Cloud</h3>
-    <div class="pill-wrap">
-      <span class="pill">SAP (S/4HANA, IBP, FICO)</span>
-      <span class="pill">Workday HCM</span>
-      <span class="pill">Salesforce</span>
-      <span class="pill">Snowflake</span>
-      <span class="pill">AWS CloudWatch</span>
-      <span class="pill">GitHub</span>
+    <div class="tech-card">
+      <h3>Platforms & Cloud</h3>
+      <div class="pill-wrap">
+        <span class="pill">SAP (S/4HANA, IBP, FICO)</span>
+        <span class="pill">Workday HCM</span>
+        <span class="pill">Salesforce</span>
+        <span class="pill">Snowflake</span>
+        <span class="pill">AWS CloudWatch</span>
+        <span class="pill">GitHub</span>
+      </div>
     </div>
-  </div>
 
-  <div class="tech-card">
-    <h3>Reliability & DevOps</h3>
-    <div class="pill-wrap">
-      <span class="pill">Datadog</span>
-      <span class="pill">SonarQube</span>
-      <span class="pill">Kong Gateway</span>
-      <span class="pill">Docker</span>
-      <span class="pill">Kubernetes</span>
-      <span class="pill">Terraform</span>
-      <span class="pill">CI/CD</span>
+    <div class="tech-card">
+      <h3>Reliability & DevOps</h3>
+      <div class="pill-wrap">
+        <span class="pill">Datadog</span>
+        <span class="pill">SonarQube</span>
+        <span class="pill">Kong Gateway</span>
+        <span class="pill">Docker</span>
+        <span class="pill">Kubernetes</span>
+        <span class="pill">Terraform</span>
+        <span class="pill">CI/CD</span>
+      </div>
     </div>
-  </div>
 
-  <div class="tech-card">
-    <h3>Web & Product</h3>
-    <div class="pill-wrap">
-      <span class="pill">Ruby</span>
-      <span class="pill">JavaScript</span>
-      <span class="pill">React.js</span>
-      <span class="pill">HTML/CSS</span>
-      <span class="pill">Jekyll</span>
-      <span class="pill">Productboard</span>
-      <span class="pill">Mural</span>
-      <span class="pill">Cursor</span>
+    <div class="tech-card">
+      <h3>Web & Product</h3>
+      <div class="pill-wrap">
+        <span class="pill">Ruby</span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">React.js</span>
+        <span class="pill">HTML/CSS</span>
+        <span class="pill">Jekyll</span>
+        <span class="pill">Productboard</span>
+        <span class="pill">Mural</span>
+        <span class="pill">Cursor</span>
+      </div>
     </div>
-  </div>
 
-  <div class="tech-card">
-    <h3>Certifications & Methods</h3>
-    <div class="pill-wrap">
-      <span class="pill">PSPO I</span>
-      <span class="pill">PSM I</span>
-      <span class="pill">Lean Six Sigma</span>
-      <span class="pill">YSU: Molecular Biology & Biotechnology</span>
+    <div class="tech-card">
+      <h3>Certifications & Methods</h3>
+      <div class="pill-wrap">
+        <span class="pill">PSPO I</span>
+        <span class="pill">PSM I</span>
+        <span class="pill">Lean Six Sigma</span>
+        <span class="pill">YSU: Molecular Biology & Biotechnology</span>
+      </div>
     </div>
-  </div>
+
+  </div> <!-- ✅ CLOSE .tech-grid -->
 </section>
 
 <section id="gallery" class="reveal">
@@ -199,17 +200,21 @@ title: "Aadil Ali"
 </section>
 
 <style>
+/* Typed bullets */
 .typed-bullets .bullet { position: relative; margin: .5rem 0; line-height: 1.5; }
 .bullet-label { font-weight: 700; border-right: 2px solid var(--accent, #7dd3fc); white-space: nowrap; overflow: hidden; display: inline-block; }
 .bullet-rest { opacity: 0; transition: opacity .35s ease-in .05s; margin-left: .25rem; }
 @keyframes caret { 0%,100% { border-color: transparent } 50% { border-color: var(--accent, #7dd3fc) } }
 .bullet-label.typing { animation: caret 1s steps(1) infinite; }
 
+/* Tech grid pills */
 .tech-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .tech-card { background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.06); border-radius: 12px; padding: 16px; }
 .tech-card h3 { margin: 0 0 8px 0; font-size: 1rem; letter-spacing: .2px; }
 .pill-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
 .pill { padding: 6px 10px; border-radius: 999px; background: rgba(125,211,252,.12); border: 1px solid rgba(125,211,252,.25); font-size: .88rem; }
+
+/* small spacing tweak for projects/spotlight */
 #portfolio { margin-top: 18px; }
 </style>
 
