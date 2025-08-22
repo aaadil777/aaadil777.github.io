@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             i++; setTimeout(tick, 18);
           } else {
             labelEl.classList.remove('typing'); // caret off; no lingering line
+            labelEl.style.borderRight = "none";
             restEl.style.opacity = 1;
             bio.unobserve(bullet);
           }
