@@ -184,13 +184,18 @@ title: "Aadil Ali"
 
 <section id="education" class="reveal">
   <h2 class="h-section">Education</h2>
-  <div class="node">
-    <div class="title">Oregon State University — B.S. Computer Science, Supply Chain Management Minor</div>
-    <div class="meta">Expected Graduation: Mar 2026</div>
-  </div>
-  <div class="node">
-    <div class="title">Youngstown State University — Master of Public Health (Epidemiology)</div>
-    <div class="meta">Graduated May 2022</div>
+  <div class="timeline">
+    {% for edu in site.data.education %}
+    <div class="node">
+      <div class="title">{{ edu.school }} — {{ edu.degree }}</div>
+      <div class="meta">{{ edu.dates }} · {{ edu.location }}</div>
+      <ul>
+        {% for b in edu.bullets %}
+        <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
   </div>
 </section>
 

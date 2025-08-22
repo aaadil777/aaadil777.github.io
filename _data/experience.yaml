@@ -55,18 +55,3 @@
   dates: "Jul 2023 – Jan 2024"
   bullets:
     - "Built live Power BI + ArcGIS dashboards for infectious disease tracking, accelerating containment responses and improving cross-agency coordination."
-
-# Education (shown in timeline too)
-- role: "B.S. Computer Science • Supply Chain Management Minor (Teaching Assistant, CS 391)"
-  company: "Oregon State University"
-  location: "Corvallis, OR"
-  dates: "2023 – 2026 (TA: Aug 2024 – Present)"
-  bullets:
-    - "Facilitated sessions on ethical computing frameworks for 50+ undergrads; grading and discussion leadership."
-
-- role: "M.P.H. Epidemiology (Graduate Analyst — DEI Outcomes Research)"
-  company: "Youngstown State University"
-  location: "Youngstown, OH"
-  dates: "2020 – 2022"
-  bullets:
-    - "Led DEI attrition research; built Power BI dashboards highlighting student outcomes; delivered data-driven recommendations to leadership."
