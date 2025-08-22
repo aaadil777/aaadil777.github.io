@@ -249,14 +249,53 @@ noscript .reveal{ opacity:1 !important; transform:none !important; }
   .hover-preview{ display:none; }
 }
 
+/* -------- Mobile polish (≤ 700px) -------- */
 @media (max-width: 700px){
-  .timeline .node{ padding:14px; }
-  .timeline .node ul{ padding-left:0; }
-  .typed-bullets .bullet{ gap:6px; }
+
+  /* Global scaling so body text is not larger than headings */
+  html { font-size: 15px; }                 /* was 16.5px */
+  body { line-height: 1.7; }
+
+  /* Section headers stay clearly larger than body */
+  .h-section { font-size: clamp(22px, 6vw, 28px); }
+
+  /* Timeline rail alignment + compact cards */
+  .timeline{ margin-left: 2px; }
+  .timeline::before{ left: 6px; }           /* move the blue line in a bit */
+  .node{
+    margin: 16px 0 16px 26px;               /* keep the dot in view */
+    padding: 14px;                           /* tighter padding */
+    border-radius: 14px;
+  }
+  .node .title{ font-size: 1.125rem; line-height: 1.35; }
+  .node .meta{  font-size: .9rem;  }
+
+  /* Bullet typography & alignment */
+  .typed-bullets .bullet{ margin: .4rem 0; }
+  .typed-bullets .bullet .bullet-label{
+    font-size: .98rem;
+    line-height: 1.45;
+  }
+  .typed-bullets .bullet .bullet-rest{
+    font-size: .98rem;                       /* same size as label */
+    line-height: 1.45;
+  }
+
+  /* Prevent super long words from forcing weird wraps */
+  .node, .node * {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  /* Pills & project cards stack nicely */
+  .proj-grid, .skills-grid, .gallery{ grid-template-columns: 1fr; }
 }
 
-@media (max-width:600px){
-  .hero h1{ font-size:clamp(28px,8vw,38px); }
-  .h-section{ font-size:clamp(22px,5.5vw,30px); }
+/* -------- Tiny phones (≤ 380px) -------- */
+@media (max-width: 380px){
+  html { font-size: 14.5px; }               /* final nudge down */
+  .node { padding: 12px; }
+  .typed-bullets .bullet .bullet-label,
+  .typed-bullets .bullet .bullet-rest { font-size: .95rem; }
 }
 
