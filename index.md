@@ -8,146 +8,87 @@ title: "Aadil Ali"
   <h1>Hi! My name is Aadil.</h1>
   <p class="sublede" data-typer data-text="I build scalable ops through digital transformation, AI integration, and strategy. Scroll to learn more."></p>
 
-  <div class="chips" style="justify-content:center;margin-top:16px; flex-wrap:wrap; gap:8px;">
-    <span class="chip">Python</span>
-    <span class="chip">SQL</span>
-    <span class="chip">Power BI</span>
-    <span class="chip">Tableau</span>
-    <span class="chip">Streamlit</span>
-    <span class="chip">Snowflake</span>
-    <span class="chip">SAP (S/4HANA, IBP, FICO)</span>
-    <span class="chip">Workday HCM</span>
-    <span class="chip">AWS CloudWatch</span>
-    <span class="chip">Datadog</span>
-    <span class="chip">SonarQube</span>
-    <span class="chip">Docker</span>
-    <span class="chip">Kubernetes</span>
-    <span class="chip">Terraform</span>
-    <span class="chip">Ruby</span>
-    <span class="chip">React.js</span>
-    <span class="chip">Jekyll</span>
-    <span class="chip">Productboard</span>
-    <span class="chip">Mural</span>
-    <span class="chip">Cursor</span>
-    <span class="chip">Agile (PSPO I · PSM I)</span>
-    <span class="chip">Lean Six Sigma</span>
-  </div>
-
   <div class="cta-row" style="margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
     <a class="btn-cta" href="{{ site.linkedin }}" target="_blank" rel="noopener">Connect on LinkedIn</a>
     <a class="btn-ghost" href="{{ site.resume_url }}" target="_blank" rel="noopener">Download Resume</a>
   </div>
 </section>
 
-<section id="summary" class="reveal">
-  <h2 class="h-section">Professional Summary</h2>
+<section id="about" class="reveal">
+  <h2 class="h-section">About</h2>
   <p>
-    Technology and supply chain professional with expertise in analytics, automation, and cloud solutions, driving digital transformation,
-    forecasting accuracy, and end-to-end supply chain optimization across global industries.
+    I’m a product-driven technologist at the intersection of data, supply chain, and AI. I turn complex operations into
+    scalable, measurable systems—spanning SAP/Workday implementations, API reliability, and cloud analytics. Recognized for
+    shipping outcomes (cost savings, higher forecast accuracy, shorter cycle times) by aligning business strategy with
+    technical execution.
   </p>
 </section>
 
-<section id="experience" class="reveal">
-  <h2 class="h-section">Professional Experience</h2>
+<section id="skills" class="reveal">
+  <h2 class="h-section">Skills</h2>
+  <div class="skills-grid">
+    <div class="card">
+      <h3>Data & Analytics</h3>
+      <p>Power BI, Tableau, DAX, Excel (PivotTables, VBA, Macros), R</p>
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+      </div>
+    </div>
 
-  <div class="node">
-    <div class="title">Caterpillar — Strategic Procurement & Planning Division Intern</div>
-    <div class="meta">Peoria, IL · May 2025 – Present</div>
-    <ul>
-      <li>Truckload Optimization: Led end-to-end development of a Power BI dashboard integrating Snowflake CTEs to improve full-truckload visibility, reduce shipping costs, enhance efficiency, and enable scalable dealer reporting.</li>
-      <li>Forecasting &amp; Planning Tools: Built Excel optimization and forecasting models (PivotTables, Macros) to validate HVLV dealer order data across 256+ machines, increasing planning accuracy, reducing manual work, and improving decision quality.</li>
-      <li>Supplier Performance &amp; Recognition: Designed KPI-driven Power BI reports on cost variance and delivery timeliness to support strategic sourcing; earned top honors in Caterpillar Procurement Case Competition for delivering measurable cost savings and implementing risk-mitigation strategies that strengthened overall supply chain resilience.</li>
-    </ul>
-  </div>
+    <div class="card">
+      <h3>Systems & Cloud</h3>
+      <p>SAP (S/4HANA, IBP, FICO), Workday HCM, Salesforce, Snowflake, AWS CloudWatch</p>
+      <p>Datadog, SonarQube, Kong Gateway</p>
+    </div>
 
-  <div class="node">
-    <div class="title">Stark State College — IT Strategy &amp; Implementation Associate (Consultant)</div>
-    <div class="meta">North Canton, OH · Jan 2023 – Present</div>
-    <ul>
-      <li>Financial Systems Integration: Implemented SAP FICO with external B2B partners and university systems, streamlining reconciliation and accelerating transactions; leveraged Streamlit and Cursor for reporting transparency.</li>
-      <li>AI-Driven Optimization: Deployed AI-enabled tools across academic/administrative workflows, reducing manual workload by over 8 working hours weekly and improving institutional efficiency with measurable productivity gains.</li>
-      <li>Strategic Alignment: Partnered with leadership and clients to align IT implementations with organizational strategy, ensuring scalable financial and academic operations that supported long-term growth.</li>
-    </ul>
-  </div>
+    <div class="card">
+      <h3>Delivery & DevOps</h3>
+      <p>Agile/Scrum (PSPO I, PSM I), CI/CD, Docker, Kubernetes, Terraform, Lean Six Sigma</p>
+    </div>
 
-  <div class="node">
-    <div class="title">84.51° (Kroger) — Product Owner Co-op</div>
-    <div class="meta">Chicago, IL · Aug 2024 – Dec 2024</div>
-    <ul>
-      <li>Agile Process &amp; Automation: Facilitated Agile ceremonies and built AI-driven JIRA/Mural workflows, boosting sprint velocity by ~25% and accelerating API delivery for critical business initiatives and enterprise-wide scalability.</li>
-      <li>API Reliability &amp; Scalability: Monitored API health with Python/SQL + Datadog; integrated SonarQube checks, cut downtime risk, and supported Kong Gateway + Terraform migration to enhance system resilience and reduce latency by ~15%.</li>
-      <li>Performance Standardization: Developed cross-functional API scorecards blending Datadog and SonarQube data, enabling leadership to prioritize optimization, track reliability trends, and guide strategic decision-making.</li>
-    </ul>
-  </div>
-
-  <div class="node">
-    <div class="title">Gilead Sciences — Supply Chain Planning Intern</div>
-    <div class="meta">Foster City, CA · May 2024 – Aug 2024</div>
-    <ul>
-      <li>Global Operations: Automated SAP S/4 HANA &amp; IBP workflows for demand/replenishment, boosting inventory availability and reducing costly clinical trial delays across India, Canada, and Brazil; utilized Microsoft Project to delegate tasks, ensure alignment, drive accountability, and improve global stakeholder coordination effectiveness.</li>
-      <li>Forecasting &amp; Cloud Monitoring: Built Excel/Solver + Monte Carlo models for diverse demand scenarios, improving forecast accuracy and automating planning efficiency; integrated AWS CloudWatch for real-time workflow visibility.</li>
-      <li>Risk Mitigation Dashboards: Created Power BI views integrating IBP forecasts with fulfillment metrics to minimize stockouts.</li>
-    </ul>
+    <div class="card">
+      <h3>Development</h3>
+      <p>Ruby, HTML, CSS, JavaScript, React.js</p>
+      <div class="chips">
+        <span class="chip">Ruby</span>
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">React.js</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="additional-experience" class="reveal">
-  <h2 class="h-section">Additional Experience</h2>
+<section id="timeline" class="reveal">
+  <h2 class="h-section">Experience</h2>
+  <div class="timeline">
+    {% for item in site.data.experience %}
+    <div class="node">
+      <div class="title">{{ item.company }} — {{ item.role }}</div>
+      <div class="meta">{{ item.dates }} · {{ item.location }}</div>
 
-  <div class="node">
-    <div class="title">B2B AI Suite (Streamlit) — Developer</div>
-    <div class="meta">Aug 2025 – Present</div>
-    <ul>
-      <li>Built a multi-page Streamlit suite (supplier scorecards, demand forecasting, what-if inventory) and deployed via GitHub CI/CD, delivering scalable, interactive analytics and actionable insights for data-driven supply chain optimization.</li>
-    </ul>
-  </div>
-
-  <div class="node">
-    <div class="title">Teaching Assistant, CS 391 — Oregon State University</div>
-    <div class="meta">Aug 2024 – Present</div>
-    <ul>
-      <li>Led sessions on ethical computing frameworks for 50+ undergraduates; graded coursework and facilitated classroom discussions.</li>
-    </ul>
-  </div>
-
-  <div class="node">
-    <div class="title">Business Analyst Intern — Summit County Executive</div>
-    <div class="meta">Feb 2023 – Jul 2023</div>
-    <ul>
-      <li>Migrated 500+ employee records with QA/testing and built dynamic Power BI dashboards integrated with Workday HCM, significantly improving workforce planning, forecasting accuracy, and executive-level decision support.</li>
-    </ul>
-  </div>
-
-  <div class="node">
-    <div class="title">Web Developer &amp; Strategist — All-American Freight Logistics</div>
-    <div class="meta">Jan 2024 – May 2024</div>
-    <ul>
-      <li>Designed a full-stack website and Salesforce dashboards boosting vendor engagement, fleet utilization, and KPI-driven decisions.</li>
-    </ul>
-  </div>
-
-  <div class="node">
-    <div class="title">Health Data Strategist &amp; BI Analyst — Marion Public Health</div>
-    <div class="meta">Jul 2023 – Jan 2024</div>
-    <ul>
-      <li>Developed Power BI + ArcGIS dashboards for infectious disease tracking, accelerating containment responses, state reporting, and cross-agency coordination for stronger, data-driven public health impact.</li>
-    </ul>
-  </div>
-
-  <div class="node">
-    <div class="title">Graduate Analyst — DEI Outcomes Research, YSU</div>
-    <div class="meta">Aug 2020 – Aug 2021</div>
-    <ul>
-      <li>Led DEI attrition research and built Power BI dashboards on student outcomes; delivered insights that shaped institutional policy.</li>
-    </ul>
+      <ul class="typed-bullets">
+        {% for b in item.bullets %}
+          {%- assign parts = b | split: ':' -%}
+          {%- assign label = parts[0] -%}
+          {%- assign rest = parts | slice: 1, 99 | join: ':' -%}
+          <li class="bullet">
+            <span class="bullet-label" data-type="{{ label | strip }}">{{ label | strip }}:</span>
+            <span class="bullet-rest">{{ rest | strip }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
   </div>
 </section>
 
-<!-- === Project Spotlight — B2B AI Suite (Streamlit) === -->
+<!-- === Project Spotlight — B2B AI Suite (Streamlit) RIGHT AFTER EXPERIENCE === -->
 <section id="b2b-ai-suite" class="reveal">
   <h2 class="h-section">Project Spotlight — B2B AI Suite (Streamlit)</h2>
 
-  <!-- Video demo -->
   <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
     <iframe
       src="https://www.youtube-nocookie.com/embed/d2lkvZj_UXg"
@@ -182,33 +123,10 @@ title: "Aadil Ali"
   </div>
 </section>
 
-<section id="education" class="reveal">
-  <h2 class="h-section">Education</h2>
-  <div class="timeline">
-    {% for edu in site.data.education %}
-    <div class="node">
-      <div class="title">{{ edu.school }} — {{ edu.degree }}</div>
-      <div class="meta">{{ edu.dates }} · {{ edu.location }}</div>
-      <ul>
-        {% for b in edu.bullets %}
-        <li>{{ b }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-<section id="expertise" class="reveal">
-  <h2 class="h-section">Technical Expertise &amp; Certifications</h2>
-  <p><strong>Skills:</strong> Python, R, SQL, Ruby, JavaScript, React.js, HTML/CSS, Streamlit, Power BI, Tableau, Excel (Pivot/VBA), Snowflake, SAP (S/4 HANA, IBP, FICO), Salesforce, Workday HCM, Docker/Kubernetes, Terraform, AWS CloudWatch, GitHub, JIRA, Confluence, Productboard, Mural, Cursor, Datadog, SonarQube, CI/CD, ArcGIS, Jekyll, Agile Methodologies, Lean Six Sigma</p>
-  <p><strong>Certifications:</strong> PSPO I &amp; PSM I (Scrum.org); YSU Certificate in Molecular Biology &amp; Biotechnology</p>
-</section>
-
+<!-- ====== PROJECTS BEFORE TECH EXPERTISE ====== -->
 <section id="portfolio" class="reveal">
-  <h2 class="h-section">Projects &amp; Certifications</h2>
+  <h2 class="h-section">Projects & Certifications</h2>
 
-  <!-- Mini case-study cards: challenge → action → result (uses your _data/projects.yml) -->
   <div class="proj-grid">
     {% for p in site.data.projects %}
       <a class="proj-card" href="{{ p.url }}" target="_blank" rel="noopener" data-img="{{ p.image | relative_url }}">
@@ -221,8 +139,58 @@ title: "Aadil Ali"
     {% endfor %}
   </div>
 
-  <!-- Hover preview container (JS fills this) -->
   <div class="hover-preview" aria-hidden="true"><img alt=""></div>
+</section>
+
+<!-- ====== TECH EXPERTISE — SOFTER, MORE READABLE CARDS ====== -->
+<section id="tech" class="reveal">
+  <h2 class="h-section">Technical Expertise & Certifications</h2>
+
+  <div class="tech-grid">
+    <div class="tech-card">
+      <h3>Analytics & Data</h3>
+      <div class="pill-wrap">
+        <span class="pill">Python</span><span class="pill">R</span><span class="pill">SQL</span>
+        <span class="pill">Power BI</span><span class="pill">Tableau</span><span class="pill">Excel (Pivot/VBA)</span>
+        <span class="pill">Streamlit</span><span class="pill">ArcGIS</span>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <h3>Platforms & Cloud</h3>
+      <div class="pill-wrap">
+        <span class="pill">SAP (S/4HANA, IBP, FICO)</span><span class="pill">Workday HCM</span>
+        <span class="pill">Salesforce</span><span class="pill">Snowflake</span>
+        <span class="pill">AWS CloudWatch</span><span class="pill">GitHub</span>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <h3>Reliability & DevOps</h3>
+      <div class="pill-wrap">
+        <span class="pill">Datadog</span><span class="pill">SonarQube</span><span class="pill">Kong Gateway</span>
+        <span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">Terraform</span>
+        <span class="pill">CI/CD</span>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <h3>Web & Product</h3>
+      <div class="pill-wrap">
+        <span class="pill">Ruby</span><span class="pill">JavaScript</span><span class="pill">React.js</span>
+        <span class="pill">HTML/CSS</span><span class="pill">Jekyll</span><span class="pill">Productboard</span>
+        <span class="pill">Mural</span><span class="pill">Cursor</span>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <h3>Certifications & Methods</h3>
+      <div class="pill-wrap">
+        <span class="pill">PSPO I</span><span class="pill">PSM I</span><span class="pill">Lean Six Sigma</span>
+        <span class="pill">YSU: Molecular Biology & Biotechnology</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="gallery" class="reveal">
@@ -244,3 +212,60 @@ title: "Aadil Ali"
     <a class="chip" href="{{ site.resume_url }}" target="_blank" rel="noopener" aria-label="Resume PDF">📄 Resume</a>
   </div>
 </section>
+
+<!-- ====== PAGE-LOCAL STYLES (keeps changes self-contained) ====== -->
+<style>
+/* timeline typed bullets */
+.typed-bullets .bullet { position: relative; margin: .5rem 0; line-height: 1.5; }
+.bullet-label { font-weight: 700; border-right: 2px solid var(--accent, #7dd3fc); white-space: nowrap; overflow: hidden; display: inline-block; }
+.bullet-rest { opacity: 0; transition: opacity .35s ease-in .05s; margin-left: .25rem; }
+
+/* typewriter caret blink */
+@keyframes caret { 0%,100% { border-color: transparent } 50% { border-color: var(--accent, #7dd3fc) } }
+.bullet-label.typing { animation: caret 1s steps(1) infinite; }
+
+/* tech grid */
+.tech-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.tech-card { background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.06); border-radius: 12px; padding: 16px; }
+.tech-card h3 { margin: 0 0 8px 0; font-size: 1rem; letter-spacing: .2px; }
+.pill-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { padding: 6px 10px; border-radius: 999px; background: rgba(125,211,252,.12); border: 1px solid rgba(125,211,252,.25); font-size: .88rem; }
+
+/* projects grid already exists; ensure spacing from spotlight */
+#portfolio { margin-top: 18px; }
+</style>
+
+<!-- ====== TYPEWRITER JS ====== -->
+<script>
+(function () {
+  const SPEED = 18; // ms per character for the label
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const bullet = entry.target;
+      const labelEl = bullet.querySelector('.bullet-label');
+      const restEl  = bullet.querySelector('.bullet-rest');
+      const full = (labelEl.dataset.type || labelEl.textContent).replace(/:$/, '');
+      labelEl.textContent = ''; // clear
+      labelEl.classList.add('typing');
+
+      // type the label, then show the rest
+      let i = 0;
+      const tick = () => {
+        if (i <= full.length) {
+          labelEl.textContent = full.slice(0, i) + ':';
+          i++; setTimeout(tick, SPEED);
+        } else {
+          labelEl.classList.remove('typing');
+          restEl.style.opacity = 1;
+          observer.unobserve(bullet);
+        }
+      };
+      tick();
+    });
+  }, { threshold: 0.35 });
+
+  document.querySelectorAll('.typed-bullets .bullet').forEach(b => observer.observe(b));
+})();
+</script>
