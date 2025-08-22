@@ -8,10 +8,13 @@ title: "Aadil Ali"
   <h1>Hi! My name is Aadil.</h1>
   <p class="sublede" data-typer data-text="I build scalable ops through digital transformation, AI integration, and strategy. Scroll to learn more."></p>
 
-  <div class="cta-row" style="margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-    <a class="btn-cta" href="{{ site.linkedin }}" target="_blank" rel="noopener">Connect on LinkedIn</a>
-    <a class="btn-ghost" href="{{ site.resume_url }}" target="_blank" rel="noopener">Download Resume</a>
-  </div>
+<div class="cta-row" style="margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+  <a class="btn-cta" href="mailto:{{ site.email }}" target="_blank" rel="noopener">✉️ Email Me</a>
+  <a class="btn-cta" href="{{ site.calendar }}" target="_blank" rel="noopener">📅 Book a Meeting</a>
+  <a class="btn-cta" href="{{ site.linkedin }}" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  <a class="btn-ghost" href="{{ site.resume_url }}" target="_blank" rel="noopener">Download Resume</a>
+</div>
+
 </section>
 
 <section id="about" class="reveal">
