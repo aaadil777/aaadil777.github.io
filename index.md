@@ -88,7 +88,7 @@ title: "Aadil Ali"
   </div>
 
   <div class="chips" style="gap:8px;margin-bottom:10px;">
-    <a class="chip" href="https://aaadil777-b2b-ai-suite.streamlit.app" target="_blank" rel="noopener">🚀 Launch Live App</a>
+    <a class="chip" href="https://aadil-ali-b2b-ai-suite.streamlit.app" target="_blank" rel="noopener">🚀 Launch Live App</a>
     <a class="chip" href="https://github.com/aaadil777/b2b_ai_streamlit_suite" target="_blank" rel="noopener">🐙 GitHub Repo</a>
   </div>
 
