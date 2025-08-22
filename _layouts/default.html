@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
 
-  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}">
 
   <meta property="og:title" content="Aadil Ali — B2B AI Suite" />
   <meta property="og:description" content="Supplier scorecards, demand baselines, and inventory what-ifs in a clean Streamlit suite." />
@@ -53,6 +53,6 @@
   </footer>
 
   <!-- Ensure script path is correct and actually runs -->
-  <script defer src="{{ '/assets/main.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/main.js' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}"></script>
 </body>
 </html>
