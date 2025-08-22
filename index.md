@@ -29,11 +29,7 @@ title: "Aadil Ali"
   <div class="skills-grid">
     <div class="card">
       <h3>Data & Analytics</h3>
-      <p>Power BI, Tableau, DAX, Excel (PivotTables, VBA, Macros), R</p>
-      <div class="chips">
-        <span class="chip">Python</span>
-        <span class="chip">SQL</span>
-      </div>
+      <p>Python, SQL, Power BI, Tableau, DAX, Excel (PivotTables, VBA, Macros), R</p>
     </div>
 
     <div class="card">
@@ -49,14 +45,7 @@ title: "Aadil Ali"
 
     <div class="card">
       <h3>Development</h3>
-      <p>Ruby, HTML, CSS, JavaScript, React.js</p>
-      <div class="chips">
-        <span class="chip">Ruby</span>
-        <span class="chip">HTML</span>
-        <span class="chip">CSS</span>
-        <span class="chip">JavaScript</span>
-        <span class="chip">React.js</span>
-      </div>
+      <p>Ruby, JavaScript, React.js, HTML/CSS, Jekyll, Productboard, Mural, Cursor</p>
     </div>
   </div>
 </section>
@@ -85,7 +74,7 @@ title: "Aadil Ali"
   </div>
 </section>
 
-<!-- === Project Spotlight — B2B AI Suite (Streamlit) RIGHT AFTER EXPERIENCE === -->
+<!-- Project Spotlight right after Experience -->
 <section id="b2b-ai-suite" class="reveal">
   <h2 class="h-section">Project Spotlight — B2B AI Suite (Streamlit)</h2>
 
@@ -123,10 +112,8 @@ title: "Aadil Ali"
   </div>
 </section>
 
-<!-- ====== PROJECTS BEFORE TECH EXPERTISE ====== -->
 <section id="portfolio" class="reveal">
   <h2 class="h-section">Projects & Certifications</h2>
-
   <div class="proj-grid">
     {% for p in site.data.projects %}
       <a class="proj-card" href="{{ p.url }}" target="_blank" rel="noopener" data-img="{{ p.image | relative_url }}">
@@ -138,14 +125,11 @@ title: "Aadil Ali"
       </a>
     {% endfor %}
   </div>
-
   <div class="hover-preview" aria-hidden="true"><img alt=""></div>
 </section>
 
-<!-- ====== TECH EXPERTISE — SOFTER, MORE READABLE CARDS ====== -->
 <section id="tech" class="reveal">
   <h2 class="h-section">Technical Expertise & Certifications</h2>
-
   <div class="tech-grid">
     <div class="tech-card">
       <h3>Analytics & Data</h3>
@@ -213,44 +197,33 @@ title: "Aadil Ali"
   </div>
 </section>
 
-<!-- ====== PAGE-LOCAL STYLES (keeps changes self-contained) ====== -->
 <style>
-/* timeline typed bullets */
 .typed-bullets .bullet { position: relative; margin: .5rem 0; line-height: 1.5; }
 .bullet-label { font-weight: 700; border-right: 2px solid var(--accent, #7dd3fc); white-space: nowrap; overflow: hidden; display: inline-block; }
 .bullet-rest { opacity: 0; transition: opacity .35s ease-in .05s; margin-left: .25rem; }
-
-/* typewriter caret blink */
 @keyframes caret { 0%,100% { border-color: transparent } 50% { border-color: var(--accent, #7dd3fc) } }
 .bullet-label.typing { animation: caret 1s steps(1) infinite; }
 
-/* tech grid */
 .tech-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .tech-card { background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.06); border-radius: 12px; padding: 16px; }
 .tech-card h3 { margin: 0 0 8px 0; font-size: 1rem; letter-spacing: .2px; }
 .pill-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
 .pill { padding: 6px 10px; border-radius: 999px; background: rgba(125,211,252,.12); border: 1px solid rgba(125,211,252,.25); font-size: .88rem; }
-
-/* projects grid already exists; ensure spacing from spotlight */
 #portfolio { margin-top: 18px; }
 </style>
 
-<!-- ====== TYPEWRITER JS ====== -->
 <script>
 (function () {
-  const SPEED = 18; // ms per character for the label
+  const SPEED = 18;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-
       const bullet = entry.target;
       const labelEl = bullet.querySelector('.bullet-label');
       const restEl  = bullet.querySelector('.bullet-rest');
       const full = (labelEl.dataset.type || labelEl.textContent).replace(/:$/, '');
-      labelEl.textContent = ''; // clear
+      labelEl.textContent = '';
       labelEl.classList.add('typing');
-
-      // type the label, then show the rest
       let i = 0;
       const tick = () => {
         if (i <= full.length) {
@@ -265,7 +238,6 @@ title: "Aadil Ali"
       tick();
     });
   }, { threshold: 0.35 });
-
   document.querySelectorAll('.typed-bullets .bullet').forEach(b => observer.observe(b));
 })();
 </script>
