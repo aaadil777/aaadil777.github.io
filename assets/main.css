@@ -102,34 +102,19 @@ section{ margin:0 auto; max-width:1100px; padding:72px 20px; }
 .meta{ color:var(--muted); font-size:14px; margin-bottom:6px; }
 
 /* === Typed bullets (typewriter label + fade-in rest) ====================== */
-.typed-bullets .bullet{
-  position: relative;
-  margin: .5rem 0;
-  line-height: 1.5;
-}
-
-/* Label: no caret by default (force higher specificity to beat theme rules) */
+.typed-bullets .bullet{ position:relative; margin:.5rem 0; line-height:1.5; }
 .typed-bullets .bullet .bullet-label{
-  font-weight: 700;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  border-right: 0 !important;                 /* never show when not typing */
-  padding-inline-end: 2px;                    /* reserve space to prevent shift */
+  font-weight:700; white-space:nowrap; overflow:hidden; display:inline-block;
+  border-right:0 !important; padding-inline-end:2px;
 }
-
-/* While typing: show a blinking caret only */
 .typed-bullets .bullet .bullet-label.typing{
-  border-right: 2px solid var(--accent, #7dd3fc) !important;
+  border-right:2px solid var(--accent, #7dd3fc) !important;
   animation: bullet-caret-blink 1s steps(1, end) infinite;
 }
+.typed-bullets .bullet .bullet-rest{ opacity:0; transition:opacity .35s ease .05s; margin-left:.25rem; }
+@keyframes bullet-caret-blink{0%,100%{border-right-color:transparent}50%{border-right-color:var(--accent,#7dd3fc)}}
+@media (prefers-reduced-motion: reduce){ .typed-bullets .bullet .bullet-label.typing{ animation:none; } }
 
-/* Fade-in for the remainder of the sentence */
-.typed-bullets .bullet .bullet-rest{
-  opacity: 0;
-  transition: opacity .35s ease .05s;
-  margin-left: .25rem;
-}
 
 /* Blink keyframes */
 @keyframes bullet-caret-blink {
