@@ -93,6 +93,45 @@ title: "Aadil Ali"
   </div>
 </section>
 
+<!-- === Project Spotlight — B2B AI Suite (Streamlit) === -->
+<section id="b2b-ai-suite" class="reveal">
+  <h2 class="h-section">Project Spotlight — B2B AI Suite (Streamlit)</h2>
+
+  <!-- Video demo -->
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/d2lkvZj_UXg"
+      title="B2B AI Suite — Live Demo"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="chips" style="gap:8px;margin-bottom:10px;">
+    <a class="chip" href="https://aaadil777-b2b-ai-suite.streamlit.app" target="_blank" rel="noopener">🚀 Launch Live App</a>
+    <a class="chip" href="https://github.com/aaadil777/b2b_ai_streamlit_suite" target="_blank" rel="noopener">🐙 GitHub Repo</a>
+  </div>
+
+  <div class="card" style="margin-top:8px;">
+    <h3>Why it matters</h3>
+    <ul>
+      <li><strong>Purpose:</strong> Fast, self-serve analytics for supplier health, demand baselines, and inventory <em>what-ifs</em>.</li>
+      <li><strong>Passion:</strong> Turning messy ops data into clear, actionable decisions.</li>
+      <li><strong>Business Need:</strong> Score OTD/PPM/cost/risk, build an explainable baseline, and quantify lead-time/service/MOQ trade-offs.</li>
+    </ul>
+  </div>
+
+  <div class="card" style="margin-top:12px;">
+    <h3>What’s inside</h3>
+    <ul>
+      <li><strong>Supplier Scorecard:</strong> KPI-weighted ranking with Bubble & Pareto visuals.</li>
+      <li><strong>Demand Forecast:</strong> Moving-average baseline + weekday/weekly profiles, CSV export.</li>
+      <li><strong>What-If Inventory:</strong> Dual-axis chart, inventory position, backlog distribution, fill-rate KPI.</li>
+    </ul>
+    <p><strong>Tech:</strong> Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly</p>
+  </div>
+</section>
+
 <section id="portfolio" class="reveal">
   <h2 class="h-section">Projects & Certifications</h2>
 
