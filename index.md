@@ -124,20 +124,31 @@ title: "Aadil Ali"
   </div>
 </section>
 
+<section id="tech" class="reveal">
+  <h2 class="h-section">Technical Expertise & Certifications</h2>
+  <div class="tech-grid">
+
     <div class="tech-card">
       <h3>Platforms & Cloud</h3>
       <div class="pill-wrap">
-        <span class="pill">SAP (S/4HANA, IBP, FICO)</span><span class="pill">Workday HCM</span>
-        <span class="pill">Salesforce</span><span class="pill">Snowflake</span>
-        <span class="pill">AWS CloudWatch</span><span class="pill">GitHub</span>
+        <span class="pill">SAP (S/4HANA, IBP, FICO)</span>
+        <span class="pill">Workday HCM</span>
+        <span class="pill">Salesforce</span>
+        <span class="pill">Snowflake</span>
+        <span class="pill">AWS CloudWatch</span>
+        <span class="pill">GitHub</span>
       </div>
     </div>
 
     <div class="tech-card">
       <h3>Reliability & DevOps</h3>
       <div class="pill-wrap">
-        <span class="pill">Datadog</span><span class="pill">SonarQube</span><span class="pill">Kong Gateway</span>
-        <span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">Terraform</span>
+        <span class="pill">Datadog</span>
+        <span class="pill">SonarQube</span>
+        <span class="pill">Kong Gateway</span>
+        <span class="pill">Docker</span>
+        <span class="pill">Kubernetes</span>
+        <span class="pill">Terraform</span>
         <span class="pill">CI/CD</span>
       </div>
     </div>
@@ -145,20 +156,26 @@ title: "Aadil Ali"
     <div class="tech-card">
       <h3>Web & Product</h3>
       <div class="pill-wrap">
-        <span class="pill">Ruby</span><span class="pill">JavaScript</span><span class="pill">React.js</span>
-        <span class="pill">HTML/CSS</span><span class="pill">Jekyll</span><span class="pill">Productboard</span>
-        <span class="pill">Mural</span><span class="pill">Cursor</span>
+        <span class="pill">Ruby</span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">React.js</span>
+        <span class="pill">HTML/CSS</span>
+        <span class="pill">Jekyll</span>
+        <span class="pill">Productboard</span>
+        <span class="pill">Mural</span>
+        <span class="pill">Cursor</span>
       </div>
     </div>
 
     <div class="tech-card">
       <h3>Certifications & Methods</h3>
       <div class="pill-wrap">
-        <span class="pill">PSPO I</span><span class="pill">PSM I</span><span class="pill">Lean Six Sigma</span>
+        <span class="pill">PSPO I</span>
+        <span class="pill">PSM I</span>
+        <span class="pill">Lean Six Sigma</span>
         <span class="pill">YSU: Molecular Biology & Biotechnology</span>
       </div>
     </div>
-  </div>
 </section>
 
 <section id="gallery" class="reveal">
