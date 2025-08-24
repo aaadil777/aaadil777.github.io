@@ -52,7 +52,7 @@ title: "Aadil Ali"
 
 <!-- Project Spotlight right after Experience -->
 <section id="b2b-ai-suite" class="reveal">
-  <h2 class="h-section">Project Spotlight — B2B AI Suite</h2>
+  <h2 class="h-section">💡 Project Spotlight — B2B AI Suite</h2>
 
   <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
     <iframe
@@ -86,10 +86,11 @@ title: "Aadil Ali"
     </ul>
     <p><strong>Tech:</strong> Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly</p>
   </div>
+</section>
 
 <!-- FEATURED: Nurse-Next AI (Streamlit) -->
 <section id="nursenext" class="reveal">
-  <h2 class="h-section">Project Spotlight — Nurse Next AI Assistant</h2>
+  <h2 class="h-section">💡 Project Spotlight — Nurse Next AI</h2>
   <div class="gallery">
     <img src="{{ '/assets/proj-nurse-next-ai.jpg' | relative_url }}">
   </div>
@@ -101,7 +102,7 @@ title: "Aadil Ali"
 
   <!-- small summary card to match project style -->
   <div class="card" style="margin-top:8px;">
-    <h3 style="margin:0 0 6px;">Nurse-Next AI — Assistant</h3>
+    <h3 style="margin:0 0 6px;">Nurse Next AI</h3>
     <p style="margin:0;">Streamlit micro-assistant to speed triage, lookups, and routine workflows.</p>
   </div>
 
@@ -121,7 +122,7 @@ title: "Aadil Ali"
       <li><strong>Session state</strong>, file I/O, exportable outputs.</li>
       <li><strong>Ready to integrate</strong> with monitoring & CI/CD pipelines.</li>
     </ul>
-    <p><strong>Tech:</strong>Streamlit · Python · Groq · OpenAI · FastAPI</p>
+    <p><strong>Tech:</strong> Streamlit · Python · Groq · OpenAI · FastAPI</p>
   </div>
   
 </section>
@@ -245,23 +246,24 @@ title: "Aadil Ali"
 </section>
 
 <style>
-/* Typed bullets */
-.typed-bullets .bullet { position: relative; margin: .5rem 0; line-height: 1.5; }
-.bullet-label { font-weight: 700; border-right: 2px solid var(--accent, #7dd3fc); white-space: nowrap; overflow: hidden; display: inline-block; }
-.bullet-rest { opacity: 0; transition: opacity .35s ease-in .05s; margin-left: .25rem; }
-@keyframes caret { 0%,100% { border-color: transparent } 50% { border-color: var(--accent, #7dd3fc) } }
-.bullet-label.typing { animation: caret 1s steps(1) infinite; }
+/* Typed bullets – label + rest stay on one line, caret appears only while typing */
+.typed-bullets .bullet { margin:.5rem 0; line-height:1.5; }
+.bullet-label { font-weight:700; white-space:nowrap; overflow:hidden; display:inline; border-right:0; }
+.bullet-label.typing { border-right:2px solid var(--accent, #7dd3fc); animation: caret 1s steps(1,end) infinite; }
+.bullet-rest { display:inline; opacity:0; transition:opacity .35s ease .05s; margin-left:.25rem; }
+@keyframes caret { 0%,100% { border-right-color: transparent } 50% { border-right-color: var(--accent, #7dd3fc) } }
 
-/* Tech grid pills */
-.tech-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.tech-card { background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.06); border-radius: 12px; padding: 16px; }
-.tech-card h3 { margin: 0 0 8px 0; font-size: 1rem; letter-spacing: .2px; }
-.pill-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
-.pill { padding: 6px 10px; border-radius: 999px; background: rgba(125,211,252,.12); border: 1px solid rgba(125,211,252,.25); font-size: .88rem; }
+/* Tech grid pills (unchanged) */
+.tech-grid { display:grid; gap:12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.tech-card { background: rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:16px; }
+.tech-card h3 { margin:0 0 8px 0; font-size:1rem; letter-spacing:.2px; }
+.pill-wrap { display:flex; flex-wrap:wrap; gap:8px; }
+.pill { padding:6px 10px; border-radius:999px; background:rgba(125,211,252,.12); border:1px solid rgba(125,211,252,.25); font-size:.88rem; }
 
-/* small spacing tweak for projects/spotlight */
-#portfolio { margin-top: 18px; }
+/* small spacing tweak */
+#portfolio { margin-top:18px; }
 </style>
+
 
 <script>
 (function () {
