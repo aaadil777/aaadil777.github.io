@@ -1,3 +1,4 @@
+<!doctype html>
 ---
 layout: default
 title: "Aadil Ali"

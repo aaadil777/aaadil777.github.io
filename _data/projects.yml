@@ -1,13 +1,13 @@
 - title: "B2B AI Suite — Supplier & Planning"
   emoji: "📦"
-  image: "/assets/b2b-ai-suite.png"
+  image: "/assets/projects/b2b-ai-suite.png"
   desc: "Streamlit mini-suite: supplier scorecards, demand baseline, inventory what-ifs."
   url: "https://aadil-ali-b2b-ai-suite.streamlit.app"   # primary click
   launch: "https://aadil-ali-b2b-ai-suite.streamlit.app" # CTA button
   repo: "https://github.com/aaadil777/b2b_ai_streamlit_suite"
   tech: "Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly"
 
-- title: "Nurse-Next AI — Assistant"
+- title: "Nurse Next AI"
   emoji: "👩‍⚕"
   image: "/assets/proj-nurse-next-ai.jpg"   # add a thumbnail image in /assets
   desc: "Streamlit micro-assistant to speed triage, lookups, and routine workflows."
