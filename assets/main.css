@@ -83,7 +83,7 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 .typed-bullets{list-style:disc;padding-left:22px;margin:0}
 .typed-bullets .bullet{margin:.6rem 0}
 .typed-bullets .bullet .bullet-label{
-  display:block;                 /* NEW: always above details */
+  display:block;                 /* label on its own line */
   font-weight:800;               /* punchy label */
   white-space:nowrap;overflow:hidden;
   border-right:0 !important;     /* no persistent caret */
@@ -94,7 +94,7 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
   animation: bullet-caret-blink 1s steps(1,end) infinite;
 }
 .typed-bullets .bullet .bullet-rest{
-  display:block;                 /* NEW: on its own line */
+  display:block;                 /* details on own line */
   opacity:0;transition:opacity .35s ease .05s;margin-top:.15rem
 }
 @keyframes bullet-caret-blink{0%,100%{border-right-color:transparent}50%{border-right-color:var(--accent,#7dd3fc)}}
@@ -146,7 +146,6 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 @media (max-width:600px){
   .hero h1{font-size:clamp(28px,8vw,38px)}
   .h-section{font-size:clamp(22px,5.5vw,30px)}
-  /* breathing room in timeline cards on small screens */
   .node{padding:16px}
   .timeline .node ul{padding-left:18px}
 }

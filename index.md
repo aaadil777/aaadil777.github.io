@@ -86,6 +86,26 @@ title: "Aadil Ali"
     </ul>
     <p><strong>Tech:</strong> Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly</p>
   </div>
+
+  <div class="featured-embed">
+  <div class="embed">
+    <iframe
+      src="https://nurse-next-ai-assistant.streamlit.app/"
+      loading="lazy"
+      title="Nurse-Next AI Assistant"
+      referrerpolicy="no-referrer"
+      allowfullscreen>
+    </iframe>
+  </div>
+  
+  <div class="embed-meta">
+    <div class="p-title">🩺 Nurse-Next AI Assistant</div>
+    <p class="p-desc">
+      AI-powered nurse assistant built with Streamlit for healthcare support and patient interaction.
+      If the live embed doesn’t load in your browser, <a href="https://nurse-next-ai-assistant.streamlit.app/" target="_blank" rel="noopener">open it in a new tab</a>.
+    </p>
+  </div>
+
 </section>
 
 <section id="portfolio" class="reveal">
