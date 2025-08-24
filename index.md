@@ -52,7 +52,7 @@ title: "Aadil Ali"
 
 <!-- Project Spotlight right after Experience -->
 <section id="b2b-ai-suite" class="reveal">
-  <h2 class="h-section">Project Spotlight — B2B AI Suite (Streamlit)</h2>
+  <h2 class="h-section">Project Spotlight — B2B AI Suite</h2>
 
   <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
     <iframe
@@ -89,30 +89,23 @@ title: "Aadil Ali"
 
 <!-- FEATURED: Nurse-Next AI (Streamlit) -->
 <section id="nursenext" class="reveal">
-  <h2 class="h-section">Featured: Nurse-Next AI Assistant</h2>
+  <h2 class="h-section">Project Spotlight — Nurse-Next AI Assistant</h2>
 
   <p style="margin:14px 0 18px; display:flex; gap:10px; flex-wrap:wrap;">
     <a class="btn-cta" href="https://nurse-next-ai-assistant.streamlit.app/" target="_blank" rel="noopener">🚀 Launch Live App</a>
     <a class="btn-ghost" href="https://github.com/aaadil777/Nurse-Next-AI" target="_blank" rel="noopener">🤖 GitHub Repo</a>
   </p>
 
-  <!-- Clickable poster instead of iframe (Streamlit blocks embeds) -->
-  <a href="https://nurse-next-ai-assistant.streamlit.app/" target="_blank" rel="noopener" class="proj-card" data-img="{{ '/assets/proj-nurse-next-ai.jpg' | relative_url }}">
-    <span class="proj-icon" aria-hidden="true">👩‍⚕</span>
-    <div class="proj-meta">
-      <div class="proj-title">Nurse-Next AI — Assistant</div>
-      <p class="proj-desc">Streamlit micro-assistant to speed triage, lookups, and routine workflows.</p>
-    </div>
-  </a>
-
-  <div class="proj-ctas" style="margin-left:62px">
-    <span class="proj-tech">Tech: Streamlit · Python · Groq · OpenAI · FastAPI</span>
+  <!-- small summary card to match project style -->
+  <div class="tech-card" style="margin-bottom:14px;">
+    <h3 style="margin:0 0 6px;">Nurse-Next AI — Assistant</h3>
+    <p style="margin:0;">Streamlit micro-assistant to speed triage, lookups, and routine workflows.</p>
   </div>
 
-  <h3 class="h-sub" style="margin-top:10px;">Why it matters</h3>
+  <h3 class="h-sub" style="margin-top:18px;">Why it matters</h3>
   <ul>
     <li><strong>Purpose:</strong> Self-serve AI assistant for triage, info lookups, and routine workflows.</li>
-    <li><strong>Business value:</strong> Reduces context-switching; scalable for internal B2B use for educational and practical applications.</li>
+    <li><strong>Business value:</strong> Reduces context-switching; scalable for internal B2B use for education and practical ops.</li>
   </ul>
 
   <h3 class="h-sub">What’s inside</h3>
@@ -121,8 +114,11 @@ title: "Aadil Ali"
     <li><strong>Session state</strong>, file I/O, exportable outputs.</li>
     <li><strong>Ready to integrate</strong> with monitoring & CI/CD pipelines.</li>
   </ul>
+
+  <p class="proj-tech" style="margin-top:8px;">Tech: Streamlit · Python · Groq · OpenAI · FastAPI</p>
 </section>
 
+<!-- Projects & Certifications -->
 <section id="portfolio" class="reveal">
   <h2 class="h-section">Projects & Certifications</h2>
 
@@ -131,7 +127,8 @@ title: "Aadil Ali"
       <!-- Card itself = primary click-through -->
       <a class="proj-card"
          href="{{ p.url }}"
-         target="_blank" rel="noopener"
+         target="_blank"
+         rel="noopener"
          data-img="{{ p.image | relative_url }}">
         <span class="proj-icon" aria-hidden="true">{{ p.emoji }}</span>
         <div class="proj-meta">
@@ -147,7 +144,7 @@ title: "Aadil Ali"
           <a class="btn-cta" href="{{ p.launch }}" target="_blank" rel="noopener">🚀 Launch</a>
         {% endif %}
         {% if p.repo %}
-          <a class="btn-ghost" href="{{ p.repo }}" target="_blank" rel="noopener">🐙 Repo</a>
+          <a class="btn-ghost" href="{{ p.repo }}" target="_blank" rel="noopener">🤖 Repo</a>
         {% endif %}
         {% if p.tech %}
           <span class="proj-tech">Tech: {{ p.tech }}</span>
