@@ -50,89 +50,9 @@
         <a href="#top" class="pill">Top</a>
         <a href="#about" class="pill">About</a>
         <a href="#timeline" class="pill">Experience</a>
-        <a href="#b2b-ai-suite" class="pill">B2B AI</a>
-        <a href="#nursenext" class="pill">Nurse-Next AI</a>
         <a href="#portfolio" class="pill">Projects</a>
         <a href="#education" class="pill">Education</a>
-        <a href="#tech" class="pill">Tech</a>
-        <a href="#gallery" class="pill">Gallery</a>
-        <a href="#contact" class="pill">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    {{ content }}
-  </main>
-
-  <footer class="site-footer">
-    <div>© {{ "now" | date: "%Y" }} Aadil Ali</div>
-  </footer>
-
-  <!-- Hover image shell for project previews (required by main.js) -->
-  <div class="hover-preview" aria-hidden="true"><img alt=""></div>
-
-  <!-- Main JS (deferred + cache-busted) -->
-  <script defer src="{{ '/assets/main.js' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}"></script>
-</body>
-</html>
-<!doctype html>
-<html lang="en" class="no-js">
-<head>
-  {% seo %}  <!-- keep if jekyll-seo-tag is enabled; remove this line if not used -->
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{{ page.title | default: site.title }}</title>
-
-  <!-- Canonical & theme -->
-  <link rel="canonical" href="{{ '/' | absolute_url }}">
-  <meta name="theme-color" content="#0b0f15">
-
-  <!-- Favicon -->
-  <link rel="icon" href="{{ '/assets/profile.jpg' | relative_url }}" type="image/jpeg">
-
-  <!-- Main CSS (cache-busted) -->
-  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}">
-
-  <!-- Open Graph (kept for robustness even with {% seo %}) -->
-  <meta property="og:type"        content="website">
-  <meta property="og:title"       content="Aadil Ali — Digital Transformation • AI Integration • Strategy">
-  <meta property="og:description" content="Product-driven technologist turning complex operations into scalable, measurable systems.">
-  <meta property="og:url"         content="{{ '/' | absolute_url }}">
-  <meta property="og:image"       content="{{ '/assets/profile.jpg' | absolute_url }}">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Aadil Ali — Digital Transformation • AI Integration • Strategy">
-  <meta name="twitter:description" content="Product-driven technologist turning complex operations into scalable, measurable systems.">
-  <meta name="twitter:image"       content="{{ '/assets/profile.jpg' | absolute_url }}">
-
-  <!-- No-JS fallback so reveal content shows -->
-  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
-</head>
-<body>
-  <script>document.documentElement.classList.remove('no-js');</script>
-
-  <header class="site-nav">
-    <div class="nav-inner">
-      <div class="brand">
-        <img src="{{ '/assets/profile.jpg' | relative_url }}" alt="Aadil" class="brand-avatar">
-        <div class="brand-meta">
-          <div class="brand-name">Aadil Ali</div>
-          <div class="brand-sub">Digital Transformation • AI Integration • Strategy</div>
-        </div>
-      </div>
-      <nav class="links" aria-label="Primary">
-        <a href="#top" class="pill">Top</a>
-        <a href="#about" class="pill">About</a>
-        <a href="#timeline" class="pill">Experience</a>
-        <a href="#b2b-ai-suite" class="pill">B2B AI</a>
-        <a href="#nursenext" class="pill">Nurse-Next AI</a>
-        <a href="#portfolio" class="pill">Projects</a>
-        <a href="#education" class="pill">Education</a>
-        <a href="#tech" class="pill">Tech</a>
+        <a href="#skills" class="pill">Skills</a>
         <a href="#gallery" class="pill">Gallery</a>
         <a href="#contact" class="pill">Contact</a>
       </nav>

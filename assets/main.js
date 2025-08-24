@@ -6,7 +6,7 @@ const reveal = () => {
       e.target.classList.add('in');
       obs.unobserve(e.target);
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.05 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 };
 
