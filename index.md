@@ -236,24 +236,24 @@ title: "Aadil Ali"
 
 <section id="contact" class="reveal">
    <h2 class="h-section">Get in touch</h2>
-   <div class="cta-grid">
-     <a class="cta-tile" href="mailto:{{ site.email }}" target="_blank" rel="noopener">
-       <span class="cta-title">Email Me</span>
-       <span class="cta-sub">Reach me directly</span>
-     </a>
-     <a class="cta-tile" href="{{ site.calendar }}" target="_blank" rel="noopener">
-       <span class="cta-title">Book a Meeting</span>
-       <span class="cta-sub">Pick a time</span>
-     </a>
-     <a class="cta-tile" href="{{ site.linkedin }}" target="_blank" rel="noopener">
-       <span class="cta-title">LinkedIn</span>
-       <span class="cta-sub">Connect & DM</span>
-     </a>
-     <a class="cta-tile" href="{{ site.resume_url }}" target="_blank" rel="noopener">
-       <span class="cta-title">Resume (PDF)</span>
-       <span class="cta-sub">Download</span>
-     </a>
-   </div>
+  <div class="cta-grid">
+    <a class="cta-tile" href="mailto:{{ site.email }}">
+      <div class="cta-title">✉️ Email Me</div>
+      <div class="cta-sub">Quickest way to reach me</div>
+    </a>
+    <a class="cta-tile" href="{{ site.calendar }}" target="_blank" rel="noopener">
+      <div class="cta-title">📅 Book a Meeting</div>
+      <div class="cta-sub">15–30 min slots</div>
+    </a>
+    <a class="cta-tile" href="{{ site.linkedin }}" target="_blank" rel="noopener">
+      <div class="cta-title">🔗 Connect on LinkedIn</div>
+      <div class="cta-sub">Let’s stay in touch</div>
+    </a>
+    <a class="cta-tile" href="{{ site.resume_url }}" target="_blank" rel="noopener">
+      <div class="cta-title">📄 Download Resume</div>
+      <div class="cta-sub">For your reference</div>
+    </a>
+  </div>
  </section>
 
 <style>
