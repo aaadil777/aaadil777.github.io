@@ -5,7 +5,7 @@
   image: "assets/projects/b2b-ai-suite.png"
 
 - title: "Nurse-Next AI — Assistant"
-  emoji: "🩺"
+  emoji: "👩‍⚕"
   image: "/assets/proj-nursenext.jpg"   # add a thumbnail image in /assets
   desc: "Streamlit micro-assistant to speed triage, lookups, and routine workflows."
   url: "https://nurse-next-ai-assistant.streamlit.app/"   # primary click for the card
