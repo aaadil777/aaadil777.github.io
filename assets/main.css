@@ -90,12 +90,19 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 .pill{padding:6px 10px;border-radius:999px;background:rgba(125,211,252,.12);border:1px solid rgba(125,211,252,.25);font-size:.88rem}
 
 /* ===== Timeline ===== */
-.timeline{position:relative;margin-left:6px}
+.timeline{position:relative;margin-left:6px; padding-right:6px}
 .timeline::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:#2c3b52}
 .node{
-  position:relative;margin:22px 0 22px 36px;padding:14px 16px;border-radius:14px;
-  background:#1a2330;border:1px solid var(--line);
+  position:relative;
+  margin:22px 0 22px 36px;
+  padding:14px 16px;
+  border-radius:14px;
+  background:#1a2330;
+  border:1px solid var(--line);
+  overflow-wrap:anywhere; /* prevent spill-over on small screens */
 }
+
+.node { max-width:100%; }           /* child elements never overflow */
 .node::before{content:"";position:absolute;left:-30px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px rgb(124 199 255 / 20%)}
 .node .title{font-weight:600;margin:0 0 4px}
 .meta{color:var(--muted);font-size:14px;margin-bottom:6px}
@@ -139,10 +146,33 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:translateY(0)}
 
+/* ===== Mobile menu (drawer) ===== */
+.menu-btn{
+  display:none;
+  align-items:center;justify-content:center;
+  width:42px;height:36px;border-radius:10px;
+  border:1px solid var(--line);
+  background:var(--pill);color:var(--text);
+  font-size:18px;cursor:pointer;
+}
+.mobile-drawer{
+  display:none;gap:8px;flex-wrap:wrap;
+  padding:10px 16px 14px;
+  background:rgba(15,20,28,.98);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.mobile-drawer.open{display:flex}
+.mobile-drawer .pill{text-decoration:none}
+
 /* ===== Responsive ===== */
 @media (max-width: 900px){
   .tech-grid,.proj-grid,.gallery{grid-template-columns:1fr}
   .hover-preview{display:none}
+}
+@media (max-width:720px){
+  .links{display:none}     /* hide desktop pills */
+  .menu-btn{display:flex}  /* show hamburger */
 }
 @media (max-width:600px){
   .hero h1{font-size:clamp(28px,8vw,38px)}

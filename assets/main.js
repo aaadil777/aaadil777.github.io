@@ -124,3 +124,32 @@ document.addEventListener('DOMContentLoaded', () => {
   projectPreview();
   sectionSpy();
 });
+
+/* Mobile menu toggle */
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('menu-toggle');
+  const drawer = document.getElementById('mobile-nav');
+  if (!btn || !drawer) return;
+
+  const close = () => {
+    drawer.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  };
+  const open = () => {
+    drawer.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+  };
+
+  btn.addEventListener('click', () => {
+    drawer.classList.toggle('open');
+    const isOpen = drawer.classList.contains('open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close when a link is tapped, on Esc, or when clicking outside
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  document.addEventListener('click', e => {
+    if (!drawer.contains(e.target) && e.target !== btn && drawer.classList.contains('open')) close();
+  }, true);
+});
