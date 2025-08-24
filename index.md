@@ -141,22 +141,6 @@ title: "Aadil Ali"
           <p class="proj-desc">{{ p.desc }}</p>
         </div>
       </a>
-
-      <!-- Optional buttons + tech line under the card -->
-      {% if p.launch or p.repo or p.tech %}
-      <div class="proj-ctas">
-        {% if p.launch %}
-          <a class="btn-cta" href="{{ p.launch }}" target="_blank" rel="noopener">🚀 Launch</a>
-        {% endif %}
-        {% if p.repo %}
-          <a class="btn-ghost" href="{{ p.repo }}" target="_blank" rel="noopener">🤖 Repo</a>
-        {% endif %}
-        {% if p.tech %}
-          <span class="proj-tech">Tech: {{ p.tech }}</span>
-        {% endif %}
-      </div>
-      {% endif %}
-    {% endfor %}
   </div>
 </section>
 
