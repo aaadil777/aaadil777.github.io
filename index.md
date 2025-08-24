@@ -96,19 +96,23 @@ title: "Aadil Ali"
     <a class="btn-ghost" href="https://github.com/aaadil777/Nurse-Next-AI" target="_blank" rel="noopener">🤖 GitHub Repo</a>
   </p>
 
-  <div class="embed-wrap">
-    <iframe
-      src="https://nurse-next-ai-assistant.streamlit.app/"
-      title="Nurse-Next AI — Streamlit App"
-      loading="lazy"
-      allow="clipboard-read; clipboard-write"
-    ></iframe>
+  <!-- Clickable poster instead of iframe (Streamlit blocks embeds) -->
+  <a href="https://nurse-next-ai-assistant.streamlit.app/" target="_blank" rel="noopener" class="proj-card" data-img="{{ '/assets/proj-nurse-next-ai.jpg' | relative_url }}">
+    <span class="proj-icon" aria-hidden="true">👩‍⚕</span>
+    <div class="proj-meta">
+      <div class="proj-title">Nurse-Next AI — Assistant</div>
+      <p class="proj-desc">Streamlit micro-assistant to speed triage, lookups, and routine workflows.</p>
+    </div>
+  </a>
+
+  <div class="proj-ctas" style="margin-left:62px">
+    <span class="proj-tech">Tech: Streamlit · Python · Groq · OpenAI · FastAPI</span>
   </div>
 
-  <h3 class="h-sub" style="margin-top:22px;">Why it matters</h3>
+  <h3 class="h-sub" style="margin-top:10px;">Why it matters</h3>
   <ul>
-    <li><strong>Purpose:</strong> Self-serve AI assistant to speed up triage, info lookups, and routine workflows.</li>
-    <li><strong>Business value:</strong> Reduces context-switching for nurses; scalable for internal B2B use.</li>
+    <li><strong>Purpose:</strong> Self-serve AI assistant for triage, info lookups, and routine workflows.</li>
+    <li><strong>Business value:</strong> Reduces context-switching; scalable for internal B2B use for educational and practical applications.</li>
   </ul>
 
   <h3 class="h-sub">What’s inside</h3>
@@ -119,15 +123,15 @@ title: "Aadil Ali"
   </ul>
 </section>
 
-</section>
-
 <section id="portfolio" class="reveal">
   <h2 class="h-section">Projects & Certifications</h2>
 
-  <div class="preview-grid">
+  <div class="proj-grid">
     {% for p in site.data.projects %}
       <!-- Card itself = primary click-through -->
-      <a class="proj-card" href="{{ p.url }}" target="_blank" rel="noopener"
+      <a class="proj-card"
+         href="{{ p.url }}"
+         target="_blank" rel="noopener"
          data-img="{{ p.image | relative_url }}">
         <span class="proj-icon" aria-hidden="true">{{ p.emoji }}</span>
         <div class="proj-meta">

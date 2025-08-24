@@ -60,6 +60,21 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
   background:#1a2330;border:1px solid var(--line);color:var(--muted);
 }
 
+/* typed bullets – base label has NO border */
+.bullet-label{
+  font-weight:700;
+  white-space:nowrap;
+  overflow:hidden;
+  display:inline-block;
+  border-right:0;              /* <- make sure this is 0 */
+}
+
+/* only show the caret while typing */
+.bullet-label.typing{
+  border-right:2px solid var(--accent, #7dd3fc);
+  animation: caret 1s steps(1) infinite;
+}
+
 /* ===== Tech cards ===== */
 .tech-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .tech-card{background:linear-gradient(180deg,#151c27,#0f141c);border:1px solid var(--line);border-radius:16px;padding:16px}
