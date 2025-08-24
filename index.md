@@ -19,10 +19,7 @@ title: "Aadil Ali"
 <section id="about" class="reveal">
   <h2 class="h-section">About</h2>
   <p>
-    I’m a product-driven technologist at the intersection of data, supply chain, and AI. I turn complex operations into
-    scalable, measurable systems—spanning SAP/Workday implementations, API reliability, and cloud analytics. Recognized for
-    shipping outcomes (cost savings, higher forecast accuracy, shorter cycle times) by aligning business strategy with
-    technical execution.
+    I’m a product-driven strategist working at the intersection of data, supply chain, and AI, transforming complex operations into scalable, measurable systems. My experience spans SAP/Workday implementations, API reliability, and cloud analytics, with a track record of delivering outcomes like cost savings, stronger forecast accuracy, and faster cycle times. I specialize in aligning business strategy with technical execution, building solutions that drive efficiency and long-term impact.
   </p>
 </section>
 
