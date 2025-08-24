@@ -51,6 +51,7 @@ title: "Aadil Ali"
 </section>
 
 <!-- Project Spotlight right after Experience -->
+<span id="ai-spotlight></span>
 <section id="b2b-ai-suite" class="reveal">
   <h2 class="h-section">💡 Project Spotlight — B2B AI Suite</h2>
 

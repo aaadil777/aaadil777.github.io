@@ -38,47 +38,49 @@
   <script>document.documentElement.classList.remove('no-js');</script>
 
   <header class="site-nav">
-  <div class="nav-inner">
-    <div class="brand">
-      <img src="{{ '/assets/profile.jpg' | relative_url }}" alt="Aadil" class="brand-avatar">
-      <div class="brand-meta">
-        <div class="brand-name">Aadil Ali</div>
-        <div class="brand-sub">Digital Transformation • AI Integration • Strategy</div>
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="{{ '/assets/profile.jpg' | relative_url }}" alt="Aadil" class="brand-avatar">
+        <div class="brand-meta">
+          <div class="brand-name">Aadil Ali</div>
+          <div class="brand-sub">Digital Transformation • AI Integration • Strategy</div>
+        </div>
       </div>
+
+      <!-- Desktop links -->
+      <nav class="links" aria-label="Primary">
+        <a href="#top" class="pill">Top</a>
+        <a href="#about" class="pill">About</a>
+        <a href="#timeline" class="pill">Experience</a>
+        <!-- FIX: point to first spotlight section id -->
+        <a href="#b2b-ai-suite" class="pill">AI Spotlight</a>
+        <a href="#portfolio" class="pill">Projects</a>
+        <a href="#education" class="pill">Education</a>
+        <!-- FIX: your section id is #tech -->
+        <a href="#tech" class="pill">Skills</a>
+        <a href="#gallery" class="pill">Gallery</a>
+        <a href="#contact" class="pill">Contact</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button class="menu-btn" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
     </div>
 
-    <!-- Desktop links -->
-    <nav class="links" aria-label="Primary">
+    <!-- Mobile drawer -->
+    <nav id="mobile-nav" class="mobile-drawer" aria-label="Mobile">
       <a href="#top" class="pill">Top</a>
       <a href="#about" class="pill">About</a>
       <a href="#timeline" class="pill">Experience</a>
-      <a href="#ai-spotlight" class="pill">Spotlight AI Projects</a>
+      <!-- FIX here too -->
+      <a href="#b2b-ai-suite" class="pill">AI Spotlight</a>
       <a href="#portfolio" class="pill">Projects</a>
       <a href="#education" class="pill">Education</a>
-      <a href="#Skills" class="pill">Skills</a>
+      <!-- FIX here too -->
+      <a href="#tech" class="pill">Skills</a>
       <a href="#gallery" class="pill">Gallery</a>
       <a href="#contact" class="pill">Contact</a>
     </nav>
-
-    <!-- Mobile menu button -->
-    <button class="menu-btn" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-      ☰
-    </button>
-  </div>
-
-  <!-- Mobile drawer -->
-  <nav id="mobile-nav" class="mobile-drawer" aria-label="Mobile">
-      <a href="#top" class="pill">Top</a>
-      <a href="#about" class="pill">About</a>
-      <a href="#timeline" class="pill">Experience</a>
-      <a href="#ai-spotlight" class="pill">Spotlight AI Projects</a>
-      <a href="#portfolio" class="pill">Projects</a>
-      <a href="#education" class="pill">Education</a>
-      <a href="#Skills" class="pill">Skills</a>
-      <a href="#gallery" class="pill">Gallery</a>
-      <a href="#contact" class="pill">Contact</a>
-    </nav>
-</header>
+  </header>
 
   <main id="top">
     {{ content }}
