@@ -20,10 +20,15 @@ body{
   font-size:16.5px; line-height:1.75; font-weight:400;
 }
 
-/* links */
-a{color:var(--link);text-decoration:underline;text-underline-offset:2px}
-a:hover{color:var(--link-2)}
-a:focus-visible{outline:var(--ring);border-radius:8px;text-decoration:none}
+/* Keep pills on one line on desktop; allow horizontal scroll if needed */
+.links{
+  display:flex;
+  gap:8px;
+  flex-wrap:nowrap;           /* was wrap */
+  overflow-x:auto;            /* allow sideways scroll instead of wrapping */
+  -webkit-overflow-scrolling: touch;
+}
+.links a{ white-space:nowrap; } /* prevent chip text from breaking */
 
 /* ===== Nav ===== */
 .site-nav{
