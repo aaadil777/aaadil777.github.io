@@ -86,7 +86,6 @@ title: "Aadil Ali"
     </ul>
     <p><strong>Tech:</strong> Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly</p>
   </div>
-</section>
 
 <!-- FEATURED: Nurse-Next AI (Streamlit) -->
 <section id="nursenext" class="reveal">
@@ -124,8 +123,6 @@ title: "Aadil Ali"
     </ul>
     <p><strong>Tech:</strong> Streamlit · Python · Groq · OpenAI · FastAPI</p>
   </div>
-  
-</section>
 
 <!-- Projects & Certifications -->
 <section id="portfolio" class="reveal">
