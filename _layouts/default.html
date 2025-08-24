@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
-  {% seo %}  <!-- keep if jekyll-seo-tag is enabled; remove this line if not used -->
+  {% seo %}
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,18 +18,18 @@
   <!-- Main CSS (cache-busted) -->
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}">
 
-  <!-- Open Graph (kept for robustness even with {% seo %}) -->
-  <meta property="og:type"        content="website">
-  <meta property="og:title"       content="Aadil Ali — Digital Transformation • AI Integration • Strategy">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aadil Ali — Digital Transformation • AI Integration • Strategy">
   <meta property="og:description" content="Product-driven technologist turning complex operations into scalable, measurable systems.">
-  <meta property="og:url"         content="{{ '/' | absolute_url }}">
-  <meta property="og:image"       content="{{ '/assets/profile.jpg' | absolute_url }}">
+  <meta property="og:url" content="{{ '/' | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/profile.jpg' | absolute_url }}">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Aadil Ali — Digital Transformation • AI Integration • Strategy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aadil Ali — Digital Transformation • AI Integration • Strategy">
   <meta name="twitter:description" content="Product-driven technologist turning complex operations into scalable, measurable systems.">
-  <meta name="twitter:image"       content="{{ '/assets/profile.jpg' | absolute_url }}">
+  <meta name="twitter:image" content="{{ '/assets/profile.jpg' | absolute_url }}">
 
   <!-- No-JS fallback so reveal content shows -->
   <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
@@ -67,7 +67,7 @@
     <div>© {{ "now" | date: "%Y" }} Aadil Ali</div>
   </footer>
 
-  <!-- Hover image shell for project previews (required by main.js) -->
+  <!-- Hover image shell for project previews (used by main.js) -->
   <div class="hover-preview" aria-hidden="true"><img alt=""></div>
 
   <!-- Main JS (deferred + cache-busted) -->
