@@ -1,4 +1,3 @@
-<!doctype html>
 ---
 layout: default
 title: "Aadil Ali"
@@ -264,7 +263,6 @@ title: "Aadil Ali"
 /* small spacing tweak */
 #portfolio { margin-top:18px; }
 </style>
-
 
 <script>
 (function () {
