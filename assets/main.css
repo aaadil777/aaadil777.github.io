@@ -78,28 +78,6 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 .node .title{font-weight:600;margin:0 0 4px}
 .meta{color:var(--muted);font-size:14px;margin-bottom:6px}
 
-/* ===== Typed bullets (stack content under the impact phrase) ===== */
-/* Structure: impact phrase (label) on its own line; details below for readability */
-.typed-bullets{list-style:disc;padding-left:22px;margin:0}
-.typed-bullets .bullet{margin:.6rem 0}
-.typed-bullets .bullet .bullet-label{
-  display:block;                 /* label on its own line */
-  font-weight:800;               /* punchy label */
-  white-space:nowrap;overflow:hidden;
-  border-right:0 !important;     /* no persistent caret */
-  padding-right:2px;
-}
-.typed-bullets .bullet .bullet-label.typing{
-  border-right:2px solid var(--accent,#7dd3fc)!important;
-  animation: bullet-caret-blink 1s steps(1,end) infinite;
-}
-.typed-bullets .bullet .bullet-rest{
-  display:block;                 /* details on own line */
-  opacity:0;transition:opacity .35s ease .05s;margin-top:.15rem
-}
-@keyframes bullet-caret-blink{0%,100%{border-right-color:transparent}50%{border-right-color:var(--accent,#7dd3fc)}}
-@media (prefers-reduced-motion:reduce){.typed-bullets .bullet .bullet-label.typing{animation:none}}
-
 /* ===== Projects & hover preview ===== */
 .proj-grid{display:grid;gap:16px;grid-template-columns:repeat(3,minmax(0,1fr))}
 .proj-card{
@@ -113,6 +91,31 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 .proj-title{margin:2px 0 4px;font-weight:600;font-size:18px}
 .proj-desc{margin:0;opacity:.95}
 
+/* ===== Project CTA row ===== */
+.proj-ctas{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin:6px 0 18px 62px;
+}
+.proj-ctas .btn-cta,
+.proj-ctas .btn-ghost{
+  padding:8px 12px;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+  line-height:1;
+}
+.proj-tech{
+  opacity:.85;
+  border-left:1px solid var(--line);
+  padding-left:10px;
+  margin-left:4px;
+  font-size:.95rem;
+}
+
+/* Hover image preview */
 .hover-preview{
   position:fixed;left:24px;top:24px;width:min(420px,40vw);height:230px;
   border-radius:16px;overflow:hidden;border:1px solid #2a3548;background:#101820;
@@ -148,4 +151,5 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
   .h-section{font-size:clamp(22px,5.5vw,30px)}
   .node{padding:16px}
   .timeline .node ul{padding-left:18px}
+  .proj-ctas{margin-left:58px}
 }

@@ -123,11 +123,11 @@ title: "Aadil Ali"
 
 <section id="portfolio" class="reveal">
   <h2 class="h-section">Projects & Certifications</h2>
+
   <div class="preview-grid">
     {% for p in site.data.projects %}
-      <a class="proj-card"
-         href="{{ p.url }}"
-         target="_blank" rel="noopener"
+      <!-- Card itself = primary click-through -->
+      <a class="proj-card" href="{{ p.url }}" target="_blank" rel="noopener"
          data-img="{{ p.image | relative_url }}">
         <span class="proj-icon" aria-hidden="true">{{ p.emoji }}</span>
         <div class="proj-meta">
@@ -135,6 +135,21 @@ title: "Aadil Ali"
           <p class="proj-desc">{{ p.desc }}</p>
         </div>
       </a>
+
+      <!-- Optional buttons + tech line under the card -->
+      {% if p.launch or p.repo or p.tech %}
+      <div class="proj-ctas">
+        {% if p.launch %}
+          <a class="btn-cta" href="{{ p.launch }}" target="_blank" rel="noopener">🚀 Launch</a>
+        {% endif %}
+        {% if p.repo %}
+          <a class="btn-ghost" href="{{ p.repo }}" target="_blank" rel="noopener">🐙 Repo</a>
+        {% endif %}
+        {% if p.tech %}
+          <span class="proj-tech">Tech: {{ p.tech }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
     {% endfor %}
   </div>
 </section>
