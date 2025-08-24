@@ -236,12 +236,11 @@ title: "Aadil Ali"
 
 <section id="contact" class="reveal">
   <h2 class="h-section">Get in touch</h2>
-  <div class="chips">
-    <a class="chip" href="mailto:{{ site.email }}" aria-label="Email">✉️ Email</a>
-    <a class="chip" href="{{ site.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">🔗 LinkedIn</a>
-    <a class="chip" href="{{ site.github }}" target="_blank" rel="noopener" aria-label="GitHub">🐙 GitHub</a>
-    <a class="chip" href="{{ site.calendar }}" target="_blank" rel="noopener" aria-label="Book time">📅 Book time</a>
-    <a class="chip" href="{{ site.resume_url }}" target="_blank" rel="noopener" aria-label="Resume PDF">📄 Resume</a>
+  <div class="cta-row" style="margin-bottom:14px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a class="btn-cta" href="mailto:{{ site.email }}" target="_blank" rel="noopener">✉️ Email Me</a>
+    <a class="btn-cta" href="{{ site.calendar }}" target="_blank" rel="noopener">📅 Book a Meeting</a>
+    <a class="btn-cta" href="{{ site.linkedin }}" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    <a class="btn-ghost" href="{{ site.resume_url }}" target="_blank" rel="noopener">Download Resume</a>
   </div>
 </section>
 
