@@ -87,32 +87,48 @@ title: "Aadil Ali"
     <p><strong>Tech:</strong> Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly</p>
   </div>
 
-  <div class="featured-embed">
-  <div class="embed">
+<!-- FEATURED: Nurse-Next AI (Streamlit) -->
+<section id="nursenext" class="reveal">
+  <h2 class="h-section">Featured: Nurse-Next AI Assistant</h2>
+
+  <p style="margin:14px 0 18px; display:flex; gap:10px; flex-wrap:wrap;">
+    <a class="btn-cta" href="https://nurse-next-ai-assistant.streamlit.app/" target="_blank" rel="noopener">🚀 Launch Live App</a>
+    <a class="btn-ghost" href="https://github.com/aaadil777/Nurse-Next-AI" target="_blank" rel="noopener">🤖 GitHub Repo</a>
+  </p>
+
+  <div class="embed-wrap">
     <iframe
       src="https://nurse-next-ai-assistant.streamlit.app/"
+      title="Nurse-Next AI — Streamlit App"
       loading="lazy"
-      title="Nurse-Next AI Assistant"
-      referrerpolicy="no-referrer"
-      allowfullscreen>
-    </iframe>
+      allow="clipboard-read; clipboard-write"
+    ></iframe>
   </div>
-  
-  <div class="embed-meta">
-    <div class="p-title">🩺 Nurse-Next AI Assistant</div>
-    <p class="p-desc">
-      AI-powered nurse assistant built with Streamlit for healthcare support and patient interaction.
-      If the live embed doesn’t load in your browser, <a href="https://nurse-next-ai-assistant.streamlit.app/" target="_blank" rel="noopener">open it in a new tab</a>.
-    </p>
-  </div>
+
+  <h3 class="h-sub" style="margin-top:22px;">Why it matters</h3>
+  <ul>
+    <li><strong>Purpose:</strong> Self-serve AI assistant to speed up triage, info lookups, and routine workflows.</li>
+    <li><strong>Business value:</strong> Reduces context-switching for nurses; scalable for internal B2B use.</li>
+  </ul>
+
+  <h3 class="h-sub">What’s inside</h3>
+  <ul>
+    <li><strong>Guardrailed chat flows</strong> with modular prompts.</li>
+    <li><strong>Session state</strong>, file I/O, exportable outputs.</li>
+    <li><strong>Ready to integrate</strong> with monitoring & CI/CD pipelines.</li>
+  </ul>
+</section>
 
 </section>
 
 <section id="portfolio" class="reveal">
   <h2 class="h-section">Projects & Certifications</h2>
-  <div class="proj-grid">
+  <div class="preview-grid">
     {% for p in site.data.projects %}
-      <a class="proj-card" href="{{ p.url }}" target="_blank" rel="noopener" data-img="{{ p.image | relative_url }}">
+      <a class="proj-card"
+         href="{{ p.url }}"
+         target="_blank" rel="noopener"
+         data-img="{{ p.image | relative_url }}">
         <span class="proj-icon" aria-hidden="true">{{ p.emoji }}</span>
         <div class="proj-meta">
           <div class="proj-title">{{ p.title }}</div>
@@ -121,7 +137,6 @@ title: "Aadil Ali"
       </a>
     {% endfor %}
   </div>
-  <div class="hover-preview" aria-hidden="true"><img alt=""></div>
 </section>
 
 <section id="education" class="reveal">
