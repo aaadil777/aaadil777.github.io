@@ -63,10 +63,10 @@ title: "Aadil Ali"
       allowfullscreen></iframe>
   </div>
 
-  <div class="chips" style="gap:8px;margin-bottom:10px;">
-    <a class="chip" href="https://aadil-ali-b2b-ai-suite.streamlit.app" target="_blank" rel="noopener">🚀 Launch Live App</a>
-    <a class="chip" href="https://github.com/aaadil777/b2b_ai_streamlit_suite" target="_blank" rel="noopener">🐙 GitHub Repo</a>
-  </div>
+  <p style="margin:14px 0 18px; display:flex; gap:10px; flex-wrap:wrap;">
+    <a class="btn-cta" href="https://aadil-ali-b2b-ai-suite.streamlit.app/" target="_blank" rel="noopener">🚀 Launch Live App</a>
+    <a class="btn-ghost" href="https://github.com/aaadil777/b2b-ai-streamlit-suite" target="_blank" rel="noopener">🤖 GitHub Repo</a>
+  </p>
 
   <div class="card" style="margin-top:8px;">
     <h3>Why it matters</h3>
@@ -84,7 +84,7 @@ title: "Aadil Ali"
       <li><strong>Demand Forecast:</strong> Moving-average baseline + weekday/weekly profiles, CSV export.</li>
       <li><strong>What-If Inventory:</strong> Dual-axis chart, inventory position, backlog distribution, fill-rate KPI.</li>
     </ul>
-    <p><strong>Tech:</strong> Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly</p>
+    <p><strong>="proj-tech":</strong> Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly</p>
   </div>
 
 <!-- FEATURED: Nurse-Next AI (Streamlit) -->
@@ -97,25 +97,30 @@ title: "Aadil Ali"
   </p>
 
   <!-- small summary card to match project style -->
-  <div class="tech-card" style="margin-bottom:14px;">
+  <div class="card" style="margin-top:8px;">
     <h3 style="margin:0 0 6px;">Nurse-Next AI — Assistant</h3>
     <p style="margin:0;">Streamlit micro-assistant to speed triage, lookups, and routine workflows.</p>
   </div>
 
-  <h3 class="h-sub" style="margin-top:18px;">Why it matters</h3>
-  <ul>
-    <li><strong>Purpose:</strong> Self-serve AI assistant for triage, info lookups, and routine workflows.</li>
-    <li><strong>Business value:</strong> Reduces context-switching; scalable for internal B2B use for education and practical ops.</li>
-  </ul>
+  <div>
+    <h3 class="card" style="margin-top:12px;">Why it matters</h3>
+    <ul>
+      <li><strong>Purpose:</strong> Self-serve AI assistant for triage, info lookups, and routine workflows.</li>
+      <li><strong>Passion:</strong> Deliver actionable, effective guidance for complex health-related inquries.</li>
+      <li><strong>Business Need:</strong> Reduces context-switching; scalable for internal B2B use for education and practical ops for health applications.</li>
+    </ul>
+  </div>
 
-  <h3 class="h-sub">What’s inside</h3>
-  <ul>
-    <li><strong>Guardrailed chat flows</strong> with modular prompts.</li>
-    <li><strong>Session state</strong>, file I/O, exportable outputs.</li>
-    <li><strong>Ready to integrate</strong> with monitoring & CI/CD pipelines.</li>
-  </ul>
-
-  <p class="proj-tech" style="margin-top:8px;">Tech: Streamlit · Python · Groq · OpenAI · FastAPI</p>
+  <div>
+    <h3 class="card">What’s inside</h3>
+    <ul>
+      <li><strong>Guardrailed chat flows</strong> with modular prompts.</li>
+      <li><strong>Session state</strong>, file I/O, exportable outputs.</li>
+      <li><strong>Ready to integrate</strong> with monitoring & CI/CD pipelines.</li>
+    </ul>
+    <p><strong>="proj-tech":</strong>Tech: Streamlit · Python · Groq · OpenAI · FastAPI</p>
+  </div>
+  
 </section>
 
 <!-- Projects & Certifications -->
