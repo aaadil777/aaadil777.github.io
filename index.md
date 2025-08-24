@@ -51,7 +51,7 @@ title: "Aadil Ali"
 </section>
 
 <!-- Project Spotlight right after Experience -->
-<section id="b2b-ai-suite" class="reveal">
+<section id="ai-spotlight" class="reveal">
   <h2 class="h-section">💡 Project Spotlight — B2B AI Suite</h2>
 
   <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
@@ -235,14 +235,26 @@ title: "Aadil Ali"
 </section>
 
 <section id="contact" class="reveal">
-  <h2 class="h-section">Get in touch</h2>
-  <div class="cta-row" style="margin-bottom:14px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-    <a class="btn-cta" href="mailto:{{ site.email }}" target="_blank" rel="noopener">✉️ Email Me</a>
-    <a class="btn-cta" href="{{ site.calendar }}" target="_blank" rel="noopener">📅 Book a Meeting</a>
-    <a class="btn-cta" href="{{ site.linkedin }}" target="_blank" rel="noopener">Connect on LinkedIn</a>
-    <a class="btn-ghost" href="{{ site.resume_url }}" target="_blank" rel="noopener">Download Resume</a>
-  </div>
-</section>
+   <h2 class="h-section">Get in touch</h2>
+   <div class="cta-grid">
+     <a class="cta-tile" href="mailto:{{ site.email }}" target="_blank" rel="noopener">
+       <span class="cta-title">Email Me</span>
+       <span class="cta-sub">Reach me directly</span>
+     </a>
+     <a class="cta-tile" href="{{ site.calendar }}" target="_blank" rel="noopener">
+       <span class="cta-title">Book a Meeting</span>
+       <span class="cta-sub">Pick a time</span>
+     </a>
+     <a class="cta-tile" href="{{ site.linkedin }}" target="_blank" rel="noopener">
+       <span class="cta-title">LinkedIn</span>
+       <span class="cta-sub">Connect & DM</span>
+     </a>
+     <a class="cta-tile" href="{{ site.resume_url }}" target="_blank" rel="noopener">
+       <span class="cta-title">Resume (PDF)</span>
+       <span class="cta-sub">Download</span>
+     </a>
+   </div>
+ </section>
 
 <style>
 /* Typed bullets – label + rest stay on one line, caret appears only while typing */

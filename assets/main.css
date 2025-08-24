@@ -32,6 +32,15 @@ a:focus-visible{outline:var(--ring);border-radius:8px;text-decoration:none}
   background:rgba(15,20,28,.85);
   border-bottom:1px solid var(--line);
 }
+
+/* Give anchored sections breathing room under the sticky header */
+section[id] { scroll-margin-top: 88px; }
+
+/* Optional: slightly more margin on very small devices */
+@media (max-width: 600px){
+  section[id] { scroll-margin-top: 96px; }
+}
+
 .nav-inner{margin:0 auto;max-width:1100px;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px}
 .brand-avatar{width:40px;height:40px;border-radius:12px;object-fit:cover}
@@ -179,4 +188,36 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
   .h-section{font-size:clamp(22px,5.5vw,30px)}
   .node{padding:16px}
   .timeline .node ul{padding-left:18px}
+}
+
+/* Contact tiles */
+.cta-grid{
+  margin-top:14px;
+  display:grid;
+  gap:14px;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+.cta-tile{
+  display:grid;
+  place-content:center;
+  min-height:120px;
+  border-radius:16px;
+  text-decoration:none;
+  color:var(--text);
+  background:linear-gradient(180deg,#1a2330,#0f141c);
+  border:1px solid var(--line);
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset;
+  transition:transform .12s ease, box-shadow .12s ease, outline .12s ease, background .2s ease;
+}
+.cta-tile:hover{ outline:var(--ring); transform:translateY(-1px) }
+.cta-title{ font-weight:700; font-size:1.05rem; letter-spacing:.2px }
+.cta-sub{ color:var(--muted); font-size:.92rem; margin-top:2px }
+
+/* Responsive – 2x2 on tablets, 1xN on phones */
+@media (max-width: 900px){
+  .cta-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 600px){
+  .cta-grid{ grid-template-columns:1fr; }
+  .cta-tile{ min-height:100px; }
 }
