@@ -84,12 +84,15 @@ title: "Aadil Ali"
       <li><strong>Demand Forecast:</strong> Moving-average baseline + weekday/weekly profiles, CSV export.</li>
       <li><strong>What-If Inventory:</strong> Dual-axis chart, inventory position, backlog distribution, fill-rate KPI.</li>
     </ul>
-    <p><strong>="proj-tech":</strong> Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly</p>
+    <p><strong>Tech:</strong> Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly</p>
   </div>
 
 <!-- FEATURED: Nurse-Next AI (Streamlit) -->
 <section id="nursenext" class="reveal">
-  <h2 class="h-section">Project Spotlight — Nurse-Next AI Assistant</h2>
+  <h2 class="h-section">Project Spotlight — Nurse Next AI Assistant</h2>
+  <div class="gallery">
+    <img src="{{ '/assets/proj-nurse-next-ai.jpg' | relative_url }}">
+  </div>
 
   <p style="margin:14px 0 18px; display:flex; gap:10px; flex-wrap:wrap;">
     <a class="btn-cta" href="https://nurse-next-ai-assistant.streamlit.app/" target="_blank" rel="noopener">🚀 Launch Live App</a>
@@ -118,7 +121,7 @@ title: "Aadil Ali"
       <li><strong>Session state</strong>, file I/O, exportable outputs.</li>
       <li><strong>Ready to integrate</strong> with monitoring & CI/CD pipelines.</li>
     </ul>
-    <p><strong>="proj-tech":</strong>Tech: Streamlit · Python · Groq · OpenAI · FastAPI</p>
+    <p><strong>Tech:</strong>Streamlit · Python · Groq · OpenAI · FastAPI</p>
   </div>
   
 </section>
@@ -141,9 +144,11 @@ title: "Aadil Ali"
           <p class="proj-desc">{{ p.desc }}</p>
         </div>
       </a>
+    {% endfor %}
   </div>
 </section>
 
+<!-- Education -->
 <section id="education" class="reveal">
   <h2 class="h-section">Education</h2>
   <div class="timeline">

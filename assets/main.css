@@ -60,20 +60,27 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
   background:#1a2330;border:1px solid var(--line);color:var(--muted);
 }
 
-/* typed bullets – base label has NO border */
+/* ===== Typed bullets ===== */
+.typed-bullets{list-style:disc;padding-left:22px;margin:0}
+.typed-bullets .bullet{margin:.6rem 0}
 .bullet-label{
   font-weight:700;
   white-space:nowrap;
   overflow:hidden;
-  display:inline-block;
-  border-right:0;              /* <- make sure this is 0 */
+  display:inline;
+  border-right:0;                /* no caret when idle */
 }
-
-/* only show the caret while typing */
 .bullet-label.typing{
-  border-right:2px solid var(--accent, #7dd3fc);
-  animation: caret 1s steps(1) infinite;
+  border-right:2px solid var(--accent,#7dd3fc);
+  animation: caret 1s steps(1,end) infinite;
 }
+.bullet-rest{
+  display:inline;
+  opacity:0;
+  transition:opacity .35s ease .05s;
+  margin-left:6px;
+}
+@keyframes caret{0%,100%{border-right-color:transparent}50%{border-right-color:var(--accent,#7dd3fc)}}
 
 /* ===== Tech cards ===== */
 .tech-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
@@ -106,30 +113,6 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 .proj-title{margin:2px 0 4px;font-weight:600;font-size:18px}
 .proj-desc{margin:0;opacity:.95}
 
-/* ===== Project CTA row ===== */
-.proj-ctas{
-  display:flex;
-  gap:8px;
-  align-items:center;
-  flex-wrap:wrap;
-  margin:6px 0 18px 62px;
-}
-.proj-ctas .btn-cta,
-.proj-ctas .btn-ghost{
-  padding:8px 12px;
-  border-radius:10px;
-  font-weight:700;
-  text-decoration:none;
-  line-height:1;
-}
-.proj-tech{
-  opacity:.85;
-  border-left:1px solid var(--line);
-  padding-left:10px;
-  margin-left:4px;
-  font-size:.95rem;
-}
-
 /* Hover image preview */
 .hover-preview{
   position:fixed;left:24px;top:24px;width:min(420px,40vw);height:230px;
@@ -141,7 +124,7 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 .hover-preview.in{opacity:1;transform:translateY(0)}
 .hover-preview img{width:100%;height:100%;object-fit:cover;display:block}
 
-/* ===== CTAs ===== */
+/* ===== CTAs (general buttons, not project rows) ===== */
 .btn-cta{display:inline-block;padding:10px 16px;border-radius:12px;background:#2a7df3;color:#fff;text-decoration:none;font-weight:700;border:1px solid #2a7df3}
 .btn-cta:hover{filter:brightness(1.08)}
 .btn-ghost{display:inline-block;padding:10px 16px;border-radius:12px;background:transparent;color:var(--text);text-decoration:none;font-weight:700;border:1px solid var(--line)}
@@ -166,5 +149,4 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
   .h-section{font-size:clamp(22px,5.5vw,30px)}
   .node{padding:16px}
   .timeline .node ul{padding-left:18px}
-  .proj-ctas{margin-left:58px}
 }
