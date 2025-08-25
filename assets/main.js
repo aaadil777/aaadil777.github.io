@@ -58,40 +58,79 @@ const typeImpactBullets = () => {
   document.querySelectorAll('.typed-bullets .bullet').forEach(b => io.observe(b));
 };
 
-// Project hover preview
+// Project hover preview (preload + swap-after-load + smooth follow)
 const projectPreview = () => {
   const preview = document.querySelector('.hover-preview');
-  const img = preview ? preview.querySelector('img') : null;
-  const cards = document.querySelectorAll('.proj-card[data-img]');
-  if (!preview || !img || !cards.length) return;
+  const imgEl   = preview ? preview.querySelector('img') : null;
+  const cards   = document.querySelectorAll('.proj-card[data-img]');
+  if (!preview || !imgEl || !cards.length) return;
 
-  const show = (src) => {
-    if (!src) return;
-    img.src = src;
-    preview.classList.add('in');
+  // Preload all images into a cache
+  const cache = new Map(); // src -> HTMLImageElement
+  const preload = (src) => {
+    if (!src || cache.has(src)) return cache.get(src);
+    const im = new Image();
+    im.decoding = 'async';
+    im.loading = 'eager';
+    try { im.fetchPriority = 'high'; } catch(_) {}
+    im.src = src;
+    cache.set(src, im);
+    return im;
   };
+  cards.forEach(card => preload(card.getAttribute('data-img')));
+
+  // Swap only when loaded to avoid flicker
+  const showSrc = (src) => {
+    if (!src) return;
+    const im = preload(src);
+    const swap = () => {
+      if (imgEl.dataset.src === src) return; // already showing
+      imgEl.src = src;
+      imgEl.dataset.src = src;
+      preview.classList.add('in');
+    };
+    if (im.complete) {
+      swap();
+    } else {
+      im.addEventListener('load', swap, { once: true });
+    }
+  };
+
   const hide = () => preview.classList.remove('in');
 
-  cards.forEach(card => {
-    const src = card.getAttribute('data-img');
-
-    // mouse
-    card.addEventListener('mouseenter', () => show(src));
-    card.addEventListener('mouseleave', hide);
-    card.addEventListener('mousemove', (e) => {
+  // Smoothly follow the cursor
+  let raf = 0;
+  const move = (e) => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
       const pad = 16;
       const w = preview.offsetWidth || 420;
       const h = preview.offsetHeight || 230;
+      const vw = window.innerWidth, vh = window.innerHeight;
       let x = e.clientX + pad, y = e.clientY + pad;
-      const maxX = innerWidth - w - pad, maxY = innerHeight - h - pad;
+      const maxX = vw - w - pad, maxY = vh - h - pad;
       if (x > maxX) x = e.clientX - w - pad;
       if (y > maxY) y = e.clientY - h - pad;
       preview.style.left = x + 'px';
       preview.style.top  = y + 'px';
     });
+  };
 
-    // touch: tap to show, tap elsewhere to hide
-    card.addEventListener('touchstart', () => show(src), { passive: true });
+  cards.forEach(card => {
+    const src = card.getAttribute('data-img');
+
+    // mouse
+    card.addEventListener('mouseenter', (e) => {
+      move(e);
+      showSrc(src);
+    });
+    card.addEventListener('mousemove', move);
+    card.addEventListener('mouseleave', hide);
+
+    // touch: tap to show; outside tap hides
+    card.addEventListener('touchstart', () => {
+      showSrc(src);
+    }, { passive: true });
   });
 
   document.addEventListener('touchstart', (e) => {
