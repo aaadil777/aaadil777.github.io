@@ -165,10 +165,40 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 .btn-ghost{display:inline-block;padding:10px 16px;border-radius:12px;background:transparent;color:var(--text);text-decoration:none;font-weight:700;border:1px solid var(--line)}
 .btn-ghost:hover{background:#16202c}
 
-/* ===== Gallery & footer ===== */
-.gallery{display:grid;gap:10px;grid-template-columns:repeat(3,minmax(0,1fr))}
-.gallery img{width:100%;border-radius:14px;border:1px solid var(--line)}
-.site-footer{text-align:center;color:var(--muted);padding:24px;border-top:1px solid var(--line);margin-top:40px}
+/* ===== Gallery (uniform square tiles) ===== */
+.gallery{
+  display:grid;
+  gap:12px;
+  grid-template-columns:repeat(3, minmax(0,1fr));
+}
+
+.tile{
+  position:relative;
+  overflow:hidden;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:#0f141c;
+}
+
+.tile img{
+  display:block;
+  width:100%;
+  height:100%;
+  aspect-ratio:1/1;         /* perfect square */
+  object-fit:cover;         /* fill without distortion */
+  transition:transform .25s ease, filter .25s ease;
+}
+
+.tile:hover img{
+  transform:scale(1.02);
+  filter:brightness(1.02);
+}
+
+/* Responsive: single column on phones */
+@media (max-width: 900px){
+  .gallery{ grid-template-columns:1fr; }
+}
+
 
 /* reveal-on-scroll */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
@@ -192,8 +222,6 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 }
 .mobile-drawer.open{display:flex}
 .mobile-drawer .pill{text-decoration:none}
-
-/* ===== Responsive ===== */
 
 /* General layout tweaks */
 @media (max-width: 900px){

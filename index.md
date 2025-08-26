@@ -221,14 +221,41 @@ title: "Aadil Ali"
 
 <section id="gallery" class="reveal">
   <h2 class="h-section">Presentation moments</h2>
+
   <div class="gallery">
-    <img src="{{ '/assets/present-cat.jpg' | relative_url }}" alt="Caterpillar Report Out Presentation for Procurement">
-    <img src="{{ '/assets/present-gilead.jpg' | relative_url }}" alt="Gilead CFO Presentation Day">
-    <img src="{{ '/assets/present-8451.jpg' | relative_url }}" alt="84.51° Last Day">
-    <img src="{{ '/assets/present-8451-team.jpg' | relative_url }}" alt="84.51° API Enablement Team Presentation Day">
-    <img src="{{ '/assets/present-diversity.jpg' | relative_url }}" alt="YSU DEI Outcomes Research with Program Manager">
+    <figure class="tile">
+      <img src="{{ '/assets/present-cat.jpg' | relative_url }}"
+           alt="Caterpillar Report Out Presentation for Procurement"
+           loading="lazy" decoding="async">
+    </figure>
+
+    <figure class="tile">
+      <img src="{{ '/assets/present-gilead.jpg' | relative_url }}"
+           alt="Gilead CFO Presentation Day"
+           loading="lazy" decoding="async">
+    </figure>
+
+    <figure class="tile">
+      <img src="{{ '/assets/present-8451.jpg' | relative_url }}"
+           alt="84.51° Last Day"
+           loading="lazy" decoding="async">
+    </figure>
+
+    <figure class="tile">
+      <img src="{{ '/assets/present-8451-team.jpeg' | relative_url }}"
+           alt="84.51° API Enablement Team Presentation Day"
+           loading="lazy" decoding="async">
+    </figure>
+
+    <figure class="tile">
+      <img src="{{ '/assets/present-diversity.jpg' | relative_url }}"
+           alt="YSU DEI Outcomes Research with Program Manager"
+           loading="lazy" decoding="async">
+    </figure>
   </div>
 </section>
+
+
 
 <section id="contact" class="reveal">
    <h2 class="h-section">Get in touch</h2>
