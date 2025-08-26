@@ -166,7 +166,6 @@ title: "Aadil Ali"
 <section id="tech" class="reveal">
   <h2 class="h-section">Technical Expertise & Certifications</h2>
   <div class="tech-grid">
-
     <div class="tech-card">
       <h3>Platforms & Cloud</h3>
       <div class="pill-wrap">
@@ -178,7 +177,6 @@ title: "Aadil Ali"
         <span class="pill">GitHub</span>
       </div>
     </div>
-
     <div class="tech-card">
       <h3>Reliability & DevOps</h3>
       <div class="pill-wrap">
@@ -191,7 +189,6 @@ title: "Aadil Ali"
         <span class="pill">CI/CD</span>
       </div>
     </div>
-
     <div class="tech-card">
       <h3>Web & Product</h3>
       <div class="pill-wrap">
@@ -205,7 +202,6 @@ title: "Aadil Ali"
         <span class="pill">Cursor</span>
       </div>
     </div>
-
     <div class="tech-card">
       <h3>Certifications & Methods</h3>
       <div class="pill-wrap">
@@ -221,32 +217,27 @@ title: "Aadil Ali"
 
 <section id="gallery" class="reveal">
   <h2 class="h-section">Presentation moments</h2>
-
   <div class="gallery">
     <figure class="tile">
       <img src="{{ '/assets/present-cat.jpg' | relative_url }}"
            alt="Caterpillar Report Out Presentation for Procurement"
            loading="lazy" decoding="async">
     </figure>
-
     <figure class="tile">
       <img src="{{ '/assets/present-gilead.jpg' | relative_url }}"
            alt="Gilead CFO Presentation Day"
            loading="lazy" decoding="async">
     </figure>
-
     <figure class="tile">
       <img src="{{ '/assets/present-8451.jpg' | relative_url }}"
            alt="84.51° Last Day"
            loading="lazy" decoding="async">
     </figure>
-
     <figure class="tile">
       <img src="{{ '/assets/present-8451-team.jpeg' | relative_url }}"
            alt="84.51° API Enablement Team Presentation Day"
            loading="lazy" decoding="async">
     </figure>
-
     <figure class="tile">
       <img src="{{ '/assets/present-diversity.jpg' | relative_url }}"
            alt="YSU DEI Outcomes Research with Program Manager"
@@ -254,8 +245,6 @@ title: "Aadil Ali"
     </figure>
   </div>
 </section>
-
-
 
 <section id="contact" class="reveal">
    <h2 class="h-section">Get in touch</h2>
