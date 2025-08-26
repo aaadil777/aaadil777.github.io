@@ -234,7 +234,7 @@ title: "Aadil Ali"
            loading="lazy" decoding="async">
     </figure>
     <figure class="tile">
-      <img src="{{ '/assets/present-8451-team.jpeg' | relative_url }}"
+      <img src="{{ '/assets/present-8451-team.jpg' | relative_url }}"
            alt="84.51° API Enablement Team Presentation Day"
            loading="lazy" decoding="async">
     </figure>
