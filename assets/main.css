@@ -20,6 +20,16 @@ body{
   font-size:16.5px; line-height:1.75; font-weight:400;
 }
 
+/* ===== Nav links: one line, centered, no scrollbar ===== */
+.links{
+  display:flex;
+  gap:12px;
+  flex-wrap:nowrap;
+  overflow:hidden;
+  justify-content:center;
+}
+.links a{ white-space:nowrap; }
+
 /* ===== Nav ===== */
 .site-nav{
   position:sticky; top:0; z-index:50;
@@ -27,49 +37,20 @@ body{
   background:rgba(15,20,28,.85);
   border-bottom:1px solid var(--line);
 }
-.nav-inner{
-  margin:0 auto;
-  max-width:1100px;
-  padding:10px 20px;
-  display:flex;
-  align-items:center;
-  gap:16px;
-  justify-content:space-between;
+
+section[id] { scroll-margin-top: 88px; }
+@media (max-width: 600px){
+  section[id] { scroll-margin-top: 96px; }
 }
+
+.nav-inner{margin:0 auto;max-width:1100px;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px}
 .brand-avatar{width:40px;height:40px;border-radius:12px;object-fit:cover}
 .brand-name{font-weight:600;letter-spacing:.2px}
 .brand-sub{color:var(--muted);font-size:14px}
-
-/* Nav links: one line, never wrap, never clip (no scrollbar) */
-.links{
-  display:flex;
-  gap:12px;
-  flex-wrap:nowrap;          /* never wrap */
-  flex:1 1 auto;             /* take remaining row space */
-  min-width:0;               /* allow shrinking inside flex row */
-  justify-content:flex-end;  /* push pills to the right of brand */
-  overflow:hidden;           /* hide any excess (we compact before this) */
-}
-.links a{ white-space:nowrap; } /* keep each chip on one line */
-
-/* Pills */
-.pill{
-  display:inline-block;
-  padding:8px 14px;
-  border-radius:999px;
-  background:var(--pill);
-  color:var(--text);
-  text-decoration:none;
-  font-weight:500;
-  border:1px solid var(--line)
-}
+.pill{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--pill);color:var(--text);text-decoration:none;font-weight:500;border:1px solid var(--line)}
 .pill:hover{outline:var(--ring)}
 .links a.active{background:#243248}
-
-/* Anchor offset for sticky header */
-section[id]{ scroll-margin-top:88px; }
-@media (max-width:600px){ section[id]{ scroll-margin-top:96px; } }
 
 /* ===== Sections ===== */
 section{margin:0 auto;max-width:1100px;padding:72px 20px}
@@ -97,7 +78,7 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
   white-space:nowrap;
   overflow:hidden;
   display:inline;
-  border-right:0; /* no caret when idle */
+  border-right:0;
 }
 .bullet-label.typing{
   border-right:2px solid var(--accent,#7dd3fc);
@@ -128,7 +109,7 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
   border-radius:14px;
   background:#1a2330;
   border:1px solid var(--line);
-  overflow-wrap:anywhere; /* prevent spill-over on small screens */
+  overflow-wrap:anywhere;
 }
 .node { max-width:100%; }
 .node::before{content:"";position:absolute;left:-30px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px rgb(124 199 255 / 20%)}
@@ -159,52 +140,44 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 .hover-preview.in{opacity:1;transform:translateY(0)}
 .hover-preview img{width:100%;height:100%;object-fit:cover;display:block}
 
-/* ===== CTAs (general buttons, not project rows) ===== */
+/* ===== CTAs ===== */
 .btn-cta{display:inline-block;padding:10px 16px;border-radius:12px;background:#2a7df3;color:#fff;text-decoration:none;font-weight:700;border:1px solid #2a7df3}
 .btn-cta:hover{filter:brightness(1.08)}
 .btn-ghost{display:inline-block;padding:10px 16px;border-radius:12px;background:transparent;color:var(--text);text-decoration:none;font-weight:700;border:1px solid var(--line)}
 .btn-ghost:hover{background:#16202c}
 
-/* ===== Gallery (uniform square tiles) ===== */
+/* ===== Gallery & footer ===== */
 .gallery{
   display:grid;
-  gap:12px;
-  grid-template-columns:repeat(3, minmax(0,1fr));
+  gap:10px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
 }
-
-.tile{
-  position:relative;
-  overflow:hidden;
-  border-radius:14px;
-  border:1px solid var(--line);
-  background:#0f141c;
+.tile {
+  position: relative;
+  overflow: visible; /* allow image overflow */
 }
-
-.tile img{
+.tile img {
   display:block;
-  width:100%;
-  height:100%;
-  aspect-ratio:1/1;         /* perfect square */
-  object-fit:cover;         /* fill without distortion */
-  transition:transform .25s ease, filter .25s ease;
+  width:auto;
+  height:auto;
+  max-width:none;
+  max-height:none;
 }
 
-.tile:hover img{
-  transform:scale(1.02);
-  filter:brightness(1.02);
+/* Optional: center oversized images inside tile */
+.tile {
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-/* Responsive: single column on phones */
-@media (max-width: 900px){
-  .gallery{ grid-template-columns:1fr; }
-}
-
+.site-footer{text-align:center;color:var(--muted);padding:24px;border-top:1px solid var(--line);margin-top:40px}
 
 /* reveal-on-scroll */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:translateY(0)}
 
-/* ===== Mobile menu (drawer) ===== */
+/* ===== Mobile menu ===== */
 .menu-btn{
   display:none;
   align-items:center;justify-content:center;
@@ -223,33 +196,15 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 .mobile-drawer.open{display:flex}
 .mobile-drawer .pill{text-decoration:none}
 
-/* General layout tweaks */
+/* ===== Responsive ===== */
 @media (max-width: 900px){
   .tech-grid,.proj-grid,.gallery{grid-template-columns:1fr}
   .hover-preview{display:none}
 }
-
-/* Progressive compaction so pills always fit before mobile switch */
-@media (max-width: 1120px){
-  .links{ gap:10px; }
-  .pill{ padding:8px 12px; }
+@media (max-width:720px){
+  .links{display:none}
+  .menu-btn{display:flex}
 }
-@media (max-width: 1040px){
-  .brand-sub{ display:none; }       /* frees space early */
-  .links{ gap:9px; }
-  .pill{ padding:7px 11px; font-size:.95rem; }
-}
-@media (max-width: 980px){
-  .links{ gap:8px; }
-  .pill{ padding:6px 10px; font-size:.92rem; }
-}
-
-/* Switch to mobile drawer a bit earlier to avoid any clipping */
-@media (max-width: 940px){
-  .links{ display:none; }
-  .menu-btn{ display:flex; }
-}
-
 @media (max-width:600px){
   .hero h1{font-size:clamp(28px,8vw,38px)}
   .h-section{font-size:clamp(22px,5.5vw,30px)}
@@ -257,7 +212,7 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
   .timeline .node ul{padding-left:18px}
 }
 
-/* Contact tiles */
+/* ===== Contact tiles ===== */
 .cta-grid{
   margin-top:14px;
   display:grid;
@@ -280,7 +235,6 @@ section{margin:0 auto;max-width:1100px;padding:72px 20px}
 .cta-title{ font-weight:700; font-size:1.05rem; letter-spacing:.2px }
 .cta-sub{ color:var(--muted); font-size:.92rem; margin-top:2px }
 
-/* Responsive – 2x2 on tablets, 1xN on phones */
 @media (max-width: 900px){
   .cta-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
 }

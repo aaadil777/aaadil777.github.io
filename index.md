@@ -47,10 +47,11 @@ title: "Aadil Ali"
   </div>
 </section>
 
-<!-- Project Spotlight right after Experience -->
+<!-- AI Spotlight & Projects -->
 <section id="ai-spotlight" class="reveal">
-  <h2 class="h-section">💡 Project Spotlight — B2B AI Suite</h2>
+  <h2 class="h-section">💡 AI Spotlight & Projects</h2>
 
+  <!-- B2B AI Suite -->
   <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;margin-bottom:16px;">
     <iframe
       src="https://www.youtube-nocookie.com/embed/d2lkvZj_UXg"
@@ -84,50 +85,44 @@ title: "Aadil Ali"
     <p><strong>Tech:</strong> Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly</p>
   </div>
 
-<!-- FEATURED: Nurse-Next AI (Streamlit) -->
-<section id="nursenext" class="reveal">
-  <h2 class="h-section">💡 Project Spotlight — Nurse Next AI</h2>
-  <div class="gallery">
-    <img src="{{ '/assets/proj-nurse-next-ai.jpg' | relative_url }}">
+  <!-- Nurse Next AI -->
+  <div style="margin-top:40px;">
+    <h3 class="h-sub">Nurse Next AI</h3>
+    <div class="gallery">
+      <img src="{{ '/assets/proj-nurse-next-ai.jpg' | relative_url }}" alt="Nurse Next AI Preview">
+    </div>
+
+    <p style="margin:14px 0 18px; display:flex; gap:10px; flex-wrap:wrap;">
+      <a class="btn-cta" href="https://nurse-next-ai-assistant.streamlit.app/" target="_blank" rel="noopener">🚀 Launch Live App</a>
+      <a class="btn-ghost" href="https://github.com/aaadil777/Nurse-Next-AI" target="_blank" rel="noopener">🤖 GitHub Repo</a>
+    </p>
+
+    <div class="card" style="margin-top:8px;">
+      <h3 style="margin:0 0 6px;">Why it matters</h3>
+      <ul>
+        <li><strong>Purpose:</strong> AI assistant for triage, lookups, and routine workflows.</li>
+        <li><strong>Passion:</strong> Deliver actionable guidance for complex health inquiries.</li>
+        <li><strong>Business Need:</strong> Reduce context-switching; scale for internal ops and education.</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <h3>What’s inside</h3>
+      <ul>
+        <li><strong>Guardrailed chat flows</strong> with modular prompts.</li>
+        <li><strong>Session state</strong>, file I/O, exportable outputs.</li>
+        <li><strong>Ready to integrate</strong> with monitoring & CI/CD pipelines.</li>
+      </ul>
+      <p><strong>Tech:</strong> Streamlit · Python · Groq · OpenAI · FastAPI</p>
+    </div>
   </div>
+</section>
 
-  <p style="margin:14px 0 18px; display:flex; gap:10px; flex-wrap:wrap;">
-    <a class="btn-cta" href="https://nurse-next-ai-assistant.streamlit.app/" target="_blank" rel="noopener">🚀 Launch Live App</a>
-    <a class="btn-ghost" href="https://github.com/aaadil777/Nurse-Next-AI" target="_blank" rel="noopener">🤖 GitHub Repo</a>
-  </p>
-
-  <!-- small summary card to match project style -->
-  <div class="card" style="margin-top:8px;">
-    <h3 style="margin:0 0 6px;">Nurse Next AI</h3>
-    <p style="margin:0;">Streamlit micro-assistant to speed triage, lookups, and routine workflows.</p>
-  </div>
-
-  <div>
-    <h3 class="card" style="margin-top:12px;">Why it matters</h3>
-    <ul>
-      <li><strong>Purpose:</strong> Self-serve AI assistant for triage, info lookups, and routine workflows.</li>
-      <li><strong>Passion:</strong> Deliver actionable, effective guidance for complex health-related inquries.</li>
-      <li><strong>Business Need:</strong> Reduces context-switching; scalable for internal B2B use for education and practical ops for health applications.</li>
-    </ul>
-  </div>
-
-  <div>
-    <h3 class="card">What’s inside</h3>
-    <ul>
-      <li><strong>Guardrailed chat flows</strong> with modular prompts.</li>
-      <li><strong>Session state</strong>, file I/O, exportable outputs.</li>
-      <li><strong>Ready to integrate</strong> with monitoring & CI/CD pipelines.</li>
-    </ul>
-    <p><strong>Tech:</strong> Streamlit · Python · Groq · OpenAI · FastAPI</p>
-  </div>
-
-<!-- Projects & Certifications -->
+<!-- Portfolio Cards -->
 <section id="portfolio" class="reveal">
-  <h2 class="h-section">Projects & Certifications</h2>
-
+  <h2 class="h-section">Other Projects & Certifications</h2>
   <div class="proj-grid">
     {% for p in site.data.projects %}
-      <!-- Card itself = primary click-through -->
       <a class="proj-card"
          href="{{ p.url }}"
          target="_blank"
@@ -163,6 +158,7 @@ title: "Aadil Ali"
   </div>
 </section>
 
+<!-- Tech -->
 <section id="tech" class="reveal">
   <h2 class="h-section">Technical Expertise & Certifications</h2>
   <div class="tech-grid">
@@ -211,98 +207,64 @@ title: "Aadil Ali"
         <span class="pill">YSU: Molecular Biology & Biotechnology</span>
       </div>
     </div>
-
-  </div> <!-- ✅ CLOSE .tech-grid -->
+  </div>
 </section>
 
+<!-- Gallery -->
 <section id="gallery" class="reveal">
-  <h2 class="h-section">Presentation moments</h2>
-    <div class="gallery">
-      <img src="{{ '/assets/present-cat.jpg' | relative_url }}"
-      alt="Caterpillar Report Out Presentation for Procurement"
-      loading="lazy" decoding="async">
-      <img src="{{ '/assets/present-gilead.jpg' | relative_url }}"
-      alt="Gilead CFO Presentation Day"
-      loading="lazy" decoding="async">
-      <img src="{{ '/assets/present-8451.jpg' | relative_url }}"
-      alt="84.51° Last Day"
-      loading="lazy" decoding="async">
-      <img src="{{ '/assets/present-8451-team.png' | relative_url }}"
-      alt="84.51° API Enablement Team Presentation Day"
-      loading="lazy" decoding="async">
-      <img src="{{ '/assets/present-diversity.jpg' | relative_url }}"
-      alt="YSU DEI Outcomes Research with Program Manager"
-      loading="lazy" decoding="async">
-    </div>
+  <h2 class="h-section">Presentation Moments</h2>
+  <div class="gallery">
+    <figure class="tile">
+      <div class="overflow-container">
+        <img src="{{ '/assets/present-cat.jpg' | relative_url }}" alt="Caterpillar Report Out Presentation for Procurement">
+      </div>
+    </figure>
+
+    <figure class="tile">
+      <div class="overflow-container">
+        <img src="{{ '/assets/present-gilead.jpg' | relative_url }}" alt="Gilead CFO Presentation Day">
+      </div>
+    </figure>
+
+    <figure class="tile">
+      <div class="overflow-container">
+        <img src="{{ '/assets/present-8451.jpg' | relative_url }}" alt="84.51° Last Day">
+      </div>
+    </figure>
+
+    <figure class="tile">
+      <div class="overflow-container">
+        <img src="{{ '/assets/present-8451-team.jpg' | relative_url }}" alt="84.51° API Enablement Team Presentation Day">
+      </div>
+    </figure>
+
+    <figure class="tile">
+      <div class="overflow-container">
+        <img src="{{ '/assets/present-diversity.jpg' | relative_url }}" alt="YSU DEI Outcomes Research with Program Manager">
+      </div>
+    </figure>
+  </div>
 </section>
 
+<!-- Contact -->
 <section id="contact" class="reveal">
-   <h2 class="h-section">Get in touch</h2>
+  <h2 class="h-section">Get in Touch</h2>
   <div class="cta-grid">
     <a class="cta-tile" href="mailto:{{ site.email }}">
-      <div class="cta-title">✉️ Email Me</div>
-      <div class="cta-sub">Quickest way to reach me</div>
-    </a>
-    <a class="cta-tile" href="{{ site.calendar }}" target="_blank" rel="noopener">
-      <div class="cta-title">📅 Book a Meeting</div>
-      <div class="cta-sub">15–30 min slots</div>
+      <div class="cta-title">✉️ Email</div>
+      <div class="cta-sub">Reach me directly</div>
     </a>
     <a class="cta-tile" href="{{ site.linkedin }}" target="_blank" rel="noopener">
-      <div class="cta-title">🔗 Connect on LinkedIn</div>
-      <div class="cta-sub">Let’s stay in touch</div>
+      <div class="cta-title">🔗 LinkedIn</div>
+      <div class="cta-sub">Connect professionally</div>
+    </a>
+    <a class="cta-tile" href="{{ site.github }}" target="_blank" rel="noopener">
+      <div class="cta-title">🐙 GitHub</div>
+      <div class="cta-sub">See my work</div>
     </a>
     <a class="cta-tile" href="{{ site.resume_url }}" target="_blank" rel="noopener">
-      <div class="cta-title">📄 Download Resume</div>
-      <div class="cta-sub">For your reference</div>
+      <div class="cta-title">📄 Resume</div>
+      <div class="cta-sub">Download PDF</div>
     </a>
   </div>
- </section>
-
-<style>
-/* Typed bullets – label + rest stay on one line, caret appears only while typing */
-.typed-bullets .bullet { margin:.5rem 0; line-height:1.5; }
-.bullet-label { font-weight:700; white-space:nowrap; overflow:hidden; display:inline; border-right:0; }
-.bullet-label.typing { border-right:2px solid var(--accent, #7dd3fc); animation: caret 1s steps(1,end) infinite; }
-.bullet-rest { display:inline; opacity:0; transition:opacity .35s ease .05s; margin-left:.25rem; }
-@keyframes caret { 0%,100% { border-right-color: transparent } 50% { border-right-color: var(--accent, #7dd3fc) } }
-
-/* Tech grid pills (unchanged) */
-.tech-grid { display:grid; gap:12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.tech-card { background: rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:16px; }
-.tech-card h3 { margin:0 0 8px 0; font-size:1rem; letter-spacing:.2px; }
-.pill-wrap { display:flex; flex-wrap:wrap; gap:8px; }
-.pill { padding:6px 10px; border-radius:999px; background:rgba(125,211,252,.12); border:1px solid rgba(125,211,252,.25); font-size:.88rem; }
-
-/* small spacing tweak */
-#portfolio { margin-top:18px; }
-</style>
-
-<script>
-(function () {
-  const SPEED = 18;
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const bullet = entry.target;
-      const labelEl = bullet.querySelector('.bullet-label');
-      const restEl  = bullet.querySelector('.bullet-rest');
-      const full = (labelEl.dataset.type || labelEl.textContent).replace(/:$/, '');
-      labelEl.textContent = '';
-      labelEl.classList.add('typing');
-      let i = 0;
-      const tick = () => {
-        if (i <= full.length) {
-          labelEl.textContent = full.slice(0, i) + ':';
-          i++; setTimeout(tick, SPEED);
-        } else {
-          labelEl.classList.remove('typing');
-          restEl.style.opacity = 1;
-          observer.unobserve(bullet);
-        }
-      };
-      tick();
-    });
-  }, { threshold: 0.35 });
-  document.querySelectorAll('.typed-bullets .bullet').forEach(b => observer.observe(b));
-})();
-</script>
+</section>
