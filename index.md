@@ -214,7 +214,7 @@ title: "Aadil Ali"
   <h2 class="h-section">Presentation Moments</h2>
   <div class="gallery">
     <figure class="tile">
-      <div class="fit-contain">
+      <div class="fit-cover">
         <img src="{{ '/assets/present-cat.jpg' | relative_url }}"
              alt="Caterpillar Report Out Presentation for Procurement"
              loading="lazy" decoding="async" width="1600">
@@ -243,7 +243,7 @@ title: "Aadil Ali"
       </div>
     </figure>
     <figure class="tile">
-      <div class="fit-contain">
+      <div class="fit-cover">
         <img 
             src="{{ '/assets/present-diversity.jpg' | relative_url }}"
             alt="YSU DEI Outcomes Research with Program Manager"
