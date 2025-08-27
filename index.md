@@ -236,16 +236,18 @@ title: "Aadil Ali"
     </figure>
     <figure class="tile tile--wide">
       <div class="overflow-container">
-        <img src="{{ '/assets/present-8451-team.png' | relative_url }}"
-             alt="84.51° API Enablement Team Presentation Day"
-             loading="lazy" decoding="async">
+        <img 
+            src="{{ '/assets/present-8451-team.png' | relative_url }}"
+            alt="84.51° API Enablement Team Presentation Day"
+            loading="lazy" decoding="async" width="2000" height="1125">
       </div>
     </figure>
     <figure class="tile">
       <div class="overflow-container">
-        <img src="{{ '/assets/present-diversity.jpg' | relative_url }}"
-             alt="YSU DEI Outcomes Research with Program Manager"
-             loading="lazy" decoding="async">
+        <img 
+            src="{{ '/assets/present-diversity.jpg' | relative_url }}"
+            alt="YSU DEI Outcomes Research with Program Manager"
+            loading="lazy" decoding="async" width="1600" height="1200">
       </div>
     </figure>
 
