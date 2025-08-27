@@ -214,21 +214,21 @@ title: "Aadil Ali"
   <h2 class="h-section">Presentation Moments</h2>
   <div class="gallery">
     <figure class="tile">
-      <div class="overflow-container">
+      <div class="fit-contain">
         <img src="{{ '/assets/present-cat.jpg' | relative_url }}"
              alt="Caterpillar Report Out Presentation for Procurement"
              loading="lazy" decoding="async">
       </div>
     </figure>
     <figure class="tile">
-      <div class="overflow-container">
+      <div class="fit-contain">
         <img src="{{ '/assets/present-gilead.jpg' | relative_url }}"
              alt="Gilead CFO Presentation Day"
              loading="lazy" decoding="async">
       </div>
     </figure>
     <figure class="tile">
-      <div class="overflow-container">
+      <div class="fit-contain">
         <img src="{{ '/assets/present-8451.jpg' | relative_url }}"
              alt="84.51° Last Day"
              loading="lazy" decoding="async">
@@ -239,15 +239,15 @@ title: "Aadil Ali"
         <img 
             src="{{ '/assets/present-8451-team.png' | relative_url }}"
             alt="84.51° API Enablement Team Presentation Day"
-            loading="lazy" decoding="async" width="2000" height="1125">
+            loading="lazy" decoding="async" width="2500" height="1125">
       </div>
     </figure>
     <figure class="tile">
-      <div class="overflow-container">
+      <div class="fit-contain">
         <img 
             src="{{ '/assets/present-diversity.jpg' | relative_url }}"
             alt="YSU DEI Outcomes Research with Program Manager"
-            loading="lazy" decoding="async" width="1600" height="1200">
+            loading="lazy" decoding="async"> 
       </div>
     </figure>
 
