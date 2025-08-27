@@ -234,7 +234,7 @@ title: "Aadil Ali"
              loading="lazy" decoding="async">
       </div>
     </figure>
-    <figure class="tile">
+    <figure class="tile tile--wide">
       <div class="fit-contain">
         <img 
             src="{{ '/assets/present-8451-team.png' | relative_url }}"
@@ -242,7 +242,7 @@ title: "Aadil Ali"
             loading="lazy" decoding="async" width="2500" height="1125">
       </div>
     </figure>
-    <figure class="tile">
+    <figure class="tile tile--wide">
       <div class="fit-contain">
         <img 
             src="{{ '/assets/present-diversity.jpg' | relative_url }}"
