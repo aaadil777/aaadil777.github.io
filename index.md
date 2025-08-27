@@ -214,7 +214,7 @@ title: "Aadil Ali"
   <h2 class="h-section">Presentation Moments</h2>
   <div class="gallery">
     <figure class="tile">
-      <div class="fit-contain">
+      <div class="overflow-container">
         <img src="{{ '/assets/present-cat.jpg' | relative_url }}"
              alt="Caterpillar Report Out Presentation for Procurement"
              loading="lazy" decoding="async">
@@ -235,7 +235,7 @@ title: "Aadil Ali"
       </div>
     </figure>
     <figure class="tile tile--wide">
-      <div class="overflow-container">
+      <div class="fit-contain">
         <img 
             src="{{ '/assets/present-8451-team.png' | relative_url }}"
             alt="84.51° API Enablement Team Presentation Day"
@@ -247,7 +247,7 @@ title: "Aadil Ali"
         <img 
             src="{{ '/assets/present-diversity.jpg' | relative_url }}"
             alt="YSU DEI Outcomes Research with Program Manager"
-            loading="lazy" decoding="async"> 
+            loading="lazy" decoding="async" width="1600" height="1200"> 
       </div>
     </figure>
 
