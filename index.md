@@ -240,12 +240,16 @@ title: "Aadil Ali"
     </figure>
     <figure class="tile">
       <div class="overflow-container">
-        <img
-          src="{{ '/assets/present-8451-team.png' | relative_url }}"
-          alt="84.51° API Enablement Team Presentation Day"
-          loading="lazy" decoding="async" width="1600" height="1200">
+        <img 
+        class="fit-contain" 
+        src="{{ '/assets/present-8451-team.png' | relative_url }}"
+        alt="84.51° API Enablement Team Presentation Day" loading="lazy" decoding="async">
+        loading="lazy" 
+        decoding="async" 
+        width="1600" 
+        height="1200">
       </div>
-    </figure>
+    </figure> 
     <!-- Feature photo (wide) -->
     <figure class="tile tile--wide">
       <div class="overflow-container">
