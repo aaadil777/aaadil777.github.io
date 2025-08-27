@@ -217,7 +217,7 @@ title: "Aadil Ali"
       <div class="fit-cover">
         <img src="{{ '/assets/present-cat.jpg' | relative_url }}"
              alt="Caterpillar Report Out Presentation for Procurement"
-             loading="lazy" decoding="async" width="1600">
+             loading="lazy" decoding="async">
       </div>
     </figure>
     <figure class="tile">
@@ -247,7 +247,7 @@ title: "Aadil Ali"
         <img 
             src="{{ '/assets/present-diversity.jpg' | relative_url }}"
             alt="YSU DEI Outcomes Research with Program Manager"
-            loading="lazy" decoding="async" width="1600"> 
+            loading="lazy" decoding="async"> 
       </div>
     </figure>
 
