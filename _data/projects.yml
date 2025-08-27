@@ -18,7 +18,7 @@
 
 - title: "API Scorecard"
   emoji: "🧭"
-  desc: "Cross-functional reliability & code-quality view blending Datadog + SonarQube."
+  desc: "Prototype of cross-functional reliability & code-quality view blending Datadog + SonarQube."
   url: "https://drive.google.com/file/d/1lc3x2ueLaNYztbQAYWTSoUokFv91zSp1/view?usp=sharing"
   image: "/assets/proj-api-scorecard.jpg"
 
