@@ -239,7 +239,7 @@ title: "Aadil Ali"
         <img 
             src="{{ '/assets/present-8451-team.png' | relative_url }}"
             alt="84.51° API Enablement Team Presentation Day"
-            loading="lazy" decoding="async">
+            loading="lazy" decoding="async" width="2500" height="1125">
       </div>
     </figure>
     <figure class="tile">
