@@ -216,31 +216,43 @@ title: "Aadil Ali"
   <div class="gallery">
     <figure class="tile">
       <div class="overflow-container">
-        <img src="{{ '/assets/present-cat.jpg' | relative_url }}" alt="Caterpillar Report Out Presentation for Procurement">
+        <img
+          src="{{ '/assets/present-cat.jpg' | relative_url }}"
+          alt="Caterpillar Report Out Presentation for Procurement"
+          loading="lazy" decoding="async" width="1600" height="1200">
       </div>
     </figure>
-
     <figure class="tile">
       <div class="overflow-container">
-        <img src="{{ '/assets/present-gilead.jpg' | relative_url }}" alt="Gilead CFO Presentation Day">
+        <img
+          src="{{ '/assets/present-gilead.jpg' | relative_url }}"
+          alt="Gilead CFO Presentation Day"
+          loading="lazy" decoding="async" width="1600" height="1200">
       </div>
     </figure>
-
     <figure class="tile">
       <div class="overflow-container">
-        <img src="{{ '/assets/present-8451.jpg' | relative_url }}" alt="84.51° Last Day">
+        <img
+          src="{{ '/assets/present-8451.jpg' | relative_url }}"
+          alt="84.51° Last Day"
+          loading="lazy" decoding="async" width="1600" height="1200">
       </div>
     </figure>
-
     <figure class="tile">
       <div class="overflow-container">
-        <img src="{{ '/assets/present-8451-team.jpg' | relative_url }}" alt="84.51° API Enablement Team Presentation Day">
+        <img
+          src="{{ '/assets/present-8451-team.png' | relative_url }}"
+          alt="84.51° API Enablement Team Presentation Day"
+          loading="lazy" decoding="async" width="1600" height="1200">
       </div>
     </figure>
-
-    <figure class="tile">
+    <!-- Feature photo (wide) -->
+    <figure class="tile tile--wide">
       <div class="overflow-container">
-        <img src="{{ '/assets/present-diversity.jpg' | relative_url }}" alt="YSU DEI Outcomes Research with Program Manager">
+        <img
+          src="{{ '/assets/present-diversity.jpg' | relative_url }}"
+          alt="YSU DEI Outcomes Research with Program Manager"
+          loading="lazy" decoding="async" width="2000" height="1125">
       </div>
     </figure>
   </div>
