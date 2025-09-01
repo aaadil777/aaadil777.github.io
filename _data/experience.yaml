@@ -1,20 +1,20 @@
+- company: Stark State College
+  role: IT Strategy & Implementation Associate (Consultant)
+  dates: Jan 2023 – Present
+  location: Remote
+  bullets:
+    - Financial Systems Integration: "Supported SAP FICO integration with external B2B partners and university systems, streamlining reconciliation processes and enhancing transparency using Streamlit and Cursor for data workflows."
+    - AI-Driven Optimization: "Assisted with deploying AI-enabled tools across academic and administrative workflows, contributing to a reduction of 8+ hours of manual workload per week during the 2024–2025 academic year."
+    - Strategic Alignment: "Strategic Insights & Agile Delivery: For the IT strategy team, led Agile sprint reviews, spikes, and strategy sessions, and used PowerPoint to present updates and highlight growth opportunities for IT and financial growth at Stark State College."
+
 - company: Caterpillar
   role: Strategic Procurement & Planning Division Intern
-  dates: May 2025 – Present
+  dates: May 2025 – August 2025
   location: Peoria, IL
   bullets:
     - "Truckload Optimization: Led end-to-end development of a Power BI dashboard integrating Snowflake CTEs to improve full-truckload visibility, reduce shipping costs, enhance efficiency, and enable scalable dealer reporting."
     - "Forecasting & Planning Tools: Built Excel optimization and forecasting models (PivotTables, Macros) to validate HVLV dealer order data across 256+ machines, increasing planning accuracy, reducing manual work, and improving decision quality."
     - "Supplier Performance & Recognition: Designed KPI-driven Power BI reports on cost variance and delivery timeliness; earned top honors in Caterpillar Procurement Case Competition for measurable cost savings and risk-mitigation strategies that strengthened overall supply chain resilience."
-
-- company: Stark State College
-  role: IT Strategy & Implementation Associate (Consultant)
-  dates: Jan 2023 – Present
-  location: North Canton, OH
-  bullets:
-    - "Financial Systems Integration: Implemented SAP FICO with external B2B partners and university systems, streamlining reconciliation and accelerating transactions; leveraged Streamlit and Cursor for reporting transparency."
-    - "AI-Driven Optimization: Deployed AI-enabled tools across academic/administrative workflows, reducing manual workload by over 8 working hours weekly (2024–2025) and improving institutional efficiency with measurable productivity gains."
-    - "Strategic Alignment: Partnered with leadership and clients to align IT implementations with organizational strategy, ensuring scalable financial and academic operations that supported long-term growth."
 
 - company: 84.51° (Kroger)
   role: Product Owner Co-op
