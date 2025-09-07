@@ -30,7 +30,29 @@ title: "Aadil Ali"
     <div class="node">
       <div class="title">{{ item.company }} — {{ item.role }}</div>
       <div class="meta">{{ item.dates }} · {{ item.location }}</div>
+      <ul class="typed-bullets">
+        {% for b in item.bullets %}
+          {%- assign parts = b | split: ':' -%}
+          {%- assign label = parts[0] -%}
+          {%- assign rest = parts | slice: 1, 99 | join: ':' -%}
+          <li class="bullet">
+            <span class="bullet-label" data-type="{{ label | strip }}">{{ label | strip }}:</span>
+            <span class="bullet-rest">{{ rest | strip }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
+<section id="additional-experience" class="reveal">
+  <h2 class="h-section">Additional Experience</h2>
+  <div class="timeline">
+    {% for item in site.data.additional_experience %}
+    <div class="node">
+      <div class="title">{{ item.company }} — {{ item.role }}</div>
+      <div class="meta">{{ item.dates }} · {{ item.location }}</div>
       <ul class="typed-bullets">
         {% for b in item.bullets %}
           {%- assign parts = b | split: ':' -%}
