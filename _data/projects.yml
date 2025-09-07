@@ -16,6 +16,18 @@
   repo: "https://github.com/aaadil777/Nurse-Next-AI"
   tech: "Streamlit · Python · Pandas · NumPy · Matplotlib · Plotly"
 
+- title: "All American Freight Logistics — Website"
+  emoji: "🚛"
+  desc: "Static site with HTML/CSS, Cloudflare, Resend forms; +35% vendor engagement."
+  url: "https://revamped-2010-aafl-site.pages.dev/"
+  image: "/assets/projects/aafl.png"
+
+- title: "Akron Crossdock — Website"
+  emoji: "🏬"
+  desc: "Freight storage & rework site; HTML/CSS, Cloudflare, Resend contact."
+  url: "https://akron-crossdock-site.pages.dev/"
+  image: "/assets/projects/crossdock.png"
+
 - title: "API Scorecard"
   emoji: "🧭"
   desc: "Prototype of cross-functional reliability & code-quality view blending Datadog + SonarQube."

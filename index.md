@@ -196,6 +196,7 @@ title: "Aadil Ali"
         <span class="pill">Productboard</span>
         <span class="pill">Mural</span>
         <span class="pill">Cursor</span>
+        <span class="pill">Cloudflare</span>
       </div>
     </div>
     <div class="tech-card">

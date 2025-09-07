@@ -41,12 +41,13 @@
   bullets:
     - "Workday Migration & Analytics: Migrated 500+ employee records with QA/testing and built dynamic Power BI dashboards integrated with Workday HCM, significantly improving workforce planning, forecasting accuracy, and executive-level decision support."
 
-- company: All-American Freight Logistics
-  role: Web Developer & Strategist — Digital Transformation
+- company: All-American Freight Logistics & Akron Crossdock
+  role: Web Developer Consultant & Strategist — Digital Transformation
   dates: Jan 2024 – May 2024
   location: Akron, OH
   bullets:
-    - "Full-stack Delivery: Designed a full-stack website and Salesforce dashboards, boosting vendor engagement, fleet utilization, and KPI-driven logistics decisions."
+    - "Full-stack Delivery: - Built production websites for trucking and freight firms (HTML/CSS, GitHub/Cloudflare, Resend APIs) and Salesforce dashboards—driving ~35% vendor engagement, fleet growth, and sharper KPI decisions."
+
 
 - company: Marion Public Health
   role: Health Data Strategist & BI Analyst — Public Health Data Visualization
