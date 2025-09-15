@@ -1,5 +1,5 @@
 - company: Caterpillar
-  role: Strategic Procurement & Planning Division Intern
+  role: Strategic Procurement & Planning Intern
   dates: May 2025 – August 2025
   location: Peoria, IL
   bullets:
@@ -17,10 +17,11 @@
     - "Performance Standardization: Developed cross-functional API scorecards blending Datadog and SonarQube data, enabling leadership to prioritize optimization, track reliability trends, and guide strategic decision-making."
 
 - company: Gilead Sciences
-  role: Supply Chain Planning Intern
+  role: IT Digital Transformation & Supply Chain Planning Intern
   dates: May 2024 – Aug 2024
   location: Foster City, CA
   bullets:
-    - "Global Operations: Automated SAP S/4 HANA & IBP workflows for demand/replenishment, boosting inventory availability and reducing clinical trial delays across India, Canada, and Brazil; used Microsoft Project to delegate tasks, ensure alignment, drive accountability, and improve global stakeholder coordination effectiveness."
-    - "Forecasting & Cloud Monitoring: Built Excel/Solver + Monte Carlo models for diverse demand scenarios, improving forecast accuracy and automating planning efficiency; integrated AWS CloudWatch for real-time workflow visibility."
-    - "Risk Mitigation Dashboards: Created Power BI views integrating IBP forecasts with fulfillment metrics to minimize stockouts."
+    -	"Global Operations: Automated SAP S/4 HANA & IBP workflows for demand/replenishment, boosting inventory availability and reducing costly clinical trial delays; used Microsoft Project for smooth global stakeholder coordination."
+    -	"Digital Transformation Enablement: For the global transformation team on Project BlueStream Phase 2, developed training resources and technical documentation for new SAP IBP users, enabling a successful go-live across Gilead sites worldwide."
+    -	"Forecasting & Cloud Monitoring: Built Excel/Solver + Monte Carlo models for diverse demand scenarios, improving forecast accuracy and automating planning efficiency; integrated AWS CloudWatch for real-time workflow visibility."
+    -	"Risk Mitigation Dashboards: Created Power BI views integrating IBP forecasts with fulfillment metrics to minimize stockouts."
