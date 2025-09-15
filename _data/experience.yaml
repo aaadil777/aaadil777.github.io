@@ -21,7 +21,7 @@
   dates: May 2024 – Aug 2024
   location: Foster City, CA
   bullets:
-    -	"Global Operations: Automated SAP S/4 HANA & IBP workflows for demand/replenishment, boosting inventory availability and reducing costly clinical trial delays; used Microsoft Project for smooth global stakeholder coordination."
-    -	"Digital Transformation Enablement: For the global transformation team on Project BlueStream Phase 2, developed training resources and technical documentation for new SAP IBP users, enabling a successful go-live across Gilead sites worldwide."
-    -	"Forecasting & Cloud Monitoring: Built Excel/Solver + Monte Carlo models for diverse demand scenarios, improving forecast accuracy and automating planning efficiency; integrated AWS CloudWatch for real-time workflow visibility."
-    -	"Risk Mitigation Dashboards: Created Power BI views integrating IBP forecasts with fulfillment metrics to minimize stockouts."
+    - "Global Operations: Automated SAP S/4 HANA & IBP workflows for demand/replenishment, boosting inventory availability and reducing costly clinical trial delays; used Microsoft Project for smooth global stakeholder coordination."
+    - "Digital Transformation Enablement: For the global transformation team on Project BlueStream Phase 2, developed training resources and technical documentation for new SAP IBP users, enabling a successful go-live across Gilead sites worldwide."
+    - "Forecasting & Cloud Monitoring: Built Excel/Solver + Monte Carlo models for diverse demand scenarios, improving forecast accuracy and automating planning efficiency; integrated AWS CloudWatch for real-time workflow visibility."
+    - "Risk Mitigation Dashboards: Created Power BI views integrating IBP forecasts with fulfillment metrics to minimize stockouts."
