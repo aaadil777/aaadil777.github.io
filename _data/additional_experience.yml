@@ -14,17 +14,16 @@
     - "AI-Driven Optimization: Assisted with deploying AI-enabled tools across academic and administrative workflows, contributing to a reduction of 8+ hours of manual workload per week during the 2024–2025 academic year."
     - "Strategic Insights & Agile Delivery: For the IT strategy team, led Agile sprint reviews, spikes, and strategy sessions, and used PowerPoint to present updates and highlight growth opportunities for IT and financial growth at Stark State College."
 
-- company: Summit County Executive
-  role: Business Analyst Intern — Workday HCM & Financial Forecasting
-  dates: Feb 2023 – Jul 2023
-  location: Akron, OH
-  bullets:
-    - "Workday Migration & Analytics: Migrated 500+ employee records with QA/testing and built dynamic Power BI dashboards integrated with Workday HCM, significantly improving workforce planning, forecasting accuracy, and executive-level decision support."
-
 - company: Marion Public Health
   role: Health Data Strategist & BI Analyst — Public Health Data Visualization
   dates: Jul 2023 – Jan 2024
   location: Marion, OH
   bullets:
     - "Epidemiology Dashboards: Developed live Power BI + ArcGIS dashboards for infectious-disease tracking, accelerating containment responses, improving cross-agency coordination, and strengthening state reporting."
-    
+
+- company: Summit County Executive
+  role: Business Analyst Intern — Workday HCM & Financial Forecasting
+  dates: Feb 2023 – Jul 2023
+  location: Akron, OH
+  bullets:
+    - "Workday Migration & Analytics: Migrated 500+ employee records with QA/testing and built dynamic Power BI dashboards integrated with Workday HCM, significantly improving workforce planning, forecasting accuracy, and executive-level decision support."
