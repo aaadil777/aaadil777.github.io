@@ -13,9 +13,10 @@
   dates: Aug 2024 – Dec 2024
   location: Chicago, IL
   bullets:
-    - "Agile Process & Automation: Facilitated Agile ceremonies and built AI-driven JIRA/Mural workflows, boosting sprint velocity by ~25% and accelerating API delivery for critical business initiatives and enterprise-wide scalability."
-    - "API Reliability & Scalability: Monitored API health with Python/SQL + Datadog; integrated SonarQube checks, cut downtime risk, and supported Kong Gateway + Terraform migration to enhance resilience and reduce latency by ~15%."
-    - "Performance Standardization: Developed cross-functional API scorecards blending Datadog and SonarQube data, enabling leadership to prioritize optimization, track reliability trends, and guide strategic decision-making."
+    - "Roadmap & Backlog Leadership: Owned roadmap planning, backlog refinement, and sprint ceremonies (planning, review, retrospectives); assigned story points and aligned quarterly goals with business objectives using Jira, Mural, and Productboard."
+    - "Agile Delivery & Workflow Automation: Led JIRA-Mural integration and drove workflow automation to streamline sprint planning and reviews, improving cross-team coordination and increasing velocity by ~25%."
+    - "API Gateway Migration & Templates: Directed API gateway registration and enterprise migration to Kong Gateway; designed Terraform-based API launch templates that accelerated deployment speed, standardized, and improved code design & efficiency."
+    - "API Reliability & Standardization: Built cross-functional API scorecards integrating Datadog and SonarQube insights, giving leadership visibility into performance, reducing downtime risk, and cutting latency by up to 15%."
 
 - company: Gilead Sciences
   role: IT Digital Transformation & Supply Chain Planning Intern
