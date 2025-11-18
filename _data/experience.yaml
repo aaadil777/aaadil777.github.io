@@ -13,7 +13,7 @@
     dates: May 2025 – Aug 2025
     location: Peoria, IL
     bullets:
-      - "Full-Truckload Optimization: Built a Power BI dashboard and Snowflake ELT processes that improved logistics visibility, reduced shipping costs, and enabled scalable dealer reporting."
+      - "Full-Truckload Optimization: Built a Power BI dashboard and Snowflake ETL processes that improved logistics visibility, reduced shipping costs, and enabled scalable dealer reporting."
       - "Data Pipeline Quality: Engineered optimized Snowflake CTEs and views that strengthened downstream data accuracy across procurement operations."
       - "Forecasting Accuracy: Developed Excel optimization and forecasting tools validating HVLV dealer demand across 256+ machines, improving supply chain planning precision."
       - "Strategic Impact: Secured first place in the Caterpillar Procurement Case Competition by identifying savings opportunities on $1.25M+ in spend."
