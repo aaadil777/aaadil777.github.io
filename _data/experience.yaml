@@ -1,38 +1,60 @@
-- company: Caterpillar Inc.
-  role: Digital Product Manager Intern (Procurement)
-  dates: May 2025 – August 2025
-  location: Peoria, IL
-  bullets:
-    - "Truckload Optimization: Led end-to-end development of a Power BI dashboard integrating Snowflake CTEs to improve full-truckload visibility, reduce shipping costs, enhance efficiency, and enable scalable dealer reporting."
-    - "Requirements Gathering: Developed project charter and documentation in coordination with ONE team stakeholders."
-    - "Forecasting & Planning Tools: Built Excel optimization and forecasting models (PivotTables, Macros) to validate HVLV dealer order data across 256+ machines, increasing planning accuracy, reducing manual work, and improving decision quality."
-    - "Supplier Performance & Recognition: Designed KPI-driven Power BI reports on cost variance and delivery timeliness; earned top honors in Caterpillar Procurement Case Competition for measurable cost savings and risk-mitigation strategies that strengthened overall supply chain resilience."
+experience:
+  - company: Caterpillar Inc.
+    role: Technical Business Systems Analyst II (Contractor via TekSystems)
+    dates: Oct 2025 – Present
+    location: Peoria, IL
+    bullets:
+      - "ITSM Leadership: Gathered requirements, mapped workflows, and led cross-functional stakeholder discussions for the FMEA (e1ns) tool to stabilize system performance and align engineering documentation standards."
+      - "Service Reliability: Triaged and resolved ServiceNow tickets while analyzing e1ns dashboard metrics to reduce outages, improve application reliability, and mitigate operational risk."
+      - "Data & Access Governance: Queried Snowflake license usage and executed IAM provisioning for a 6,000+ user community, improving audit readiness and visibility into system operations."
+      - "Product & Process Optimization: Coordinated FMEA enhancement initiatives via Azure DevOps by organizing work items, tracking deliverables, and improving documentation quality and data integrity across teams."
 
-- company: 84.51° (Kroger)
-  role: Product Owner Co-op
-  dates: Aug 2024 – Dec 2024
-  location: Chicago, IL
-  bullets:
-    - "Roadmap & Backlog Leadership: Owned roadmap planning, backlog refinement, and sprint ceremonies (planning, review, retrospectives); assigned story points and aligned quarterly goals with business objectives using Jira, Mural, and Productboard."
-    - "Agile Delivery & Workflow Automation: Led JIRA-Mural integration and drove workflow automation to streamline sprint planning and reviews, improving cross-team coordination and increasing velocity by ~25%."
-    - "API Gateway Migration & Templates: Directed API gateway registration and enterprise migration to Kong Gateway; designed Terraform-based API launch templates that accelerated deployment speed, standardized, and improved code design & efficiency."
-    - "API Reliability & Standardization: Built cross-functional API scorecards integrating Datadog and SonarQube insights, giving leadership visibility into performance, reducing downtime risk, and cutting latency by up to 15%."
+  - company: Caterpillar Inc.
+    role: Digital Product Management Intern (Procurement)
+    dates: May 2025 – Aug 2025
+    location: Peoria, IL
+    bullets:
+      - "Full-Truckload Optimization: Built a Power BI dashboard and Snowflake ELT processes that improved logistics visibility, reduced shipping costs, and enabled scalable dealer reporting."
+      - "Data Pipeline Quality: Engineered optimized Snowflake CTEs and views that strengthened downstream data accuracy across procurement operations."
+      - "Forecasting Accuracy: Developed Excel optimization and forecasting tools validating HVLV dealer demand across 256+ machines, improving supply chain planning precision."
+      - "Strategic Impact: Secured first place in the Caterpillar Procurement Case Competition by identifying savings opportunities on $1.25M+ in spend."
 
-- company: Gilead Sciences
-  role: IT Digital Transformation & Supply Chain Planning Intern
-  dates: May 2024 – Aug 2024
-  location: Foster City, CA
-  bullets:
-    - "Global Product Delivery: Automated SAP S/4 HANA & IBP workflows for demand/replenishment, boosting inventory availability and reducing costly clinical trial delays; used Microsoft Project for smooth global stakeholder coordination."
-    - "Digital Transformation Enablement: For the global transformation team on Project BlueStream Phase 2, developed training resources and technical documentation for new SAP IBP users, enabling a successful go-live across Gilead sites worldwide."
-    - "Forecasting & Cloud Monitoring: Built Excel/Solver + Monte Carlo models for diverse demand scenarios, improving forecast accuracy and automating planning efficiency; integrated AWS CloudWatch for real-time workflow visibility."
-    - "Risk Mitigation Dashboards: Created Power BI views integrating IBP forecasts with fulfillment metrics to minimize stockouts."
+  - company: 84.51° (Kroger)
+    role: Product Owner Co-op
+    dates: Aug 2024 – Dec 2024
+    location: Chicago, IL
+    bullets:
+      - "Agile Delivery Leadership: Owned roadmap planning, backlog refinement, and sprint ceremonies, improving delivery cadence and alignment with quarterly OKRs."
+      - "API Transformation: Directed enterprise API Gateway migration to Kong, defining authentication protocols and coordinating phased rollout with engineering SMEs."
+      - "Performance Monitoring: Built Datadog + SonarQube API scorecards that increased visibility into code health and reduced service latency by 15%."
+      - "Documentation Standardization: Enhanced internal engineering documentation and API reporting structures, increasing consistency and reducing review cycle time."
 
-- company: Oak Street Health (CVS Health)
-  role: Epic Analyst & BI Developer
-  dates: Nov 2021 – Apr 2022
-  location: Akron, OH
-  bullets:
-    - "Clinical Systems Migration: Facilitated Greenway to Epic transition, improving scheduling efficiency, boosting daily visitations by 15%, and cutting 6+ weekly hours of manual entry."
-    - "Data Accuracy & Reporting: Integrated Epic Beaker & Clarity modules; optimized SQL queries and built Power BI + Excel reports to enhance reporting precision and streamline workflows."
-    - "Adoption Enablement: Developed technical documentation and user guides, training clinicians and staff to drive smoother Epic adoption and strengthen data-driven clinical care outcomes."
+  - company: Gilead Sciences
+    role: IT Digital Transformation & Supply Chain Planning Intern
+    dates: May 2024 – Aug 2024
+    location: Foster City, CA
+    bullets:
+      - "Workflow Automation: Automated SAP S/4HANA + IBP demand/replenishment processes to improve inventory visibility and prevent clinical trial delays."
+      - "Operational Transparency: Integrated AWS CloudWatch and Microsoft Project for real-time synchronization across supply chain, R&D, and IT groups."
+      - "Global Enablement: Authored Phase 2 Project BlueStream training materials and implementation guides, supporting a successful global rollout."
+      - "Forecasting Impact: Developed advanced SAP IBP forecasting models that boosted clinical trial demand accuracy by 12% and optimized downstream MRP scheduling."
+
+  - company: Oak Street Health (CVS Health)
+    role: Epic Analyst & Business Intelligence Developer (Contractor)
+    dates: Nov 2021 – Apr 2022
+    location: Akron, OH
+    bullets:
+      - "EHR Migration: Led the Greenway-to-Epic transition, improving workflow efficiency, data reliability, and increasing patient visits by 15%."
+      - "Reporting Automation: Integrated Epic Beaker and Clarity modules, optimizing SQL and Power BI reports to eliminate 6+ weekly hours of manual work."
+      - "Training & Adoption: Authored technical documentation and delivered clinician training to improve ERP adoption and data literacy."
+      - "Data Governance: Strengthened reporting accuracy and identity access governance supporting Epic rollout and operational readiness."
+
+  - company: Youngstown State University
+    role: Business Intelligence Developer
+    dates: Aug 2020 – Aug 2021
+    location: Youngstown, OH
+    bullets:
+      - "Analytics Development: Built interactive dashboards using BRFSS 'Student Success Outcomes' survey data to provide insights into student behavior and academic performance."
+      - "Stakeholder Enablement: Partnered with academic leadership and cross-functional teams to integrate survey data into visual tools guiding student services decisions."
+      - "Engagement Outcomes: Drove marketing initiatives and cultural programs that enhanced campus engagement, supported enrollment growth, and contributed to improved graduation rates."
+      - "Predictive Modeling: Conducted trend analysis to identify retention drivers and supported foreign graduate student engagement through coordinated program events."
