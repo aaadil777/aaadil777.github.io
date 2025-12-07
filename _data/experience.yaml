@@ -3,10 +3,10 @@
     dates: Oct 2025 – Present
     location: Peoria, IL
     bullets:
-      - "ITSM Leadership: Gathered requirements, mapped workflows, and led cross-functional stakeholder discussions for the FMEA (e1ns) tool to stabilize system performance and align engineering documentation standards."
-      - "Service Reliability: Triaged and resolved ServiceNow tickets while analyzing e1ns dashboard metrics to reduce outages, improve application reliability, and mitigate operational risk."
-      - "Data & Access Governance: Queried Snowflake license usage and executed IAM provisioning for a 6,000+ user community, improving audit readiness and visibility into system operations."
-      - "Product & Process Optimization: Coordinated FMEA enhancement initiatives via Azure DevOps by organizing work items, tracking deliverables, and improving documentation quality and data integrity across teams."
+      - "ITSM Leadership: Functioned as an information technology service management (ITSM) professional for the FMEA (e1ns) tool by gathering requirements, mapping workflows, and leading stakeholder discussions with senior leadership across FMEA, APQP, NPI & multidisciplinary CAT Technology teams while performing UAT for system updates to ensure stable performance, consistent documentation standards, and alignment with manufacturing business processes."
+      - "Service Reliability: Coordinated with senior leadership to triage and resolve ServiceNow tickets for FMEA (e1ns) tool while analyzing e1ns dashboard metrics in ServiceNow to seek quality improvement opportunities that strengthened system reliability, minimized outages & application downturn, and risks to application performance."
+      - "Data & Access Governance: Leveraged Snowflake to query license usage, perform IAM duties, and manage access provisioning for a 6,000+ user community; conducted Power BI dashboard reviews and maintained the FMEA reporting dashboard to ensure alignment with user needs and improved visibility into submitted requests and feedback."
+      - "Product & Process Optimization: Coordinated FMEA enhancement initiatives through Azure DevOps by leading backlog refinement, creating user stories, coordinating QA assessments for e1ns tool, and collaborating with product owners and data scientists enhance documentation standards and improve data governance and audit readiness; relayed enhancement requests to external vendors to improve operational efficiency for FMEA e1ns tool users."
 
   - company: Caterpillar Inc.
     role: Digital Product Management Intern (Procurement)
