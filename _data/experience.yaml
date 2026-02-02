@@ -13,10 +13,10 @@
     dates: May 2025 – Aug 2025
     location: Peoria, IL
     bullets:
-      - "Full-Truckload Optimization: Built a Power BI dashboard and Snowflake ETL processes that improved logistics visibility, reduced shipping costs, and enabled scalable dealer reporting."
-      - "Data Pipeline Quality: Engineered optimized Snowflake CTEs and views that strengthened downstream data accuracy across procurement operations."
-      - "Forecasting Accuracy: Developed Excel optimization and forecasting tools validating HVLV dealer demand across 256+ machines, improving supply chain planning precision."
-      - "Strategic Impact: Secured first place in the Caterpillar Procurement Case Competition by identifying savings opportunities on $1.25M+ in spend."
+      - "Full-Truckload Optimization: Directed the end-to-end product lifecycle for the Order Navigation Experience Team (Strategic Procurement & Planning Division); authored the Project Charter for a high-priority pilot study focused on outbound logistics optimization, automating Snowflake-to-Power BI ETL processes to maximize truckload utilization and minimize shipping costs."
+      - "Data Pipeline Quality: Facilitated Agile ceremonies and modified the Definition of Done (DoD) to standardize governance; increased team velocity by refining the product backlog, providing extended support to the HVLV dealer project, and developing technical documentation for incoming interns."
+      - "Forecasting Accuracy: Utilized Agentic AI (Microsoft Copilot 365) and VBA macros to engineer automated forecasting simulations for the Building Construction Products (BCP) team; optimized the future orders process for 256+ machines, significantly improving planning accuracy and mitigating lead-time risks for high-volume, low-variation (HVLV) models."
+      - "Strategic Impact: Recognized as finalist among teams in the Caterpillar Procurement Case Competition by leading savings opportunities on $1.25M+ in spend."
 
   - company: 84.51° (Kroger)
     role: Product Owner Co-op
